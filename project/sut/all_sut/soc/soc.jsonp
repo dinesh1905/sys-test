@@ -1,0 +1,26 @@
+{
+   //soc configuration
+// "params": {
+//       "global": {
+//           "soc": {},
+          ${params.global.sut.soc.PORT}:          "22",
+          ${params.global.sut.soc.USERNAME}:      "root",
+          ${params.global.sut.soc.ETH_Path}:    "D://tmp//SWdownload//ETHSwitch//MAAS_ETHSWT_25.04.00_SEC_PRJ",
+          ${params.global.sut.soc.ETH_Switch_Version}:    "EthSwtFwversion: 25.04.00",
+          ${params.global.sut.soc.DLT_VIEWER_PATH}:    "D://tmp//SWdownload//DLTViewer//dlt-viewer-3.0.0-win64",
+          ${params.global.sut.soc.DLT_VIEWER_EXE}:    "dlt_viewer.exe",
+          ${params.global.sut.soc.DLP_FILE} : "MaaS_Blade_LinuxVM.dlp",
+          ${params.global.sut.soc.DLT_VIEWER_PATH1} :"C://Users//TOA8PG1//Desktop//MaaS_SW//DltViewerSDK_2.18.2_6.0.3 (Safety)//DltViewerSDK_2.18.2_6.0.3 - Copy",
+          ${params.global.sut.soc.SCREENSHOT_PATH} :  "C://Users//TOA8PG1//Desktop//MaaS_SW//DltViewerSDK_2.18.2_6.0.3 (Safety)",
+          ${params.global.sut.soc.ADB_PATH}:       "C://Users//TOA8PG1//Desktop//Android_platform_tools//Android_platform_tools",
+          ${params.global.sut.soc.TARGET_IP}:      "172.21.0.40",
+          ${params.global.sut.soc.TARGET_IP1}:      "172.21.0.10",
+          ${params.global.sut.soc.MEDIA_FILE}:    "waterdrop.mp4",
+          ${params.global.sut.soc.PUSH_DEST}:      "./data/",
+          ${params.global.sut.soc.WAIT_REBOOT}:    "4 min",
+          ${params.global.sut.soc.ADB_PATH}:    "C://Users//TOA8PG1//Desktop//Android_platform_tools//Android_platform_tools"
+
+
+   //     }
+   // }
+}

@@ -1,0 +1,201 @@
+{
+
+   //comman configuration
+// "params": {
+//       "global": {
+//           "power": {},
+             // Project sut audio media parameter
+   ${params.global.sut.power.MaaS_Battery_On}: "12",
+   ${params.global.sut.power.MaaS_Battery_Off}: "0",
+   ${params.global.sut.power.MaaS_Current_On}: "0.5",
+   ${params.global.sut.power.MaaS_Current_Off}: "0",
+
+
+   // Generic sut power channels parameter
+   ${params.global.sut.power.channels.sut_Power.output.voltage.sId} : "Battery",
+   ${params.global.sut.power.channels.sut_Power.output.voltage.nLimitMin} : 0.0,
+   ${params.global.sut.power.channels.sut_Power.output.voltage.nLimitMax} : 13.0,
+   ${params.global.sut.power.channels.sut_Power.output.voltage.Csample.NormalVoltage_HighThresholdValue} : 12.0,
+   ${params.global.sut.power.channels.sut_Power.output.voltage.Csample.HightVoltage_Value} : 20.8,
+   ${params.global.sut.power.channels.sut_Power.output.voltage.Bsample.NormalVoltage_HighThresholdValue} : 17.7,
+   ${params.global.sut.power.channels.sut_Power.output.voltage.Bsample.HightVoltage_Value} : 17.8,
+   ${params.global.sut.power.channels.sut_Power.measurement.voltage.sId} : "U0meas",
+   ${params.global.sut.power.channels.sut_Power.measurement.current.sId} : "Battery_Current",
+
+   //DLT keywords
+   ${params.global.sut.power.DLT.normalvoltage} : "Voltage enters NORMAL_VOLTAGE range",
+   ${params.global.sut.power.DLT.normalvoltage_2} : "OnEnterNormalVoltage",
+   ${params.global.sut.power.DLT.normalvoltage_3} : "Default voltage range is NORMAL_VOLTAGE",
+   ${params.global.sut.power.DLT.undervoltage} : "Voltage enters UNDERVOLTAGE range",
+   ${params.global.sut.power.DLT.undervoltage_2} : "OnEnterUnderVoltage",
+   ${params.global.sut.power.DLT.critical_undervoltage} : "Voltage enters CRITICAL_UNDERVOLTAGE range via UDROP61",
+   ${params.global.sut.power.DLT.critical_undervoltage_2} : "OnEnterCriticalUnderVoltage",
+   ${params.global.sut.power.DLT.overvoltage} : "Voltage enters OVERVOLTAGE range",
+   ${params.global.sut.power.DLT.overvoltage_2} : "OnEnterOverVoltage",
+
+
+   //DLT keywords for MCU startup sequence
+   ${params.global.sut.power.DLT.MCUStartup} : {},
+   ${params.global.sut.power.DLT.MCUStartup.MCUStartup_sequence1} :"OnInit",
+   ${params.global.sut.power.DLT.MCUStartup.MCUStartup_sequence2} :"Set PWR_HOLD pin to ACTIVE",
+   ${params.global.sut.power.DLT.MCUStartup.MCUStartup_sequence3} :"Enable UART trace supply",
+   ${params.global.sut.power.DLT.MCUStartup.MCUStartup_sequence4} :"Enable CPU_RESET",
+   ${params.global.sut.power.DLT.MCUStartup.MCUStartup_sequence5} :"EcuM] OnEnterWakeup",
+   ${params.global.sut.power.DLT.MCUStartup.MCUStartup_sequence6} :"RecvCanSignal \\[PRE_RUN]",
+   ${params.global.sut.power.DLT.MCUStartup.MCUStartup_sequence7} :"BswM_RequestMode \\[PRJ_OpeMode_PRE_RUN]",
+   ${params.global.sut.power.DLT.MCUStartup.MCUStartup_sequence8} :"SendCanSignal \\[PRE_RUN_ACK]",
+   ${params.global.sut.power.DLT.MCUStartup.MCUStartup_sequence9} :"EcuM] OnEnterPreRun",
+   ${params.global.sut.power.DLT.MCUStartup.MCUStartup_sequence10} :"OnDriveUp",
+   ${params.global.sut.power.DLT.MCUStartup.MCUStartup_sequence11} :"KssPowerUp InitFusaWdg",
+   ${params.global.sut.power.DLT.MCUStartup.MCUStartup_sequence12} :"KssPowerUp Disable CPU_RESET",
+   ${params.global.sut.power.DLT.MCUStartup.MCUStartup_sequence13} :"GssPowerUp Set PMIC_PGOOD_BL2 pin to ACTIVE",
+   ${params.global.sut.power.DLT.MCUStartup.MCUStartup_sequence14} :"KssPowerUp SwitchOnMainSupplies",
+   ${params.global.sut.power.DLT.MCUStartup.MCUStartup_sequence15} :"OnDriveUpComReady",
+   ${params.global.sut.power.DLT.MCUStartup.MCUStartup_sequence16} :"OnEnterRunMode",
+   ${params.global.sut.power.DLT.MCUStartup.MCUStartup_sequence17} :"EcuM] OnEnterKssRun",
+   ${params.global.sut.power.DLT.MCUStartup.MCUStartup_sequence18} :"GssPowerUp Enable MAX20877",
+   ${params.global.sut.power.DLT.MCUStartup.MCUStartup_sequence19} :"GssPowerUp MiscSupplies",
+   ${params.global.sut.power.DLT.MCUStartup.MCUStartup_sequence20} :"GssPowerUp Enable CPU",
+   ${params.global.sut.power.DLT.MCUStartup.MCUStartup_sequence21} :"GssPowerUp CPU Activated",
+   //     }
+   // }
+
+   //Power Curve
+   ${params.global.sut.power.PowerCurve} : {},
+   ${params.global.sut.power.PowerCurve.Path} : "/project/config/Power_Curve",
+   ${params.global.sut.power.PowerCurve.E_01_power_curve} : "E-01 Longterm Overvoltage_1.wav",
+   ${params.global.sut.power.PowerCurve.E_02_T2_power_curve} : "E-02_Transient_overvoltage_TC1&2.wav",
+   ${params.global.sut.power.PowerCurve.E_02_T3_power_curve} : "E-02_Transient_overvoltage_TC3.wav",
+   ${params.global.sut.power.PowerCurve.E_03a_power_curve} : "E-03a_Transient_Undervoltage.wav",
+   ${params.global.sut.power.PowerCurve.E_03b_power_curve} : "E-03b_Transient_Undervoltage.wav",
+   ${params.global.sut.power.PowerCurve.E_04_power_curve} : "E-04_Jump_start.wav",
+   ${params.global.sut.power.PowerCurve.E_05_power_curve} : "E-05_Load_dump.wav",
+
+   ${params.global.sut.power.PowerCurve.E_06_T4_power_curve} : "",
+
+   ${params.global.sut.power.PowerCurve.E_07_power_curve} : "E-07_Slow_Decrease_and_Increase_of_the_Supply_Voltage.wav",
+   ${params.global.sut.power.PowerCurve.E_08_power_curve} : "E-08_Slow_Decrease_Quick_Increase_of_the_Supply_Voltage.wav",
+   ${params.global.sut.power.PowerCurve.E_08_power_curve} : "E-08_Slow_Decrease_Quick_Increase_of_the_Supply_Voltage.wav",
+   ${params.global.sut.power.PowerCurve.E_08_power_curve} : "E-08_Slow_Decrease_Quick_Increase_of_the_Supply_Voltage.wav",
+
+   ${params.global.sut.power.PowerCurve.E_09_T1_power_curve} : "",
+   ${params.global.sut.power.PowerCurve.E_09_T2_power_curve} : "",
+
+   ${params.global.sut.power.PowerCurve.E_12_T1_power_curve} : "E-12_Voltage_curve_with_vehicle_electrical_system_control_TC1_1Cycle.wav",
+   ${params.global.sut.power.PowerCurve.E_12_T2_power_curve} : "E-12_Voltage_curve_with_vehicle_electrical_system_control_TC2_1Cycle.wav",
+   ${params.global.sut.power.PowerCurve.E_12_T3_power_curve} : "E-12_Voltage_curve_with_vehicle_electrical_system_control_TC3_1Cycle.wav",
+
+   ${params.global.sut.power.PowerCurve.E_15_T1_power_curve} : "E-09_Reset_behaviour_TC1.wav",
+   ${params.global.sut.power.PowerCurve.E_15_T1_power_curve_2v} : "/E-09 Reset_behaviour/TC1/E-09_TC1_2V.wav",
+   ${params.global.sut.power.PowerCurve.E_15_T1_power_curve_3v} : "/E-09 Reset_behaviour/TC1/E-09_TC1_3V.wav",
+   ${params.global.sut.power.PowerCurve.E_15_T1_power_curve_4v} : "/E-09 Reset_behaviour/TC1/E-09_TC1_4V.wav",
+   ${params.global.sut.power.PowerCurve.E_15_T1_power_curve_5v} : "/E-09 Reset_behaviour/TC1/E-09_TC1_5V.wav",
+   ${params.global.sut.power.PowerCurve.E_15_T1_power_curve_6v} : "/E-09 Reset_behaviour/TC1/E-09_TC1_6V.wav",
+   ${params.global.sut.power.PowerCurve.E_15_T1_power_curve_7v} : "/E-09 Reset_behaviour/TC1/E-09_TC1_7V.wav",
+   ${params.global.sut.power.PowerCurve.E_15_T1_power_curve_8v} : "/E-09 Reset_behaviour/TC1/E-09_TC1_8V.wav",
+   ${params.global.sut.power.PowerCurve.E_15_T1_power_curve_9v} : "/E-09 Reset_behaviour/TC1/E-09_TC1_9V.wav",
+   ${params.global.sut.power.PowerCurve.E_15_T1_power_curve_10v} : "/E-09 Reset_behaviour/TC1/E-09_TC1_10V.wav",
+   ${params.global.sut.power.PowerCurve.E_15_T1_power_curve_11v} : "/E-09 Reset_behaviour/TC1/E-09_TC1_11V.wav",
+   ${params.global.sut.power.PowerCurve.E_15_T1_power_curve_12v} : "/E-09 Reset_behaviour/TC1/E-09_TC1_12V.wav",
+   ${params.global.sut.power.PowerCurve.E_15_T1_power_curve_13v} : "/E-09 Reset_behaviour/TC1/E-09_TC1_13V.wav",
+   ${params.global.sut.power.PowerCurve.E_15_T1_power_curve_14v} : "/E-09 Reset_behaviour/TC1/E-09_TC1_14V.wav",
+
+   ${params.global.sut.power.PowerCurve.E_15_T2_power_curve} : "/E-15 Reversepolarity/test_case_2/E-15 Reversepolarity_test_case_2.wav",
+   ${params.global.sut.power.PowerCurve.E_15_T2_power_curve_4v} : "/E-15 Reversepolarity/test_case_2/E-15_10.8_4V.wav",
+
+   ${params.global.sut.power.DLT.Funcational_state.A} : "[PowerM] SendCanSignal [RUN_STATE_REACHED]",
+   ${params.global.sut.power.DLT.Funcational_state.B} : "Not used",
+   ${params.global.sut.power.DLT.Funcational_state.C} : "STANDBY State",
+   ${params.global.sut.power.DLT.Funcational_state.D1} : "",
+   ${params.global.sut.power.DLT.Funcational_state.D2} : "",
+   ${params.global.sut.power.DLT.Funcational_state.E} : "",
+
+   ${params.global.sut.power.DLT.Temperature.Normal} : "",
+   ${params.global.sut.power.DLT.Temperature.plus_70} : "",
+   ${params.global.sut.power.DLT.Temperature.minus_40} : "",
+   ${params.global.sut.power.DLT.Temperature.plus_23} : "",
+   ${params.global.sut.power.DLT.Temperature.Normal} : "",
+
+
+   ${params.global.sut.power.Voltage.A2B.Higher_Threshold_upper_limit} : 8.9,
+   ${params.global.sut.power.Voltage.A2B.Higher_Threshold_upper_limit1} : 9.0,
+   ${params.global.sut.power.Voltage.A2B.Higher_Threshold_lower_limit} : 8.7,
+   ${params.global.sut.power.Voltage.A2B.Higher_Threshold_lower_limit1} : 8.6,
+   ${params.global.sut.power.Voltage.A2B.Lower_Threshold_upper_limit} : 0.1,
+   ${params.global.sut.power.Voltage.A2B.Lower_Threshold_lower_limit} : 0.0,
+
+
+   ${params.global.sut.power.Voltage.UBAT.Upper_limit_Normalvoltage} : 17.0,
+
+   ${params.global.sut.power.Voltage.UBAT.Lower_limit_Normalvoltage} : 8.9,
+
+   ${params.global.sut.power.Voltage.UBAT.Upper_limit_undervoltage} : 8.8,
+
+   ${params.global.sut.power.Voltage.UBAT.Lower_limit_undervoltage} : 6.3,
+
+   ${params.global.sut.power.Voltage.UBAT.Upper_limit_critical_undervoltage} : 6.2,
+
+   ${params.global.sut.power.Voltage.UBAT.Lower_limit_critical_undervoltage} : 5.0,
+   ${params.global.sut.power.Voltage.UBAT.Shutdown_start} : 0.0,
+   ${params.global.sut.power.Voltage.UBAT.Shutdown_done} : 0.0,
+
+   ${params.global.sut.power.PIN.X1700} : "X1700",
+   ${params.global.sut.power.PIN.X9704} : "X9704",
+   ${params.global.sut.power.PIN.X5000} : "X5000",
+
+   ${params.global.sut.power.Duration.Bsample} : 500,
+   ${params.global.sut.power.Duration.Csample} : 3000,
+   ${params.global.sut.power.Duration.Predefined_duration} : 200,
+
+   ${params.global.sut.power.QNXCommand.Configure_camera_settings_line1} : "cat > /tmp/camxoverridesettings.txt<< EOF",
+   ${params.global.sut.power.QNXCommand.Configure_camera_settings_line2} : "multiCameraLogicalXMLFile=mulsanne_auto_idbuzz.xml",
+   ${params.global.sut.power.QNXCommand.Configure_camera_settings_line3} : "customer=idbuzzn",
+   ${params.global.sut.power.QNXCommand.Configure_camera_settings_line4} : "EOF",
+   ${params.global.sut.power.QNXCommand.request_camera_info} : "slog2info | grep -i fps",
+   ${params.global.sut.power.QNXCommand.video_dump} : "vcd_test 2",
+   ${params.global.sut.power.QNXCommand.Starts_camera_test_Without_Display} : "cd /mnt/bin/camera/ && ./qcarcam_test/qcarcam_test -config=/mnt/bin/camera/qcarcam_test/idbuzz_4cam_nv12.xml -noDisplay -printfps=2",
+   ${params.global.sut.power.QNXCommand.Starts_camera_test_Without_Display_1camera} : "cd /mnt/bin/camera/ && ./qcarcam_test/qcarcam_test -config=/mnt/bin/camera/qcarcam_test/idbuzz_1cam_nv12.xml -noDisplay -printfps=20",
+   ${params.global.sut.power.QNXCommand.Starts_camera_test_Display} : "cd /mnt/bin/camera/ && ./qcarcam_test/qcarcam_test -config=/mnt/bin/camera/qcarcam_test/idbuzz_1cam_nv12.xml -printfps=2",
+   ${params.global.sut.power.QNXCommand.Starts_camera_test_Without_Display_Reponse} : "|  0  |  0  | 0x000 | init",
+   ${params.global.sut.power.QNXCommand.Starts_camera_test_Display_Reponse} : "0x000 | ok",
+   ${params.global.sut.power.QNXCommand.Starts_Video_test} : "i2cdbgr -D /dev/i2c2 -s 0x14 -r -b1 -o 0x0c -i 6 -v",
+   ${params.global.sut.power.QNXCommand.Video_test_Reponse_Notconnected} : "addr: 0xc data : 0x00",
+   ${params.global.sut.power.QNXCommand.Video_test_Reponse_connected} : "addr: 0xc data : 0x4",
+   ${params.global.sut.power.QNXCommand.Starts_A2B} : "slog2info | grep -e ASC -e A2B | awk 'NR <= 50'",
+   ${params.global.sut.power.QNXCommand.Reponse_A2B} : "A2BService: Discovery succeeded with 3 nodes discovered",
+   ${params.global.sut.power.DTL_log.Camera_Phantom_disabled} : "[PowerM] VmPowerDown Switch off MAX20087 VI0123_ON",
+   ${params.global.sut.power.DTL_log.Microphone_Phantom_disabled} : "",
+   ${params.global.sut.power.DTL_log.A2B_disabled} : "[PowerM] VmPowerDown Switch off UxxS_A2B_ON",
+   ${params.global.sut.power.DTL_log.Serializer_DeSerializer} : "[PowerM] VmPowerDown Switch off UxxS_CPUPERI_ON",
+   ${params.global.sut.power.DTL_log.Serializer_DeSerializer_ON} : "[PowerM] VmPowerUp Switch on UxxS_CPUPERI_ON",
+   ${params.global.sut.power.DTL_log.Linux_Android_sDisabled_StandbyMode} : "[PowerM] VmPowerDown Disable MAX20877",
+   ${params.global.sut.power.DTL_log.MaaS_Blade_Reduced_Function_behavior} : "Enter SOC low power mode",
+   ${params.global.sut.power.DTL_log.CAN_ETH_trace_status} : "[PowerM] SendCanSignal",
+   ${params.global.sut.power.DTL_log.A2B_enabled} : "[PowerM] VmPowerUp Switch on UxxS_A2B_ON",
+   ${params.global.sut.power.DTL_log.Camera_Phantom_enabled} : "[PowerM] VmPowerUp Switch on MAX20087 VI0123_ON",
+   ${params.global.sut.power.DTL_log.start_up_Camera_Phantom_enabled} : "[PowerM] KssPowerUp Switch on MAX20087 VI0123_ON",
+   ${params.global.sut.power.DTL_log.Normal_Temperature_state} : "[SystemManager] Send system temperature to soc [TM_NORMAL]",
+   ${params.global.sut.power.DTL_log.Normal_Temperature_state_COM_Ready} : "[SystemManager] Pending COM_READY to send system temperature to soc [TM_NORMAL]",
+   ${params.global.sut.power.DTL_log.Critical_High_Temperature_state} : "[SystemManager] Send system temperature to soc [TM_CRITICAL_OVER_TEMPERATURE]",
+   ${params.global.sut.power.DTL_log.High_Temperature_state} : "[SystemManager] Send system temperature to soc [TM_OVER_TEMPERATURE]",
+   ${params.global.sut.power.DTL_log.High_Temperature_state_COM_Ready} : "[SystemManager] Pending COM_READY to send system temperature to soc [TM_OVER_TEMPERATURE]",
+   ${params.global.sut.power.DTL_log.Critical_Low_Temperature_state} : "[SystemManager] Send system temperature to soc [TM_CRITICAL_UNDER_TEMPERATURE]",
+   ${params.global.sut.power.DTL_log.Low_Temperature_state} : "[SystemManager] Send system temperature to soc [TM_UNDER_TEMPERATURE]",
+   ${params.global.sut.power.DTL_log.MCURestart.MCURestart_sequence1} : "[PowerM] VmPowerUp. Resume operation",
+   ${params.global.sut.power.DTL_log.MCURestart.MCURestart_sequence2} : "[PowerM] SendCanSignal Safety Temperature value",
+   ${params.global.sut.power.DTL_log.MCURestart.MCURestart_sequence3} : "[PowerM] VmPowerUp Switch on MAX20087 VI0123_ON",
+   ${params.global.sut.power.DTL_log.MCURestart.MCURestart_sequence4} : "[Temperature] Send MaaS inter blade temperature (BLADE_TOP)",
+   ${params.global.sut.power.DTL_log.MCURestart.MCURestart_sequence5} : "[PowerM] VmPowerUp Switch on UxxS_A2B_ON",
+   ${params.global.sut.power.DTL_log.MCURestart.MCURestart_sequence6} : "[PowerM] VmPowerUp Switch on UxxS_CPUPERI_ON",
+   ${params.global.sut.power.DTL_log.MCURestart.MCURestart_sequence7} : "[PowerM] VmPowerDown Enter SOC low power mode",
+
+   ${params.global.sut.power.DTL_log.CUP_Reduced} : "[PowerM] VmPowerDown DoFastCPUPoff",
+   ${params.global.sut.power.DTL_log.SLEEP_state} : "[PowerM] VmPowerDown enters SLEEP state",
+   ${params.global.sut.power.Temperature_TOLERANCE_1} : 1,
+   ${params.global.sut.power.Temperature_TOLERANCE_2} : 2,
+   ${params.global.sut.power.DTL_log.disable_cpu} :"[PowerM] KssPowerDown Disable CPU",
+   ${params.global.sut.power.DTL_log.switch_off_powerrail} : "[PowerM] KssPowerDown SwitchOffPowerRail",
+   ${params.global.sut.power.DTL_log.shutdown} : "[PowerM] BswM_RequestMode [PRJ_RackMode_SHUTDOWN]",
+   ${params.global.sut.power.DTL_log.pin_inactive} : "[PowerM] Set PMIC_PGOOD_BL2 pin to INACTIVE",
+   ${params.global.sut.power.DTL_log.power_pin_inactive} : "[PowerM] Set PWR_HOLD pin to INACTIVE"
+}

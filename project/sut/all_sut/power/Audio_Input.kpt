@@ -1,0 +1,45 @@
+BITS-Platform Setupfile 23.9.0
+
+
+Analog_In_Key_Clear_List
+Analog_In_Key_Add_List Maas_Current 603 1.0 0.0 
+Analog_In_Key_Add_List Maas_Voltage 602 1.0 0.0 
+Analog_In_Key_Add_List IGN_Current 9000 1.0 0.0 
+Analog_In_Key_Add_List IGN_Level 9000 1.0 0.0 
+Analog_In_Key_Add_List Revers_Level 9000 1.0 0.0 
+Analog_In_Key_Add_List Light_Level 9000 1.0 0.0 
+Analog_In_Key_Add_List Break_Level 9000 1.0 0.0 
+Analog_In_Key_Add_List Antenna_Switch_Level 9000 1.0 0.0 
+Analog_In_Key_Add_List Boster_Switch_Level 9000 1.0 0.0 
+Analog_In_Key_Add_List Antenna_1_Level 9000 1.0 0.0 
+Analog_In_Key_Add_List Antenna_2_Level 9000 1.0 0.0 
+Analog_In_Key_Add_List RR_Level 800 1.0 0.0 
+Analog_In_Key_Add_List RF_Level 801 1.0 0.0 
+Analog_In_Key_Add_List LF_Level 802 1.0 0.0 
+Analog_In_Key_Add_List LR_Level 803 1.0 0.0 
+Analog_In_Key_Add_List RR_Freq 810 1.0 0.0 
+Analog_In_Key_Add_List RF_Freq 811 1.0 0.0 
+Analog_In_Key_Add_List LF_Freq 812 1.0 0.0 
+Analog_In_Key_Add_List LR_Freq 813 1.0 0.0 
+Analog_In_Key_Add_List RR_Source 820 1.0 0.0 
+Analog_In_Key_Add_List RF_Source 821 1.0 0.0 
+Analog_In_Key_Add_List LF_Source 822 1.0 0.0 
+Analog_In_Key_Add_List LR_Source 823 1.0 0.0 
+Analog_In_Key_Add_List RR_SourceID 830 1.0 0.0 
+Analog_In_Key_Add_List RF_SourceID 831 1.0 0.0 
+Analog_In_Key_Add_List LF_SourceID 832 1.0 0.0 
+Analog_In_Key_Add_List LR_SourceID 833 1.0 0.0 
+Analog_In_Key_Add_List RR_DeviceID 840 1.0 0.0 
+Analog_In_Key_Add_List RF_DeviceID 841 1.0 0.0 
+Analog_In_Key_Add_List LF_DeviceID 842 1.0 0.0 
+Analog_In_Key_Add_List LR_DeviceID 843 1.0 0.0 
+Analog_In_Key_Add_List RR_TrackID 850 1.0 0.0 
+Analog_In_Key_Add_List RF_TrackID 851 1.0 0.0 
+Analog_In_Key_Add_List LF_TrackID 852 1.0 0.0 
+Analog_In_Key_Add_List LR_TrackID 853 1.0 0.0 
+Analog_In_Key_Add_List RR_TimePos 860 1.0 0.0 
+Analog_In_Key_Add_List RF_TimePos 861 1.0 0.0 
+Analog_In_Key_Add_List LF_TimePos 862 1.0 0.0 
+Analog_In_Key_Add_List LR_TimePos 863 1.0 0.0 
+
+End_Setup_File

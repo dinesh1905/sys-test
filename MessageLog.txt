@@ -1,0 +1,1079 @@
+==============================================================================
+20240829 00:14:50.389 - INFO - + START SUITE: Sys Test [ ]
+==============================================================================
+20240829 00:14:50.392 - INFO - +- START SETUP: Initialize The Test Run [ ]
+20240829 00:14:50.393 - INFO - +-- START KEYWORD: testsuites.Testsuite Setup [ C:\\Users\\anp1pg1\\Documents\\BITSRF\\projects\\IDBuzz\\Maas\\development\\annette\\sys_test/project/config/main_config.jsonp ]
+20240829 00:14:50.898 - INFO - Set suite metadata 'project' to value 'G3g'.
+20240829 00:14:50.969 - INFO - Set suite metadata 'machine' to value 'PG1UT0784C'.
+20240829 00:14:50.973 - INFO - Set suite metadata 'tester' to value 'Annette Arpana Pakiam (XC-CP/ESS5-Pg)'.
+20240829 00:14:50.973 - INFO - Set suite metadata 'testtool' to value 'Robot Framework 6.0.2 (Python 3.9.16 on win32)'.
+20240829 00:14:50.973 - INFO - Set suite metadata 'bundle_version' to value '0.8.2.2'.
+20240829 00:14:50.973 - INFO - Set suite metadata 'version_sw' to value ''.
+20240829 00:14:50.973 - INFO - Set suite metadata 'version_hw' to value ''.
+20240829 00:14:50.973 - INFO - Set suite metadata 'version_test' to value ''.
+20240829 00:14:50.977 - INFO - ${dREPORTING} = {'StartTime': -5, 'TestName': -4, 'Iteration': -3, 'TestResult': -2, 'ErrorInfo': -1, 'Duration_ms': 1, 'prj1': 2}
+20240829 00:14:50.986 - INFO - ${dDATABASE} = {'supported': False}
+20240829 00:14:50.988 - INFO - ${dFRAMEWORK} = {'sVersion': '1.3.0', 'sLastUpdated': '15.09.2023', 'project': 'BITS', 'testbench_label': None}
+20240829 00:14:50.995 - INFO - ${dSUT} = {'media': {'audio': {}, 'image': {}, 'video': {}}, 'system': {'variant': 'SelfTest', 'sw_version': '23.1.0'}, 'tuner': {'am': {}, 'fm': {}, 'dab': {}}, 'auto_flash': {'drive': 'D', 'driveC': 'C', 'ite...
+20240829 00:14:51.030 - INFO - ${dTESTBENCH} = {'audio': {'channels': {'Front_Left': {'source': {'sId': 'LF_Source'}, 'volume': {'sId': 'LF_Volume'}, 'track': {'sId': 'LF_TrackID', 'position': {'sId': 'LF_TimePos'}}}, 'Front_Right': {'source': {'s...
+20240829 00:14:51.776 - INFO - ${///Comment///} = General with Subfunction Negative Response
+20240829 00:14:51.779 - INFO - ${////Comment////} = This value will change every release
+20240829 00:14:51.798 - INFO - ${CONFIG} = {'WelcomeString': 'Hello... TA-Framework is running now!!', 'version': {'majorversion': '1', 'minorversion': '0', 'patchversion': '0'}, 'Maximum_version': '0.8.2', 'Minimum_version': '0.8.0', 'Project...
+20240829 00:14:51.798 - INFO - The parameter 'params['global']['dREPORTING']['StartTime']' is updated
+20240829 00:14:51.798 - INFO - The parameter 'params['global']['dREPORTING']['TestName']' is updated
+20240829 00:14:51.798 - INFO - The parameter 'params['global']['dREPORTING']['Iteration']' is updated
+20240829 00:14:51.798 - INFO - The parameter 'params['global']['dREPORTING']['TestResult']' is updated
+20240829 00:14:51.798 - INFO - The parameter 'params['global']['dREPORTING']['ErrorInfo']' is updated
+20240829 00:14:51.798 - INFO - The parameter 'params['global']['dDATABASE']['supported']' is updated
+20240829 00:14:51.798 - INFO - The parameter 'params['global']['dFRAMEWORK']['sVersion']' is updated
+20240829 00:14:51.798 - INFO - The parameter 'params['global']['dFRAMEWORK']['sLastUpdated']' is updated
+20240829 00:14:51.798 - INFO - The parameter 'params['global']['dSUT']['media']' is updated
+20240829 00:14:51.798 - INFO - The parameter 'params['global']['dSUT']['media']['audio']' is updated
+20240829 00:14:51.798 - INFO - The parameter 'params['global']['dSUT']['media']['image']' is updated
+20240829 00:14:51.798 - INFO - The parameter 'params['global']['dSUT']['media']['video']' is updated
+20240829 00:14:51.798 - INFO - The parameter 'params['global']['dSUT']['system']' is updated
+20240829 00:14:51.798 - INFO - The parameter 'params['global']['dSUT']['tuner']' is updated
+20240829 00:14:51.798 - INFO - The parameter 'params['global']['dSUT']['tuner']['am']' is updated
+20240829 00:14:51.798 - INFO - The parameter 'params['global']['dSUT']['tuner']['fm']' is updated
+20240829 00:14:51.798 - INFO - The parameter 'params['global']['dSUT']['tuner']['dab']' is updated
+20240829 00:14:51.798 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']' is updated
+20240829 00:14:51.798 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']' is updated
+20240829 00:14:51.798 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']' is updated
+20240829 00:14:51.798 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Front_Left']' is updated
+20240829 00:14:51.798 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Front_Left']['source']' is updated
+20240829 00:14:51.798 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Front_Left']['source']['sId']' is updated
+20240829 00:14:51.798 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Front_Left']['volume']' is updated
+20240829 00:14:51.798 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Front_Left']['volume']['sId']' is updated
+20240829 00:14:51.798 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Front_Left']['track']' is updated
+20240829 00:14:51.798 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Front_Left']['track']['sId']' is updated
+20240829 00:14:51.798 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Front_Left']['track']['position']' is updated
+20240829 00:14:51.798 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Front_Left']['track']['position']['sId']' is updated
+20240829 00:14:51.798 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Front_Right']' is updated
+20240829 00:14:51.798 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Front_Right']['source']' is updated
+20240829 00:14:51.798 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Front_Right']['source']['sId']' is updated
+20240829 00:14:51.798 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Front_Right']['volume']' is updated
+20240829 00:14:51.798 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Front_Right']['volume']['sId']' is updated
+20240829 00:14:51.798 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Front_Right']['track']' is updated
+20240829 00:14:51.798 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Front_Right']['track']['sId']' is updated
+20240829 00:14:51.798 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Front_Right']['track']['position']' is updated
+20240829 00:14:51.798 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Front_Right']['track']['position']['sId']' is updated
+20240829 00:14:51.798 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Rear_Left']' is updated
+20240829 00:14:51.798 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Rear_Left']['source']' is updated
+20240829 00:14:51.798 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Rear_Left']['source']['sId']' is updated
+20240829 00:14:51.798 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Rear_Left']['volume']' is updated
+20240829 00:14:51.798 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Rear_Left']['volume']['sId']' is updated
+20240829 00:14:51.798 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Rear_Left']['track']' is updated
+20240829 00:14:51.798 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Rear_Left']['track']['sId']' is updated
+20240829 00:14:51.798 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Rear_Left']['track']['position']' is updated
+20240829 00:14:51.798 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Rear_Left']['track']['position']['sId']' is updated
+20240829 00:14:51.798 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Rear_Right']' is updated
+20240829 00:14:51.800 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Rear_Right']['source']' is updated
+20240829 00:14:51.800 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Rear_Right']['source']['sId']' is updated
+20240829 00:14:51.800 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Rear_Right']['volume']' is updated
+20240829 00:14:51.800 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Rear_Right']['volume']['sId']' is updated
+20240829 00:14:51.800 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Rear_Right']['track']' is updated
+20240829 00:14:51.800 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Rear_Right']['track']['sId']' is updated
+20240829 00:14:51.800 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Rear_Right']['track']['position']' is updated
+20240829 00:14:51.800 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Rear_Right']['track']['position']['sId']' is updated
+20240829 00:14:51.800 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Side_Left']' is updated
+20240829 00:14:51.800 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Side_Left']['source']' is updated
+20240829 00:14:51.800 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Side_Left']['source']['sId']' is updated
+20240829 00:14:51.800 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Side_Left']['volume']' is updated
+20240829 00:14:51.800 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Side_Left']['volume']['sId']' is updated
+20240829 00:14:51.800 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Side_Left']['track']' is updated
+20240829 00:14:51.800 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Side_Left']['track']['sId']' is updated
+20240829 00:14:51.800 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Side_Left']['track']['position']' is updated
+20240829 00:14:51.800 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Side_Left']['track']['position']['sId']' is updated
+20240829 00:14:51.800 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Side_Right']' is updated
+20240829 00:14:51.800 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Side_Right']['source']' is updated
+20240829 00:14:51.800 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Side_Right']['source']['sId']' is updated
+20240829 00:14:51.800 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Side_Right']['volume']' is updated
+20240829 00:14:51.800 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Side_Right']['volume']['sId']' is updated
+20240829 00:14:51.800 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Side_Right']['track']' is updated
+20240829 00:14:51.800 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Side_Right']['track']['sId']' is updated
+20240829 00:14:51.800 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Side_Right']['track']['position']' is updated
+20240829 00:14:51.800 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Side_Right']['track']['position']['sId']' is updated
+20240829 00:14:51.800 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Center']' is updated
+20240829 00:14:51.801 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Center']['source']' is updated
+20240829 00:14:51.801 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Center']['source']['sId']' is updated
+20240829 00:14:51.801 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Center']['volume']' is updated
+20240829 00:14:51.801 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Center']['volume']['sId']' is updated
+20240829 00:14:51.801 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Center']['track']' is updated
+20240829 00:14:51.801 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Center']['track']['sId']' is updated
+20240829 00:14:51.801 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Center']['track']['position']' is updated
+20240829 00:14:51.801 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Center']['track']['position']['sId']' is updated
+20240829 00:14:51.801 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Subwoofer']' is updated
+20240829 00:14:51.801 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Subwoofer']['source']' is updated
+20240829 00:14:51.801 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Subwoofer']['source']['sId']' is updated
+20240829 00:14:51.801 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Subwoofer']['volume']' is updated
+20240829 00:14:51.801 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Subwoofer']['volume']['sId']' is updated
+20240829 00:14:51.801 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Subwoofer']['track']' is updated
+20240829 00:14:51.801 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Subwoofer']['track']['sId']' is updated
+20240829 00:14:51.801 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Subwoofer']['track']['position']' is updated
+20240829 00:14:51.801 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['channels']['Subwoofer']['track']['position']['sId']' is updated
+20240829 00:14:51.801 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['FM_1']' is updated
+20240829 00:14:51.801 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['FM_1']['details']' is updated
+20240829 00:14:51.801 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['FM_1']['details']['sType']' is updated
+20240829 00:14:51.801 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['FM_1']['details']['nSrcId']' is updated
+20240829 00:14:51.801 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['FM_2']' is updated
+20240829 00:14:51.801 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['FM_2']['details']' is updated
+20240829 00:14:51.801 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['FM_2']['details']['sType']' is updated
+20240829 00:14:51.801 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['FM_2']['details']['nSrcId']' is updated
+20240829 00:14:51.801 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['FM_3']' is updated
+20240829 00:14:51.802 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['FM_3']['details']' is updated
+20240829 00:14:51.802 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['FM_3']['details']['sType']' is updated
+20240829 00:14:51.802 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['FM_3']['details']['nSrcId']' is updated
+20240829 00:14:51.802 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['FM_RDS_1']' is updated
+20240829 00:14:51.802 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['FM_RDS_1']['details']' is updated
+20240829 00:14:51.802 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['FM_RDS_1']['details']['sType']' is updated
+20240829 00:14:51.802 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['FM_RDS_1']['details']['nSrcId']' is updated
+20240829 00:14:51.802 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['FM_RDS_2']' is updated
+20240829 00:14:51.802 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['FM_RDS_2']['details']' is updated
+20240829 00:14:51.802 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['FM_RDS_2']['details']['sType']' is updated
+20240829 00:14:51.802 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['FM_RDS_2']['details']['nSrcId']' is updated
+20240829 00:14:51.802 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['FM_RDS_3']' is updated
+20240829 00:14:51.802 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['FM_RDS_3']['details']' is updated
+20240829 00:14:51.802 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['FM_RDS_3']['details']['sType']' is updated
+20240829 00:14:51.802 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['FM_RDS_3']['details']['nSrcId']' is updated
+20240829 00:14:51.802 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['AM_1']' is updated
+20240829 00:14:51.802 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['AM_1']['details']' is updated
+20240829 00:14:51.802 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['AM_1']['details']['sType']' is updated
+20240829 00:14:51.802 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['AM_1']['details']['nSrcId']' is updated
+20240829 00:14:51.802 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['AM_2']' is updated
+20240829 00:14:51.802 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['AM_2']['details']' is updated
+20240829 00:14:51.802 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['AM_2']['details']['sType']' is updated
+20240829 00:14:51.802 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['AM_2']['details']['nSrcId']' is updated
+20240829 00:14:51.802 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['AM_3']' is updated
+20240829 00:14:51.802 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['AM_3']['details']' is updated
+20240829 00:14:51.802 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['AM_3']['details']['sType']' is updated
+20240829 00:14:51.802 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['AM_3']['details']['nSrcId']' is updated
+20240829 00:14:51.803 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['DAB_1']' is updated
+20240829 00:14:51.803 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['DAB_1']['details']' is updated
+20240829 00:14:51.803 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['DAB_1']['details']['sType']' is updated
+20240829 00:14:51.803 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['DAB_1']['details']['nSrcId']' is updated
+20240829 00:14:51.803 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['DAB_2']' is updated
+20240829 00:14:51.803 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['DAB_2']['details']' is updated
+20240829 00:14:51.803 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['DAB_2']['details']['sType']' is updated
+20240829 00:14:51.803 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['DAB_2']['details']['nSrcId']' is updated
+20240829 00:14:51.803 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['DAB_3']' is updated
+20240829 00:14:51.803 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['DAB_3']['details']' is updated
+20240829 00:14:51.803 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['DAB_3']['details']['sType']' is updated
+20240829 00:14:51.803 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['DAB_3']['details']['nSrcId']' is updated
+20240829 00:14:51.803 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['XM_1']' is updated
+20240829 00:14:51.803 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['XM_1']['details']' is updated
+20240829 00:14:51.803 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['XM_1']['details']['sType']' is updated
+20240829 00:14:51.803 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['XM_1']['details']['nSrcId']' is updated
+20240829 00:14:51.803 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['XM_2']' is updated
+20240829 00:14:51.803 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['XM_2']['details']' is updated
+20240829 00:14:51.803 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['XM_2']['details']['sType']' is updated
+20240829 00:14:51.803 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['XM_2']['details']['nSrcId']' is updated
+20240829 00:14:51.803 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['XM_3']' is updated
+20240829 00:14:51.803 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['XM_3']['details']' is updated
+20240829 00:14:51.803 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['XM_3']['details']['sType']' is updated
+20240829 00:14:51.803 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['XM_3']['details']['nSrcId']' is updated
+20240829 00:14:51.803 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['USB_1']' is updated
+20240829 00:14:51.803 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['USB_1']['details']' is updated
+20240829 00:14:51.803 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['USB_1']['details']['sType']' is updated
+20240829 00:14:51.803 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['USB_1']['details']['nSrcId']' is updated
+20240829 00:14:51.804 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['USB_2']' is updated
+20240829 00:14:51.804 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['USB_2']['details']' is updated
+20240829 00:14:51.804 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['USB_2']['details']['sType']' is updated
+20240829 00:14:51.804 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['USB_2']['details']['nSrcId']' is updated
+20240829 00:14:51.804 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['USB_3']' is updated
+20240829 00:14:51.804 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['USB_3']['details']' is updated
+20240829 00:14:51.804 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['USB_3']['details']['sType']' is updated
+20240829 00:14:51.804 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['USB_3']['details']['nSrcId']' is updated
+20240829 00:14:51.804 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['USB_4']' is updated
+20240829 00:14:51.804 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['USB_4']['details']' is updated
+20240829 00:14:51.804 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['USB_4']['details']['sType']' is updated
+20240829 00:14:51.804 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['USB_4']['details']['nSrcId']' is updated
+20240829 00:14:51.804 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['USB_5']' is updated
+20240829 00:14:51.804 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['USB_5']['details']' is updated
+20240829 00:14:51.804 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['USB_5']['details']['sType']' is updated
+20240829 00:14:51.804 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['USB_5']['details']['nSrcId']' is updated
+20240829 00:14:51.804 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['USB_6']' is updated
+20240829 00:14:51.804 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['USB_6']['details']' is updated
+20240829 00:14:51.804 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['USB_6']['details']['sType']' is updated
+20240829 00:14:51.804 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['USB_6']['details']['nSrcId']' is updated
+20240829 00:14:51.804 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['USB_7']' is updated
+20240829 00:14:51.804 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['USB_7']['details']' is updated
+20240829 00:14:51.804 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['USB_7']['details']['sType']' is updated
+20240829 00:14:51.804 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['USB_7']['details']['nSrcId']' is updated
+20240829 00:14:51.804 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['USB_8']' is updated
+20240829 00:14:51.804 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['USB_8']['details']' is updated
+20240829 00:14:51.804 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['USB_8']['details']['sType']' is updated
+20240829 00:14:51.804 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['USB_8']['details']['nSrcId']' is updated
+20240829 00:14:51.805 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['USB_9']' is updated
+20240829 00:14:51.805 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['USB_9']['details']' is updated
+20240829 00:14:51.805 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['USB_9']['details']['sType']' is updated
+20240829 00:14:51.805 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['USB_9']['details']['nSrcId']' is updated
+20240829 00:14:51.805 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['USB_10']' is updated
+20240829 00:14:51.805 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['USB_10']['details']' is updated
+20240829 00:14:51.805 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['USB_10']['details']['sType']' is updated
+20240829 00:14:51.805 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['USB_10']['details']['nSrcId']' is updated
+20240829 00:14:51.805 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['Disc_1']' is updated
+20240829 00:14:51.805 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['Disc_1']['details']' is updated
+20240829 00:14:51.805 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['Disc_1']['details']['sType']' is updated
+20240829 00:14:51.805 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['Disc_1']['details']['nSrcId']' is updated
+20240829 00:14:51.805 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['Disc_2']' is updated
+20240829 00:14:51.805 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['Disc_2']['details']' is updated
+20240829 00:14:51.805 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['Disc_2']['details']['sType']' is updated
+20240829 00:14:51.805 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['Disc_2']['details']['nSrcId']' is updated
+20240829 00:14:51.805 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['Disc_3']' is updated
+20240829 00:14:51.805 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['Disc_3']['details']' is updated
+20240829 00:14:51.805 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['Disc_3']['details']['sType']' is updated
+20240829 00:14:51.805 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['Disc_3']['details']['nSrcId']' is updated
+20240829 00:14:51.805 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['Disc_4']' is updated
+20240829 00:14:51.805 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['Disc_4']['details']' is updated
+20240829 00:14:51.805 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['Disc_4']['details']['sType']' is updated
+20240829 00:14:51.805 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['Disc_4']['details']['nSrcId']' is updated
+20240829 00:14:51.805 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['Disc_5']' is updated
+20240829 00:14:51.805 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['Disc_5']['details']' is updated
+20240829 00:14:51.805 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['Disc_5']['details']['sType']' is updated
+20240829 00:14:51.805 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['Disc_5']['details']['nSrcId']' is updated
+20240829 00:14:51.806 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['BT_Audio_1']' is updated
+20240829 00:14:51.806 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['BT_Audio_1']['details']' is updated
+20240829 00:14:51.806 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['BT_Audio_1']['details']['sType']' is updated
+20240829 00:14:51.806 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['BT_Audio_1']['details']['nSrcId']' is updated
+20240829 00:14:51.806 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['BT_Audio_2']' is updated
+20240829 00:14:51.806 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['BT_Audio_2']['details']' is updated
+20240829 00:14:51.806 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['BT_Audio_2']['details']['sType']' is updated
+20240829 00:14:51.806 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['BT_Audio_2']['details']['nSrcId']' is updated
+20240829 00:14:51.806 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['BT_Audio_3']' is updated
+20240829 00:14:51.806 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['BT_Audio_3']['details']' is updated
+20240829 00:14:51.806 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['BT_Audio_3']['details']['sType']' is updated
+20240829 00:14:51.806 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['BT_Audio_3']['details']['nSrcId']' is updated
+20240829 00:14:51.806 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['SD_1']' is updated
+20240829 00:14:51.806 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['SD_1']['details']' is updated
+20240829 00:14:51.806 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['SD_1']['details']['sType']' is updated
+20240829 00:14:51.806 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['SD_1']['details']['nSrcId']' is updated
+20240829 00:14:51.806 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['SD_2']' is updated
+20240829 00:14:51.806 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['SD_2']['details']' is updated
+20240829 00:14:51.806 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['SD_2']['details']['sType']' is updated
+20240829 00:14:51.806 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['SD_2']['details']['nSrcId']' is updated
+20240829 00:14:51.806 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['iPod_1']' is updated
+20240829 00:14:51.806 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['iPod_1']['details']' is updated
+20240829 00:14:51.806 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['iPod_1']['details']['sType']' is updated
+20240829 00:14:51.806 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['iPod_1']['details']['nSrcId']' is updated
+20240829 00:14:51.806 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['iPod_2']' is updated
+20240829 00:14:51.807 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['iPod_2']['details']' is updated
+20240829 00:14:51.807 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['iPod_2']['details']['sType']' is updated
+20240829 00:14:51.807 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['iPod_2']['details']['nSrcId']' is updated
+20240829 00:14:51.807 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['iPod_3']' is updated
+20240829 00:14:51.807 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['iPod_3']['details']' is updated
+20240829 00:14:51.807 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['iPod_3']['details']['sType']' is updated
+20240829 00:14:51.807 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['iPod_3']['details']['nSrcId']' is updated
+20240829 00:14:51.807 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['iPod_4']' is updated
+20240829 00:14:51.807 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['iPod_4']['details']' is updated
+20240829 00:14:51.807 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['iPod_4']['details']['sType']' is updated
+20240829 00:14:51.807 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['iPod_4']['details']['nSrcId']' is updated
+20240829 00:14:51.807 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['iPod_5']' is updated
+20240829 00:14:51.807 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['iPod_5']['details']' is updated
+20240829 00:14:51.807 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['iPod_5']['details']['sType']' is updated
+20240829 00:14:51.807 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['iPod_5']['details']['nSrcId']' is updated
+20240829 00:14:51.807 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['iPod_6']' is updated
+20240829 00:14:51.807 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['iPod_6']['details']' is updated
+20240829 00:14:51.807 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['iPod_6']['details']['sType']' is updated
+20240829 00:14:51.807 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['iPod_6']['details']['nSrcId']' is updated
+20240829 00:14:51.807 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['iPod_7']' is updated
+20240829 00:14:51.807 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['iPod_7']['details']' is updated
+20240829 00:14:51.807 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['iPod_7']['details']['sType']' is updated
+20240829 00:14:51.807 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['iPod_7']['details']['nSrcId']' is updated
+20240829 00:14:51.807 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['iPod_8']' is updated
+20240829 00:14:51.807 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['iPod_8']['details']' is updated
+20240829 00:14:51.807 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['iPod_8']['details']['sType']' is updated
+20240829 00:14:51.807 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['iPod_8']['details']['nSrcId']' is updated
+20240829 00:14:51.807 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['iPod_9']' is updated
+20240829 00:14:51.807 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['iPod_9']['details']' is updated
+20240829 00:14:51.807 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['iPod_9']['details']['sType']' is updated
+20240829 00:14:51.808 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['iPod_9']['details']['nSrcId']' is updated
+20240829 00:14:51.808 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['iPod_10']' is updated
+20240829 00:14:51.808 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['iPod_10']['details']' is updated
+20240829 00:14:51.808 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['iPod_10']['details']['sType']' is updated
+20240829 00:14:51.808 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['iPod_10']['details']['nSrcId']' is updated
+20240829 00:14:51.808 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['AUX_1']' is updated
+20240829 00:14:51.808 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['AUX_1']['details']' is updated
+20240829 00:14:51.808 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['AUX_1']['details']['sType']' is updated
+20240829 00:14:51.808 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['AUX_1']['details']['nSrcId']' is updated
+20240829 00:14:51.808 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['AUX_2']' is updated
+20240829 00:14:51.808 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['AUX_2']['details']' is updated
+20240829 00:14:51.808 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['AUX_2']['details']['sType']' is updated
+20240829 00:14:51.808 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['AUX_2']['details']['nSrcId']' is updated
+20240829 00:14:51.808 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['Phone_1']' is updated
+20240829 00:14:51.808 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['Phone_1']['details']' is updated
+20240829 00:14:51.808 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['Phone_1']['details']['sType']' is updated
+20240829 00:14:51.808 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['Phone_1']['details']['nSrcId']' is updated
+20240829 00:14:51.808 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['Phone_2']' is updated
+20240829 00:14:51.808 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['Phone_2']['details']' is updated
+20240829 00:14:51.808 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['Phone_2']['details']['sType']' is updated
+20240829 00:14:51.808 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['Phone_2']['details']['nSrcId']' is updated
+20240829 00:14:51.808 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['Phone_3']' is updated
+20240829 00:14:51.808 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['Phone_3']['details']' is updated
+20240829 00:14:51.808 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['Phone_3']['details']['sType']' is updated
+20240829 00:14:51.808 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['Phone_3']['details']['nSrcId']' is updated
+20240829 00:14:51.808 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['Phone_4']' is updated
+20240829 00:14:51.808 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['Phone_4']['details']' is updated
+20240829 00:14:51.809 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['Phone_4']['details']['sType']' is updated
+20240829 00:14:51.809 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['Phone_4']['details']['nSrcId']' is updated
+20240829 00:14:51.809 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['Phone_5']' is updated
+20240829 00:14:51.809 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['Phone_5']['details']' is updated
+20240829 00:14:51.809 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['Phone_5']['details']['sType']' is updated
+20240829 00:14:51.809 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['Phone_5']['details']['nSrcId']' is updated
+20240829 00:14:51.809 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['Phone_6']' is updated
+20240829 00:14:51.809 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['Phone_6']['details']' is updated
+20240829 00:14:51.809 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['Phone_6']['details']['sType']' is updated
+20240829 00:14:51.809 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['Phone_6']['details']['nSrcId']' is updated
+20240829 00:14:51.809 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['CarPlay']' is updated
+20240829 00:14:51.809 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['CarPlay']['details']' is updated
+20240829 00:14:51.809 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['CarPlay']['details']['sType']' is updated
+20240829 00:14:51.809 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['CarPlay']['details']['nSrcId']' is updated
+20240829 00:14:51.809 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['AndroidAuto']' is updated
+20240829 00:14:51.809 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['AndroidAuto']['details']' is updated
+20240829 00:14:51.809 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['AndroidAuto']['details']['sType']' is updated
+20240829 00:14:51.809 - INFO - The parameter 'params['global']['dTESTBENCH']['audio']['sources']['AndroidAuto']['details']['nSrcId']' is updated
+20240829 00:14:51.809 - INFO - The parameter 'params['global']['dTESTBENCH']['relays']' is updated
+20240829 00:14:51.809 - INFO - The parameter 'params['global']['dTESTBENCH']['relays']['channels']' is updated
+20240829 00:14:51.809 - INFO - The parameter 'params['global']['dTESTBENCH']['relays']['channels']['Conrad_1']' is updated
+20240829 00:14:51.809 - INFO - The parameter 'params['global']['dTESTBENCH']['relays']['channels']['Conrad_1']['port']' is updated
+20240829 00:14:51.809 - INFO - The parameter 'params['global']['dTESTBENCH']['relays']['channels']['Conrad_1']['port']['sId']' is updated
+20240829 00:14:51.809 - INFO - The parameter 'params['global']['dTESTBENCH']['tuner']' is updated
+20240829 00:14:51.809 - INFO - The parameter 'params['global']['dTESTBENCH']['tuner']['am']' is updated
+20240829 00:14:51.809 - INFO - The parameter 'params['global']['dTESTBENCH']['tuner']['am']['channels']' is updated
+20240829 00:14:51.809 - INFO - The parameter 'params['global']['dTESTBENCH']['tuner']['am']['channels']['JOE']' is updated
+20240829 00:14:51.809 - INFO - The parameter 'params['global']['dTESTBENCH']['tuner']['am']['channels']['JOE']['device_id']' is updated
+20240829 00:14:51.809 - INFO - The parameter 'params['global']['dTESTBENCH']['tuner']['am']['channels']['JOE']['frequency']' is updated
+20240829 00:14:51.810 - INFO - The parameter 'params['global']['dTESTBENCH']['tuner']['am']['channels']['JOE']['level']' is updated
+20240829 00:14:51.810 - INFO - The parameter 'params['global']['dTESTBENCH']['tuner']['am']['channels']['JOE']['tone']' is updated
+20240829 00:14:51.810 - INFO - The parameter 'params['global']['dTESTBENCH']['tuner']['am']['channels']['JOE']['depth']' is updated
+20240829 00:14:51.810 - INFO - The parameter 'params['global']['dTESTBENCH']['tuner']['dab']' is updated
+20240829 00:14:51.810 - INFO - The parameter 'params['global']['dTESTBENCH']['tuner']['dab']['channels']' is updated
+20240829 00:14:51.810 - INFO - The parameter 'params['global']['dTESTBENCH']['tuner']['dab']['channels']['NJOY']' is updated
+20240829 00:14:51.810 - INFO - The parameter 'params['global']['dTESTBENCH']['tuner']['dab']['channels']['NJOY']['device_id']' is updated
+20240829 00:14:51.810 - INFO - The parameter 'params['global']['dTESTBENCH']['tuner']['dab']['channels']['NJOY']['frequency']' is updated
+20240829 00:14:51.810 - INFO - The parameter 'params['global']['dTESTBENCH']['tuner']['dab']['channels']['NJOY']['level']' is updated
+20240829 00:14:51.810 - INFO - The parameter 'params['global']['dTESTBENCH']['tuner']['fm']' is updated
+20240829 00:14:51.810 - INFO - The parameter 'params['global']['dTESTBENCH']['tuner']['fm']['channels']' is updated
+20240829 00:14:51.810 - INFO - The parameter 'params['global']['dTESTBENCH']['tuner']['fm']['channels']['NDR2']' is updated
+20240829 00:14:51.810 - INFO - The parameter 'params['global']['dTESTBENCH']['tuner']['fm']['channels']['NDR2']['device_id']' is updated
+20240829 00:14:51.810 - INFO - The parameter 'params['global']['dTESTBENCH']['tuner']['fm']['channels']['NDR2']['frequency']' is updated
+20240829 00:14:51.810 - INFO - The parameter 'params['global']['dTESTBENCH']['tuner']['fm']['channels']['NDR2']['level']' is updated
+20240829 00:14:51.810 - INFO - The parameter 'params['global']['dTESTBENCH']['tuner']['fm']['channels']['NDR2']['tone']' is updated
+20240829 00:14:51.810 - INFO - The parameter 'params['global']['dTESTBENCH']['tuner']['fm']['channels']['NDR2']['deviation']' is updated
+20240829 00:14:51.810 - INFO - The parameter 'params['global']['dTESTBENCH']['tuner']['rds']' is updated
+20240829 00:14:51.810 - INFO - The parameter 'params['global']['dTESTBENCH']['tuner']['rds']['channels']' is updated
+20240829 00:14:51.810 - INFO - The parameter 'params['global']['dTESTBENCH']['tuner']['rds']['channels']['NDR1']' is updated
+20240829 00:14:51.810 - INFO - The parameter 'params['global']['dTESTBENCH']['tuner']['rds']['channels']['NDR1']['device_id']' is updated
+20240829 00:14:51.810 - INFO - The parameter 'params['global']['dTESTBENCH']['tuner']['rds']['channels']['NDR1']['frequency']' is updated
+20240829 00:14:51.810 - INFO - The parameter 'params['global']['dTESTBENCH']['tuner']['rds']['channels']['NDR1']['level']' is updated
+20240829 00:14:51.810 - INFO - The parameter 'params['global']['dTESTBENCH']['tuner']['rds']['channels']['NDR1']['tone']' is updated
+20240829 00:14:51.810 - INFO - The parameter 'params['global']['dTESTBENCH']['tuner']['rds']['channels']['NDR1']['slot']' is updated
+20240829 00:14:51.810 - INFO - The parameter 'params['global']['dTESTBENCH']['BITS']' is updated
+20240829 00:14:51.810 - INFO - The parameter 'params['global']['dTESTBENCH']['BITS']['Platform']' is updated
+20240829 00:14:51.811 - INFO - The parameter 'params['global']['dTESTBENCH']['BITS']['Platform']['bSupported']' is updated
+20240829 00:14:51.811 - INFO - The parameter 'params['global']['dREPORTING']['Duration_ms']' is updated
+20240829 00:14:51.811 - INFO - The parameter 'params['global']['dREPORTING']['prj1']' is updated
+20240829 00:14:51.811 - INFO - The parameter 'params['global']['dSUT']['auto_flash']' is updated
+20240829 00:14:51.811 - INFO - The parameter 'params['global']['dSUT']['auto_flash']['drive']' is updated
+20240829 00:14:51.811 - INFO - The parameter 'params['global']['dSUT']['auto_flash']['driveC']' is updated
+20240829 00:14:51.811 - INFO - The parameter 'params['global']['dSUT']['auto_flash']['iteration']' is updated
+20240829 00:14:51.811 - INFO - The parameter 'params['global']['dSUT']['auto_flash']['JenkinsEnable']' is updated
+20240829 00:14:51.811 - INFO - The parameter 'params['global']['dSUT']['auto_flash']['pcat_path']' is updated
+20240829 00:14:51.811 - INFO - The parameter 'params['global']['dSUT']['auto_flash']['hardware_info']' is updated
+20240829 00:14:51.811 - INFO - The parameter 'params['global']['dSUT']['auto_flash']['hardware_info']['dltportnumber']' is updated
+20240829 00:14:51.811 - INFO - The parameter 'params['global']['dSUT']['auto_flash']['hardware_info']['pg9c0012p']' is updated
+20240829 00:14:51.811 - INFO - The parameter 'params['global']['dSUT']['auto_flash']['hardware_info']['pg9c0012p']['SUT1']' is updated
+20240829 00:14:51.811 - INFO - The parameter 'params['global']['dSUT']['auto_flash']['hardware_info']['pg9c0012p']['SUT2']' is updated
+20240829 00:14:51.811 - INFO - The parameter 'params['global']['dSUT']['auto_flash']['hardware_info']['pg9c0012p']['SUT2']['pcat_serialnumber']' is updated
+20240829 00:14:51.811 - INFO - The parameter 'params['global']['dSUT']['auto_flash']['hardware_info']['pg9c0012p']['SUT2']['memory_typeSail']' is updated
+20240829 00:14:51.811 - INFO - The parameter 'params['global']['dSUT']['auto_flash']['hardware_info']['pg9c0012p']['SUT2']['memory_flavor']' is updated
+20240829 00:14:51.811 - INFO - The parameter 'params['global']['dSUT']['auto_flash']['hardware_info']['pg9c0012p']['SUT2']['contents_xml']' is updated
+20240829 00:14:51.811 - INFO - The parameter 'params['global']['dSUT']['auto_flash']['hardware_info']['pg9c0012p']['SUT2']['memory_typeMainSW']' is updated
+20240829 00:14:51.811 - INFO - The parameter 'params['global']['dSUT']['auto_flash']['hardware_info']['pg9c0012p']['SUT2']['memory_flavorMainSW']' is updated
+20240829 00:14:51.811 - INFO - The parameter 'params['global']['dSUT']['auto_flash']['hardware_info']['pg9c0012p']['SUT2']['Provisioning']' is updated
+20240829 00:14:51.811 - INFO - The parameter 'params['global']['dSUT']['auto_flash']['hardware_info']['pg9c0012p']['SUT2']['CDT']' is updated
+20240829 00:14:51.811 - INFO - The parameter 'params['global']['dSUT']['auto_flash']['hardware_info']['pg9c0012p']['SUT2']['Provisioning_xmlpath']' is updated
+20240829 00:14:51.811 - INFO - The parameter 'params['global']['dSUT']['auto_flash']['hardware_info']['pg9c0012p']['SUT2']['Provisioning_elfpath']' is updated
+20240829 00:14:51.811 - INFO - The parameter 'params['global']['dSUT']['auto_flash']['hardware_info']['pg9c0012p']['SUT2']['memory_type_ufs']' is updated
+20240829 00:14:51.811 - INFO - The parameter 'params['global']['dSUT']['auto_flash']['hardware_info']['pg9c0012p']['SUT2']['cdt_path']' is updated
+20240829 00:14:51.811 - INFO - The parameter 'params['global']['dSUT']['auto_flash']['hardware_info']['pg9c0012p']['SUT2']['memory_flavorCDT']' is updated
+20240829 00:14:51.811 - INFO - The parameter 'params['global']['dSUT']['auto_flash']['hardware_info']['pg1ut078c']' is updated
+20240829 00:14:51.811 - INFO - The parameter 'params['global']['dSUT']['auto_flash']['hardware_info']['pg1ut078c']['SUT1']' is updated
+20240829 00:14:51.811 - INFO - The parameter 'params['global']['dSUT']['auto_flash']['hardware_info']['pg1ut078c']['SUT1']['pcat_serialnumber']' is updated
+20240829 00:14:51.812 - INFO - The parameter 'params['global']['dSUT']['auto_flash']['hardware_info']['pg1ut078c']['SUT1']['memory_typeSail']' is updated
+20240829 00:14:51.812 - INFO - The parameter 'params['global']['dSUT']['auto_flash']['hardware_info']['pg1ut078c']['SUT1']['memory_flavor']' is updated
+20240829 00:14:51.812 - INFO - The parameter 'params['global']['dSUT']['auto_flash']['hardware_info']['pg1ut078c']['SUT1']['contents_xml']' is updated
+20240829 00:14:51.812 - INFO - The parameter 'params['global']['dSUT']['auto_flash']['hardware_info']['pg1ut078c']['SUT1']['memory_typeMainSW']' is updated
+20240829 00:14:51.812 - INFO - The parameter 'params['global']['dSUT']['auto_flash']['hardware_info']['pg1ut078c']['SUT1']['memory_flavorMainSW']' is updated
+20240829 00:14:51.812 - INFO - The parameter 'params['global']['dSUT']['auto_flash']['hardware_info']['pg1ut078c']['SUT1']['Provisioning']' is updated
+20240829 00:14:51.812 - INFO - The parameter 'params['global']['dSUT']['auto_flash']['hardware_info']['pg1ut078c']['SUT1']['CDT']' is updated
+20240829 00:14:51.812 - INFO - The parameter 'params['global']['dSUT']['auto_flash']['hardware_info']['pg1ut078c']['SUT1']['Provisioning_xmlpath']' is updated
+20240829 00:14:51.812 - INFO - The parameter 'params['global']['dSUT']['auto_flash']['hardware_info']['pg1ut078c']['SUT1']['Provisioning_elfpath']' is updated
+20240829 00:14:51.812 - INFO - The parameter 'params['global']['dSUT']['auto_flash']['hardware_info']['pg1ut078c']['SUT1']['memory_type_ufs']' is updated
+20240829 00:14:51.812 - INFO - The parameter 'params['global']['dSUT']['auto_flash']['hardware_info']['pg1ut078c']['SUT1']['cdt_path']' is updated
+20240829 00:14:51.812 - INFO - The parameter 'params['global']['dSUT']['auto_flash']['hardware_info']['pg1ut078c']['SUT1']['memory_flavorCDT']' is updated
+20240829 00:14:51.812 - INFO - The parameter 'params['global']['dSUT']['auto_flash']['hardware_info']['pg9c001xa']' is updated
+20240829 00:14:51.812 - INFO - The parameter 'params['global']['dSUT']['auto_flash']['hardware_info']['pg9c001xa']['SUT1']' is updated
+20240829 00:14:51.812 - INFO - The parameter 'params['global']['dSUT']['auto_flash']['hardware_info']['pg9c001xa']['SUT1']['pcat_serialnumber']' is updated
+20240829 00:14:51.812 - INFO - The parameter 'params['global']['dSUT']['auto_flash']['hardware_info']['pg9c001xa']['SUT1']['memory_typeSail']' is updated
+20240829 00:14:51.812 - INFO - The parameter 'params['global']['dSUT']['auto_flash']['hardware_info']['pg9c001xa']['SUT1']['memory_flavor']' is updated
+20240829 00:14:51.812 - INFO - The parameter 'params['global']['dSUT']['auto_flash']['hardware_info']['pg9c001xa']['SUT1']['contents_xml']' is updated
+20240829 00:14:51.812 - INFO - The parameter 'params['global']['dSUT']['auto_flash']['hardware_info']['pg9c001xa']['SUT1']['memory_typeMainSW']' is updated
+20240829 00:14:51.812 - INFO - The parameter 'params['global']['dSUT']['auto_flash']['hardware_info']['pg9c001xa']['SUT1']['memory_flavorMainSW']' is updated
+20240829 00:14:51.812 - INFO - The parameter 'params['global']['dSUT']['auto_flash']['hardware_info']['pg9c001xa']['SUT1']['Provisioning']' is updated
+20240829 00:14:51.812 - INFO - The parameter 'params['global']['dSUT']['auto_flash']['hardware_info']['pg9c001xa']['SUT1']['CDT']' is updated
+20240829 00:14:51.812 - INFO - The parameter 'params['global']['dSUT']['auto_flash']['hardware_info']['pg9c001xa']['SUT1']['Provisioning_xmlpath']' is updated
+20240829 00:14:51.812 - INFO - The parameter 'params['global']['dSUT']['auto_flash']['hardware_info']['pg9c001xa']['SUT1']['Provisioning_elfpath']' is updated
+20240829 00:14:51.812 - INFO - The parameter 'params['global']['dSUT']['auto_flash']['hardware_info']['pg9c001xa']['SUT1']['memory_type_ufs']' is updated
+20240829 00:14:51.812 - INFO - The parameter 'params['global']['dSUT']['auto_flash']['hardware_info']['pg9c001xa']['SUT1']['cdt_path']' is updated
+20240829 00:14:51.812 - INFO - The parameter 'params['global']['dSUT']['auto_flash']['hardware_info']['pg9c001xa']['SUT1']['memory_flavorCDT']' is updated
+20240829 00:14:51.813 - INFO - The parameter 'params['global']['dSUT']['auto_flash_flashgui']' is updated
+20240829 00:14:51.813 - INFO - The parameter 'params['global']['dSUT']['auto_flash_flashgui']['flashgui_path']' is updated
+20240829 00:14:51.813 - INFO - The parameter 'params['global']['dSUT']['auto_flash_flashgui']['flashgui_dnlpath']' is updated
+20240829 00:14:51.813 - INFO - The parameter 'params['global']['dSUT']['auto_flash_flashgui']['flashgui_COMport']' is updated
+20240829 00:14:51.813 - INFO - The parameter 'params['global']['dSUT']['auto_flash_flashgui']['flashgui_baudrate']' is updated
+20240829 00:14:51.813 - INFO - The parameter 'params['global']['dSUT']['auto_flash_flashgui']['flashgui_DataBits']' is updated
+20240829 00:14:51.813 - INFO - The parameter 'params['global']['dSUT']['auto_flash_flashgui']['flashgui_StopBits']' is updated
+20240829 00:14:51.813 - INFO - The parameter 'params['global']['dSUT']['auto_flash_flashgui']['flashgui_Parity']' is updated
+20240829 00:14:51.813 - INFO - The parameter 'params['global']['dSUT']['auto_flash_flashgui']['flashgui_dnlfile']' is updated
+20240829 00:14:51.813 - INFO - The parameter 'params['global']['dSUT']['auto_flash_artifactory']' is updated
+20240829 00:14:51.813 - INFO - The parameter 'params['global']['dSUT']['auto_flash_artifactory']['bosch_pem1']' is updated
+20240829 00:14:51.813 - INFO - The parameter 'params['global']['dSUT']['auto_flash_artifactory']['bosch_pem2']' is updated
+20240829 00:14:51.813 - INFO - The parameter 'params['global']['dSUT']['auto_flash_artifactory']['bosch_pem3']' is updated
+20240829 00:14:51.813 - INFO - The parameter 'params['global']['dSUT']['auto_flash_artifactory']['host1']' is updated
+20240829 00:14:51.813 - INFO - The parameter 'params['global']['dSUT']['auto_flash_artifactory']['host2']' is updated
+20240829 00:14:51.813 - INFO - The parameter 'params['global']['dSUT']['auto_flash_artifactory']['host3']' is updated
+20240829 00:14:51.813 - INFO - The parameter 'params['global']['dSUT']['auto_flash_artifactory']['username']' is updated
+20240829 00:14:51.813 - INFO - The parameter 'params['global']['dSUT']['auto_flash_artifactory']['password1']' is updated
+20240829 00:14:51.813 - INFO - The parameter 'params['global']['dSUT']['auto_flash_artifactory']['password2']' is updated
+20240829 00:14:51.813 - INFO - The parameter 'params['global']['dSUT']['auto_flash_artifactory']['password3']' is updated
+20240829 00:14:51.813 - INFO - The parameter 'params['global']['dSUT']['auto_flash_artifactory']['url1']' is updated
+20240829 00:14:51.814 - INFO - The parameter 'params['global']['dSUT']['auto_flash_artifactory']['url_aurix']' is updated
+20240829 00:14:51.814 - INFO - The parameter 'params['global']['dSUT']['auto_flash_artifactory']['url_soc']' is updated
+20240829 00:14:51.814 - INFO - The parameter 'params['global']['dSUT']['auto_flash_artifactory']['url_cdt']' is updated
+20240829 00:14:51.814 - INFO - The parameter 'params['global']['dSUT']['auto_flash_artifactory']['cdt_saveasfile']' is updated
+20240829 00:14:51.814 - INFO - The parameter 'params['global']['dSUT']['auto_flash_artifactory']['soc_saveasfile']' is updated
+20240829 00:14:51.814 - INFO - The parameter 'params['global']['dSUT']['auto_flash_artifactory']['aurix_saveasfile']' is updated
+20240829 00:14:51.814 - INFO - The parameter 'params['global']['dSUT']['auto_flash_artifactory']['LIBMaas_saveasfile']' is updated
+20240829 00:14:51.814 - INFO - The parameter 'params['global']['dSUT']['auto_flash_artifactory']['saveasfile']' is updated
+20240829 00:14:51.814 - INFO - The parameter 'params['global']['dSUT']['ssh']' is updated
+20240829 00:14:51.814 - INFO - The parameter 'params['global']['dSUT']['ssh']['MaaS_SWVersion']' is updated
+20240829 00:14:51.814 - INFO - The parameter 'params['global']['dSUT']['ssh']['DeviceSwVersionPath']' is updated
+20240829 00:14:51.814 - INFO - The parameter 'params['global']['dSUT']['ssh']['LocalSwVersionPath']' is updated
+20240829 00:14:51.814 - INFO - The parameter 'params['global']['dSUT']['ssh']['SSH_DeviceHost']' is updated
+20240829 00:14:51.814 - INFO - The parameter 'params['global']['dSUT']['ssh']['SSH_Username']' is updated
+20240829 00:14:51.814 - INFO - The parameter 'params['global']['dSUT']['ssh']['SSH_Password']' is updated
+20240829 00:14:51.814 - INFO - The parameter 'params['global']['dSUT']['power']' is updated
+20240829 00:14:51.814 - INFO - The parameter 'params['global']['dSUT']['power']['MaaS_Battery_On']' is updated
+20240829 00:14:51.814 - INFO - The parameter 'params['global']['dSUT']['power']['MaaS_Battery_Off']' is updated
+20240829 00:14:51.814 - INFO - The parameter 'params['global']['dSUT']['power']['MaaS_Current_On']' is updated
+20240829 00:14:51.814 - INFO - The parameter 'params['global']['dSUT']['power']['MaaS_Current_Off']' is updated
+20240829 00:14:51.814 - INFO - The parameter 'params['global']['dTESTBENCH']['power']' is updated
+20240829 00:14:51.814 - INFO - The parameter 'params['global']['dTESTBENCH']['power']['channels']' is updated
+20240829 00:14:51.814 - INFO - The parameter 'params['global']['dTESTBENCH']['power']['channels']['SUT_Power']' is updated
+20240829 00:14:51.814 - INFO - The parameter 'params['global']['dTESTBENCH']['power']['channels']['SUT_Power']['output']' is updated
+20240829 00:14:51.814 - INFO - The parameter 'params['global']['dTESTBENCH']['power']['channels']['SUT_Power']['output']['voltage']' is updated
+20240829 00:14:51.814 - INFO - The parameter 'params['global']['dTESTBENCH']['power']['channels']['SUT_Power']['output']['voltage']['sId']' is updated
+20240829 00:14:51.814 - INFO - The parameter 'params['global']['dTESTBENCH']['power']['channels']['SUT_Power']['output']['voltage']['nLimitMin']' is updated
+20240829 00:14:51.815 - INFO - The parameter 'params['global']['dTESTBENCH']['power']['channels']['SUT_Power']['output']['voltage']['nLimitMax']' is updated
+20240829 00:14:51.815 - INFO - The parameter 'params['global']['dTESTBENCH']['power']['channels']['SUT_Power']['measurement']' is updated
+20240829 00:14:51.815 - INFO - The parameter 'params['global']['dTESTBENCH']['power']['channels']['SUT_Power']['measurement']['voltage']' is updated
+20240829 00:14:51.815 - INFO - The parameter 'params['global']['dTESTBENCH']['power']['channels']['SUT_Power']['measurement']['voltage']['sId']' is updated
+20240829 00:14:51.815 - INFO - The parameter 'params['global']['dTESTBENCH']['power']['channels']['SUT_Power']['measurement']['current']' is updated
+20240829 00:14:51.815 - INFO - The parameter 'params['global']['dTESTBENCH']['power']['channels']['SUT_Power']['measurement']['current']['sId']' is updated
+20240829 00:14:51.815 - INFO - The parameter 'params['global']['dTESTBENCH']['power']['DLT']' is updated
+20240829 00:14:51.815 - INFO - The parameter 'params['global']['dTESTBENCH']['power']['DLT']['normalvoltage']' is updated
+20240829 00:14:51.815 - INFO - The parameter 'params['global']['dTESTBENCH']['power']['DLT']['normalvoltage_2']' is updated
+20240829 00:14:51.815 - INFO - The parameter 'params['global']['dTESTBENCH']['power']['DLT']['undervoltage']' is updated
+20240829 00:14:51.815 - INFO - The parameter 'params['global']['dTESTBENCH']['power']['DLT']['undervoltage_2']' is updated
+20240829 00:14:51.815 - INFO - The parameter 'params['global']['dTESTBENCH']['power']['DLT']['critical_undervoltage']' is updated
+20240829 00:14:51.815 - INFO - The parameter 'params['global']['dTESTBENCH']['power']['DLT']['critical_undervoltage_2']' is updated
+20240829 00:14:51.815 - INFO - The parameter 'params['global']['dTESTBENCH']['power']['DLT']['overvoltage']' is updated
+20240829 00:14:51.815 - INFO - The parameter 'params['global']['dTESTBENCH']['power']['DLT']['overvoltage_2']' is updated
+20240829 00:14:51.815 - INFO - The parameter 'params['global']['dTESTBENCH']['power']['DLT']['MCUStartup']' is updated
+20240829 00:14:51.815 - INFO - The parameter 'params['global']['dTESTBENCH']['power']['DLT']['MCUStartup']['MCUStartup_sequence1']' is updated
+20240829 00:14:51.815 - INFO - The parameter 'params['global']['dTESTBENCH']['power']['DLT']['MCUStartup']['MCUStartup_sequence2']' is updated
+20240829 00:14:51.815 - INFO - The parameter 'params['global']['dTESTBENCH']['power']['DLT']['MCUStartup']['MCUStartup_sequence3']' is updated
+20240829 00:14:51.815 - INFO - The parameter 'params['global']['dTESTBENCH']['power']['DLT']['MCUStartup']['MCUStartup_sequence4']' is updated
+20240829 00:14:51.815 - INFO - The parameter 'params['global']['dTESTBENCH']['power']['DLT']['MCUStartup']['MCUStartup_sequence5']' is updated
+20240829 00:14:51.815 - INFO - The parameter 'params['global']['dTESTBENCH']['power']['DLT']['MCUStartup']['MCUStartup_sequence6']' is updated
+20240829 00:14:51.815 - INFO - The parameter 'params['global']['dTESTBENCH']['power']['DLT']['MCUStartup']['MCUStartup_sequence7']' is updated
+20240829 00:14:51.815 - INFO - The parameter 'params['global']['dTESTBENCH']['power']['DLT']['MCUStartup']['MCUStartup_sequence8']' is updated
+20240829 00:14:51.815 - INFO - The parameter 'params['global']['dTESTBENCH']['power']['DLT']['MCUStartup']['MCUStartup_sequence9']' is updated
+20240829 00:14:51.815 - INFO - The parameter 'params['global']['dTESTBENCH']['power']['DLT']['MCUStartup']['MCUStartup_sequence10']' is updated
+20240829 00:14:51.815 - INFO - The parameter 'params['global']['dTESTBENCH']['power']['DLT']['MCUStartup']['MCUStartup_sequence11']' is updated
+20240829 00:14:51.816 - INFO - The parameter 'params['global']['dTESTBENCH']['power']['DLT']['MCUStartup']['MCUStartup_sequence12']' is updated
+20240829 00:14:51.816 - INFO - The parameter 'params['global']['dTESTBENCH']['power']['DLT']['MCUStartup']['MCUStartup_sequence13']' is updated
+20240829 00:14:51.816 - INFO - The parameter 'params['global']['dTESTBENCH']['power']['DLT']['MCUStartup']['MCUStartup_sequence14']' is updated
+20240829 00:14:51.816 - INFO - The parameter 'params['global']['dTESTBENCH']['power']['DLT']['MCUStartup']['MCUStartup_sequence15']' is updated
+20240829 00:14:51.816 - INFO - The parameter 'params['global']['dTESTBENCH']['power']['DLT']['MCUStartup']['MCUStartup_sequence16']' is updated
+20240829 00:14:51.816 - INFO - The parameter 'params['global']['dTESTBENCH']['power']['DLT']['MCUStartup']['MCUStartup_sequence17']' is updated
+20240829 00:14:51.816 - INFO - The parameter 'params['global']['dTESTBENCH']['power']['DLT']['MCUStartup']['MCUStartup_sequence18']' is updated
+20240829 00:14:51.816 - INFO - The parameter 'params['global']['dTESTBENCH']['power']['DLT']['MCUStartup']['MCUStartup_sequence19']' is updated
+20240829 00:14:51.816 - INFO - The parameter 'params['global']['dTESTBENCH']['power']['DLT']['MCUStartup']['MCUStartup_sequence20']' is updated
+20240829 00:14:51.816 - INFO - The parameter 'params['global']['dTESTBENCH']['power']['DLT']['MCUStartup']['MCUStartup_sequence21']' is updated
+20240829 00:14:51.816 - INFO - The parameter 'params['global']['dSUT']['can']' is updated
+20240829 00:14:51.816 - INFO - The parameter 'params['global']['dSUT']['can']['drive']' is updated
+20240829 00:14:51.816 - INFO - The parameter 'params['global']['dSUT']['can']['driveC']' is updated
+20240829 00:14:51.816 - INFO - The parameter 'params['global']['dSUT']['can']['iteration']' is updated
+20240829 00:14:51.816 - INFO - The parameter 'params['global']['dSUT']['can']['JenkinsEnable']' is updated
+20240829 00:14:51.816 - INFO - The parameter 'params['global']['dSUT']['can']['simulationpath']' is updated
+20240829 00:14:51.816 - INFO - The parameter 'params['global']['dSUT']['diag']' is updated
+20240829 00:14:51.816 - INFO - The parameter 'params['global']['dSUT']['diag']['Default_Session_Req']' is updated
+20240829 00:14:51.816 - INFO - The parameter 'params['global']['dSUT']['diag']['Default_Session_Resp']' is updated
+20240829 00:14:51.816 - INFO - The parameter 'params['global']['dSUT']['diag']['Programming_Session_Req']' is updated
+20240829 00:14:51.816 - INFO - The parameter 'params['global']['dSUT']['diag']['Programming_Session_Resp']' is updated
+20240829 00:14:51.816 - INFO - The parameter 'params['global']['dSUT']['diag']['Extended_Session_Req']' is updated
+20240829 00:14:51.816 - INFO - The parameter 'params['global']['dSUT']['diag']['Extended_Session_Resp']' is updated
+20240829 00:14:51.816 - INFO - The parameter 'params['global']['dSUT']['diag']['Tester_Present_Req']' is updated
+20240829 00:14:51.816 - INFO - The parameter 'params['global']['dSUT']['diag']['Tester_Present_Resp']' is updated
+20240829 00:14:51.817 - INFO - The parameter 'params['global']['dSUT']['diag']['Hard_Reset_Req']' is updated
+20240829 00:14:51.817 - INFO - The parameter 'params['global']['dSUT']['diag']['Hard_Reset_Resp']' is updated
+20240829 00:14:51.817 - INFO - The parameter 'params['global']['dSUT']['diag']['Key_Off_On_Reset_Req']' is updated
+20240829 00:14:51.817 - INFO - The parameter 'params['global']['dSUT']['diag']['Key_Off_On_Reset_Resp']' is updated
+20240829 00:14:51.817 - INFO - The parameter 'params['global']['dSUT']['diag']['Group_of_DTC_Req']' is updated
+20240829 00:14:51.817 - INFO - The parameter 'params['global']['dSUT']['diag']['Group_of_DTC_Resp']' is updated
+20240829 00:14:51.817 - INFO - The parameter 'params['global']['dSUT']['diag']['Report_Number_of_DTC_by_Status_Mask_Req']' is updated
+20240829 00:14:51.817 - INFO - The parameter 'params['global']['dSUT']['diag']['Report_Number_of_DTC_by_Status_Mask_Resp']' is updated
+20240829 00:14:51.817 - INFO - The parameter 'params['global']['dSUT']['diag']['Report_DTC_By_Status_Mask_Req']' is updated
+20240829 00:14:51.817 - INFO - The parameter 'params['global']['dSUT']['diag']['Report_DTC_By_Status_Mask_Resp']' is updated
+20240829 00:14:51.817 - INFO - The parameter 'params['global']['dSUT']['diag']['Report_DTC_Ext_Data_Record_By_DTC_NumberPositive_Req']' is updated
+20240829 00:14:51.817 - INFO - The parameter 'params['global']['dSUT']['diag']['Report_DTC_Ext_Data_Record_By_DTC_NumberPositive_Resp']' is updated
+20240829 00:14:51.817 - INFO - The parameter 'params['global']['dSUT']['diag']['Report_DTC_Ext_Data_Record_By_DTC_Number_Req']' is updated
+20240829 00:14:51.817 - INFO - The parameter 'params['global']['dSUT']['diag']['Report_DTC_Ext_Data_Record_By_DTC_Number_Resp']' is updated
+20240829 00:14:51.817 - INFO - The parameter 'params['global']['dSUT']['diag']['RollerTestStandMode_NotActive_Resp']' is updated
+20240829 00:14:51.817 - INFO - The parameter 'params['global']['dSUT']['diag']['RollerTestStandMode_Active_Resp']' is updated
+20240829 00:14:51.817 - INFO - The parameter 'params['global']['dSUT']['diag']['RollerTestStandMode_Active_Write_Req']' is updated
+20240829 00:14:51.817 - INFO - The parameter 'params['global']['dSUT']['diag']['RollerTestStandMode_NotActive_Write_Req']' is updated
+20240829 00:14:51.817 - INFO - The parameter 'params['global']['dSUT']['diag']['RollerTestStandMode_NotActive_Write_Resp']' is updated
+20240829 00:14:51.817 - INFO - The parameter 'params['global']['dSUT']['diag']['RollerTestStandMode_Active_Write_Resp']' is updated
+20240829 00:14:51.817 - INFO - The parameter 'params['global']['dSUT']['diag']['ActiveDiagnosticSession_Req']' is updated
+20240829 00:14:51.817 - INFO - The parameter 'params['global']['dSUT']['diag']['ActiveDiagnosticSession_DefaultSession_Resp']' is updated
+20240829 00:14:51.817 - INFO - The parameter 'params['global']['dSUT']['diag']['ActiveDiagnosticSession_ProgrammingSession_Resp']' is updated
+20240829 00:14:51.817 - INFO - The parameter 'params['global']['dSUT']['diag']['ActiveDiagnosticSession_ExtendedSession_Resp']' is updated
+20240829 00:14:51.817 - INFO - The parameter 'params['global']['dSUT']['diag']['ActiveDiagnosticSession_IncorrectMessageLengthLess_Req']' is updated
+20240829 00:14:51.817 - INFO - The parameter 'params['global']['dSUT']['diag']['ActiveDiagnosticSession_IncorrectMessageLengthExtra_Req']' is updated
+20240829 00:14:51.817 - INFO - The parameter 'params['global']['dSUT']['diag']['AUTOSARStandardApplicationSoftwareIdentification_Req']' is updated
+20240829 00:14:51.817 - INFO - The parameter 'params['global']['dSUT']['diag']['AUTOSARStandardApplicationSoftwareIdentification_Resp']' is updated
+20240829 00:14:51.818 - INFO - The parameter 'params['global']['dSUT']['diag']['AUTOSARStandardApplicationSoftwareIdentification_BoschVendorID_Resp']' is updated
+20240829 00:14:51.818 - INFO - The parameter 'params['global']['dSUT']['diag']['AUTOSARStandardApplicationSoftwareIdentification_HarmanVendorID_Resp']' is updated
+20240829 00:14:51.818 - INFO - The parameter 'params['global']['dSUT']['diag']['AUTOSARStandardApplicationSoftwareIdentification_VWVendorID_Resp']' is updated
+20240829 00:14:51.818 - INFO - The parameter 'params['global']['dSUT']['diag']['AUTOSARStandardApplicationSoftwareIdentification_IncorrectMessageLengthLess_Req']' is updated
+20240829 00:14:51.818 - INFO - The parameter 'params['global']['dSUT']['diag']['AUTOSARStandardApplicationSoftwareIdentification_IncorrectMessageLengthExtra_Req']' is updated
+20240829 00:14:51.818 - INFO - The parameter 'params['global']['dSUT']['diag']['BasicSettingStatus_Req']' is updated
+20240829 00:14:51.818 - INFO - The parameter 'params['global']['dSUT']['diag']['BasicSettingStatus_NoRoutineActive_Resp']' is updated
+20240829 00:14:51.818 - INFO - The parameter 'params['global']['dSUT']['diag']['BasicSettingStatus_RoutineActive_Resp']' is updated
+20240829 00:14:51.818 - INFO - The parameter 'params['global']['dSUT']['diag']['BasicSettingStatus_IncorrectMessageLengthLess_Req']' is updated
+20240829 00:14:51.818 - INFO - The parameter 'params['global']['dSUT']['diag']['BasicSettingStatus_IncorrectMessageLengthExtra_Req']' is updated
+20240829 00:14:51.818 - INFO - The parameter 'params['global']['dSUT']['diag']['Check_Programming_Preconditions_Req']' is updated
+20240829 00:14:51.818 - INFO - The parameter 'params['global']['dSUT']['diag']['Check_Programming_Preconditions_BlockingtimeforProgrammingActive_Resp']' is updated
+20240829 00:14:51.818 - INFO - The parameter 'params['global']['dSUT']['diag']['Check_Programming_Preconditions_VehicleSpeedNonZero_Resp']' is updated
+20240829 00:14:51.818 - INFO - The parameter 'params['global']['dSUT']['diag']['ECUExtractAR_CVersionNumber_Req']' is updated
+20240829 00:14:51.818 - INFO - The parameter 'params['global']['dSUT']['diag']['ECUExtractAR_CVersionNumber_Resp']' is updated
+20240829 00:14:51.818 - INFO - The parameter 'params['global']['dSUT']['diag']['ECUExtractAR_CVersionNumber_IncorrectMessageLengthLess_Req']' is updated
+20240829 00:14:51.818 - INFO - The parameter 'params['global']['dSUT']['diag']['ECUExtractAR_CVersionNumber_IncorrectMessageLengthExtra_Req']' is updated
+20240829 00:14:51.818 - INFO - The parameter 'params['global']['dSUT']['diag']['ECUProgrammingInformation_Req']' is updated
+20240829 00:14:51.818 - INFO - The parameter 'params['global']['dSUT']['diag']['ECUProgrammingInformation_NotProgrammable_Resp']' is updated
+20240829 00:14:51.818 - INFO - The parameter 'params['global']['dSUT']['diag']['ECUProgrammingInformation_Programmable_Resp']' is updated
+20240829 00:14:51.818 - INFO - The parameter 'params['global']['dSUT']['diag']['ECUSerialNumber_Req']' is updated
+20240829 00:14:51.818 - INFO - The parameter 'params['global']['dSUT']['diag']['ECUSerialNumber_Resp']' is updated
+20240829 00:14:51.818 - INFO - The parameter 'params['global']['dSUT']['diag']['ECUSerialNumber_ConvertText_Resp']' is updated
+20240829 00:14:51.818 - INFO - The parameter 'params['global']['dSUT']['diag']['ECUSerialNumber_IncorrectMessageLengthLess_Req']' is updated
+20240829 00:14:51.818 - INFO - The parameter 'params['global']['dSUT']['diag']['ECUSerialNumber_IncorrectMessageLengthExtra_Req']' is updated
+20240829 00:14:51.818 - INFO - The parameter 'params['global']['dSUT']['diag']['Enable_Rx_And_Disable_Tx_Control_Req']' is updated
+20240829 00:14:51.819 - INFO - The parameter 'params['global']['dSUT']['diag']['Enable_Rx_And_Disable_Tx_Control_Resp']' is updated
+20240829 00:14:51.819 - INFO - The parameter 'params['global']['dSUT']['diag']['Enable_Rx_And_Tx_Control_Req']' is updated
+20240829 00:14:51.819 - INFO - The parameter 'params['global']['dSUT']['diag']['Enable_Rx_And_Tx_Control_Resp']' is updated
+20240829 00:14:51.819 - INFO - The parameter 'params['global']['dSUT']['diag']['Fingerprint_Req']' is updated
+20240829 00:14:51.819 - INFO - The parameter 'params['global']['dSUT']['diag']['Fingerprint_Resp']' is updated
+20240829 00:14:51.819 - INFO - The parameter 'params['global']['dSUT']['diag']['Fingerprint_IncorrectMessageLengthLess_Req']' is updated
+20240829 00:14:51.819 - INFO - The parameter 'params['global']['dSUT']['diag']['Fingerprint_IncorrectMessageLengthExtra_Req']' is updated
+20240829 00:14:51.819 - INFO - The parameter 'params['global']['dSUT']['diag']['Fingerprint_Write_Req']' is updated
+20240829 00:14:51.819 - INFO - The parameter 'params['global']['dSUT']['diag']['Fingerprint_Write_Resp']' is updated
+20240829 00:14:51.819 - INFO - The parameter 'params['global']['dSUT']['diag']['Fingerprint_Write_IncorrectMessageLengthLess_Req']' is updated
+20240829 00:14:51.819 - INFO - The parameter 'params['global']['dSUT']['diag']['Fingerprint_Write_IncorrectMessageLengthExtra_Req']' is updated
+20240829 00:14:51.819 - INFO - The parameter 'params['global']['dSUT']['diag']['RollerTestStandMode_Req']' is updated
+20240829 00:14:51.819 - INFO - The parameter 'params['global']['dSUT']['diag']['RollerTestStandMode_Resp']' is updated
+20240829 00:14:51.819 - INFO - The parameter 'params['global']['dSUT']['diag']['RollerTestStandModeWrite_Req']' is updated
+20240829 00:14:51.819 - INFO - The parameter 'params['global']['dSUT']['diag']['RollerTestStandModeWriteWrongValue_Req']' is updated
+20240829 00:14:51.819 - INFO - The parameter 'params['global']['dSUT']['diag']['RollerTestStandModeWrite_Resp']' is updated
+20240829 00:14:51.819 - INFO - The parameter 'params['global']['dSUT']['diag']['RollerTestStandModeWriteUpdate_Resp']' is updated
+20240829 00:14:51.819 - INFO - The parameter 'params['global']['dSUT']['diag']['RollerTestStandMode_IncorrectMessageLengthLess_Req']' is updated
+20240829 00:14:51.819 - INFO - The parameter 'params['global']['dSUT']['diag']['RollerTestStandMode_IncorrectMessageLengthExtra_Req']' is updated
+20240829 00:14:51.819 - INFO - The parameter 'params['global']['dSUT']['diag']['RollerTestStandModeWrite_IncorrectMessageLengthLess_Req']' is updated
+20240829 00:14:51.819 - INFO - The parameter 'params['global']['dSUT']['diag']['RollerTestStandModeWrite_IncorrectMessageLengthExtra_Req']' is updated
+20240829 00:14:51.819 - INFO - The parameter 'params['global']['dSUT']['diag']['SystemSupplierECUHardwareNumber_Req']' is updated
+20240829 00:14:51.819 - INFO - The parameter 'params['global']['dSUT']['diag']['SystemSupplierECUHardwareNumber_Resp']' is updated
+20240829 00:14:51.819 - INFO - The parameter 'params['global']['dSUT']['diag']['SystemSupplierECUHardwareNumber_IncorrectMessageLengthLess_Req']' is updated
+20240829 00:14:51.819 - INFO - The parameter 'params['global']['dSUT']['diag']['SystemSupplierECUHardwareNumber_IncorrectMessageLengthExtra_Req']' is updated
+20240829 00:14:51.819 - INFO - The parameter 'params['global']['dSUT']['diag']['SystemSupplierECUHardwareVersionNumber_Req']' is updated
+20240829 00:14:51.819 - INFO - The parameter 'params['global']['dSUT']['diag']['SystemSupplierECUHardwareVersionNumber_Resp']' is updated
+20240829 00:14:51.819 - INFO - The parameter 'params['global']['dSUT']['diag']['SystemSupplierECUHardwareVersionNumber_IncorrectMessageLengthLess_Req']' is updated
+20240829 00:14:51.819 - INFO - The parameter 'params['global']['dSUT']['diag']['SystemSupplierECUHardwareVersionNumber_IncorrectMessageLengthExtra_Req']' is updated
+20240829 00:14:51.820 - INFO - The parameter 'params['global']['dSUT']['diag']['SystemSupplierECUSoftwareVersionNumber_Req']' is updated
+20240829 00:14:51.820 - INFO - The parameter 'params['global']['dSUT']['diag']['SystemSupplierECUSoftwareVersionNumber_Resp']' is updated
+20240829 00:14:51.820 - INFO - The parameter 'params['global']['dSUT']['diag']['SystemSupplierECUSoftwareVersionNumber_IncorrectMessageLengthLess_Req']' is updated
+20240829 00:14:51.820 - INFO - The parameter 'params['global']['dSUT']['diag']['SystemSupplierECUSoftwareVersionNumber_IncorrectMessageLengthExtra_Req']' is updated
+20240829 00:14:51.820 - INFO - The parameter 'params['global']['dSUT']['diag']['SystemSupplierECUSWNumber_Req']' is updated
+20240829 00:14:51.820 - INFO - The parameter 'params['global']['dSUT']['diag']['SystemSupplierECUSWNumber_Resp']' is updated
+20240829 00:14:51.820 - INFO - The parameter 'params['global']['dSUT']['diag']['SystemSupplierECUSWNumber_IncorrectMessageLengthLess_Req']' is updated
+20240829 00:14:51.820 - INFO - The parameter 'params['global']['dSUT']['diag']['SystemSupplierECUSWNumber_IncorrectMessageLengthExtra_Req']' is updated
+20240829 00:14:51.820 - INFO - The parameter 'params['global']['dSUT']['diag']['SystemSupplierIdentification_Req']' is updated
+20240829 00:14:51.820 - INFO - The parameter 'params['global']['dSUT']['diag']['SystemSupplierIdentification_Resp']' is updated
+20240829 00:14:51.820 - INFO - The parameter 'params['global']['dSUT']['diag']['SystemSupplierIdentification_IncorrectMessageLengthLess_Req']' is updated
+20240829 00:14:51.820 - INFO - The parameter 'params['global']['dSUT']['diag']['SystemSupplierIdentification_IncorrectMessageLengthExtra_Req']' is updated
+20240829 00:14:51.820 - INFO - The parameter 'params['global']['dSUT']['diag']['TechnicalSpecificationsVersion_Req']' is updated
+20240829 00:14:51.820 - INFO - The parameter 'params['global']['dSUT']['diag']['TechnicalSpecificationsVersion_Resp']' is updated
+20240829 00:14:51.820 - INFO - The parameter 'params['global']['dSUT']['diag']['TechnicalSpecificationsVersion_IncorrectMessageLengthLess_Req']' is updated
+20240829 00:14:51.820 - INFO - The parameter 'params['global']['dSUT']['diag']['TechnicalSpecificationsVersion_IncorrectMessageLengthExtra_Req']' is updated
+20240829 00:14:51.820 - INFO - The parameter 'params['global']['dSUT']['diag']['VehicleIdentificationNumber_Req']' is updated
+20240829 00:14:51.820 - INFO - The parameter 'params['global']['dSUT']['diag']['VehicleIdentificationNumber_Resp']' is updated
+20240829 00:14:51.820 - INFO - The parameter 'params['global']['dSUT']['diag']['VehicleIdentificationNumber_IncorrectMessageLengthLess_Req']' is updated
+20240829 00:14:51.820 - INFO - The parameter 'params['global']['dSUT']['diag']['VehicleIdentificationNumber_IncorrectMessageLengthExtra_Req']' is updated
+20240829 00:14:51.820 - INFO - The parameter 'params['global']['dSUT']['diag']['VWSparePartNumber_Req']' is updated
+20240829 00:14:51.820 - INFO - The parameter 'params['global']['dSUT']['diag']['VWSparePartNumber_Resp']' is updated
+20240829 00:14:51.820 - INFO - The parameter 'params['global']['dSUT']['diag']['VWSparePartNumber_IncorrectMessageLengthLess_Req']' is updated
+20240829 00:14:51.820 - INFO - The parameter 'params['global']['dSUT']['diag']['VWSparePartNumber_IncorrectMessageLengthExtra_Req']' is updated
+20240829 00:14:51.821 - INFO - The parameter 'params['global']['dSUT']['diag']['VW_FAZIT_Identification_Req']' is updated
+20240829 00:14:51.821 - INFO - The parameter 'params['global']['dSUT']['diag']['VW_FAZIT_Identification_Resp']' is updated
+20240829 00:14:51.821 - INFO - The parameter 'params['global']['dSUT']['diag']['VW_FAZIT_Identification_IncorrectMessageLengthLess_Req']' is updated
+20240829 00:14:51.821 - INFO - The parameter 'params['global']['dSUT']['diag']['VW_FAZIT_Identification_IncorrectMessageLengthExtra_Req']' is updated
+20240829 00:14:51.821 - INFO - The parameter 'params['global']['dSUT']['diag']['VWApplicationSoftwareVersionNumber_Req']' is updated
+20240829 00:14:51.821 - INFO - The parameter 'params['global']['dSUT']['diag']['VWApplicationSoftwareVersionNumber_Resp']' is updated
+20240829 00:14:51.821 - INFO - The parameter 'params['global']['dSUT']['diag']['VWApplicationSoftwareVersionNumber_IncorrectMessageLengthLess_Req']' is updated
+20240829 00:14:51.821 - INFO - The parameter 'params['global']['dSUT']['diag']['VWApplicationSoftwareVersionNumber_IncorrectMessageLengthExtra_Req']' is updated
+20240829 00:14:51.821 - INFO - The parameter 'params['global']['dSUT']['diag']['VWClearDiagnosticInformationDateFunctional_Req']' is updated
+20240829 00:14:51.821 - INFO - The parameter 'params['global']['dSUT']['diag']['VWClearDiagnosticInformationDateFunctional_Resp']' is updated
+20240829 00:14:51.821 - INFO - The parameter 'params['global']['dSUT']['diag']['VVWClearDiagnosticInformationDateFunctional_IncorrectMessageLengthLess_Req']' is updated
+20240829 00:14:51.821 - INFO - The parameter 'params['global']['dSUT']['diag']['VWClearDiagnosticInformationDateFunctional_IncorrectMessageLengthExtra_Req']' is updated
+20240829 00:14:51.821 - INFO - The parameter 'params['global']['dSUT']['diag']['VWECUHardwareNumber_Req']' is updated
+20240829 00:14:51.821 - INFO - The parameter 'params['global']['dSUT']['diag']['VWECUHardwareNumber_Resp']' is updated
+20240829 00:14:51.821 - INFO - The parameter 'params['global']['dSUT']['diag']['VWECUHardwareNumber_IncorrectMessageLengthLess_Req']' is updated
+20240829 00:14:51.821 - INFO - The parameter 'params['global']['dSUT']['diag']['VWECUHardwareNumber_IncorrectMessageLengthExtra_Req']' is updated
+20240829 00:14:51.821 - INFO - The parameter 'params['global']['dSUT']['diag']['VWECUHardwareVersionNumber_Req']' is updated
+20240829 00:14:51.821 - INFO - The parameter 'params['global']['dSUT']['diag']['VWECUHardwareVersionNumber_Resp']' is updated
+20240829 00:14:51.821 - INFO - The parameter 'params['global']['dSUT']['diag']['VWECUHardwareVersionNumber_IncorrectMessageLengthLess_Req']' is updated
+20240829 00:14:51.821 - INFO - The parameter 'params['global']['dSUT']['diag']['VWECUHardwareVersionNumber_IncorrectMessageLengthExtra_Req']' is updated
+20240829 00:14:51.821 - INFO - The parameter 'params['global']['dSUT']['diag']['FingerprintAndProgrammingDateOfLogicalSoftwareBlocks_Req']' is updated
+20240829 00:14:51.821 - INFO - The parameter 'params['global']['dSUT']['diag']['FingerprintAndProgrammingDateOfLogicalSoftwareBlocks_Resp']' is updated
+20240829 00:14:51.821 - INFO - The parameter 'params['global']['dSUT']['diag']['Report_DTC_By_Status_Mask_08_Req']' is updated
+20240829 00:14:51.821 - INFO - The parameter 'params['global']['dSUT']['diag']['Report_DTC_By_Status_Mask_08_Resp']' is updated
+20240829 00:14:51.821 - INFO - The parameter 'params['global']['dSUT']['diag']['ResetIpCounterDroppedIpv6PacketsLayer3_Req']' is updated
+20240829 00:14:51.821 - INFO - The parameter 'params['global']['dSUT']['diag']['ResetIpCounterDroppedIpv6PacketsLayer3_Resp']' is updated
+20240829 00:14:51.821 - INFO - The parameter 'params['global']['dSUT']['diag']['IpCounterDroppedIpv6PacketsLayer3_Req']' is updated
+20240829 00:14:51.821 - INFO - The parameter 'params['global']['dSUT']['diag']['IpCounterDroppedIpv6PacketsLayer3_Resp']' is updated
+20240829 00:14:51.822 - INFO - The parameter 'params['global']['dSUT']['diag']['ResetIpCounterDroppedUdpTcpPacketsLayer4_Req']' is updated
+20240829 00:14:51.822 - INFO - The parameter 'params['global']['dSUT']['diag']['ResetIpCounterDroppedUdpTcpPacketsLayer4_Resp']' is updated
+20240829 00:14:51.822 - INFO - The parameter 'params['global']['dSUT']['diag']['IpCounterDroppedUdpTcpPacketsLayer4_Req']' is updated
+20240829 00:14:51.822 - INFO - The parameter 'params['global']['dSUT']['diag']['IpCounterDroppedUdpTcpPacketsLayer4_Resp']' is updated
+20240829 00:14:51.822 - INFO - The parameter 'params['global']['dSUT']['diag']['ResetIpCounterWrongTcpPorts_Req']' is updated
+20240829 00:14:51.822 - INFO - The parameter 'params['global']['dSUT']['diag']['ResetIpCounterWrongTcpPorts_Resp']' is updated
+20240829 00:14:51.822 - INFO - The parameter 'params['global']['dSUT']['diag']['IpCounterWrongTcpPorts_Req']' is updated
+20240829 00:14:51.822 - INFO - The parameter 'params['global']['dSUT']['diag']['IpCounterWrongTcpPorts_Resp']' is updated
+20240829 00:14:51.822 - INFO - The parameter 'params['global']['dSUT']['diag']['ResetIpCounterWrongUdpPorts_Req']' is updated
+20240829 00:14:51.822 - INFO - The parameter 'params['global']['dSUT']['diag']['ResetIpCounterWrongUdpPorts_Resp']' is updated
+20240829 00:14:51.822 - INFO - The parameter 'params['global']['dSUT']['diag']['IpCounterWrongUdpPorts_Req']' is updated
+20240829 00:14:51.822 - INFO - The parameter 'params['global']['dSUT']['diag']['IpCounterWrongUdpPorts_Resp']' is updated
+20240829 00:14:51.822 - INFO - The parameter 'params['global']['dSUT']['diag']['IncorrectMessageLengthOrInvalidFormat_Resp']' is updated
+20240829 00:14:51.822 - INFO - The parameter 'params['global']['dSUT']['diag']['RequestOutOfRange_Resp']' is updated
+20240829 00:14:51.822 - INFO - The parameter 'params['global']['dSUT']['diag']['ResponseLengthExceeded_Resp']' is updated
+20240829 00:14:51.822 - INFO - The parameter 'params['global']['dSUT']['diag']['IncorrectMessageLengthOrInvalidFormat_Write_Resp']' is updated
+20240829 00:14:51.822 - INFO - The parameter 'params['global']['dSUT']['diag']['RequestOutOfRange_Write_Resp']' is updated
+20240829 00:14:51.822 - INFO - The parameter 'params['global']['dSUT']['diag']['GeneralProgrammingFailure_Write_Resp']' is updated
+20240829 00:14:51.822 - INFO - The parameter 'params['global']['dSUT']['diag']['ConditionNotCorrect_Write_Resp']' is updated
+20240829 00:14:51.822 - INFO - The parameter 'params['global']['dSUT']['diag']['TesterPresent_ServiceNotSupported_Resp']' is updated
+20240829 00:14:51.822 - INFO - The parameter 'params['global']['dSUT']['diag']['SessionControl_ServiceNotSupported_Resp']' is updated
+20240829 00:14:51.822 - INFO - The parameter 'params['global']['dSUT']['diag']['SessionControl_ServiceNotSupportedInActiveSession_Resp']' is updated
+20240829 00:14:51.822 - INFO - The parameter 'params['global']['dSUT']['diag']['Write_ServiceNotSupportedInActiveSession_Resp']' is updated
+20240829 00:14:51.822 - INFO - The parameter 'params['global']['dSUT']['diag']['General_IncorrectMessageLengthOrInvalidFormat_Resp']' is updated
+20240829 00:14:51.822 - INFO - The parameter 'params['global']['dSUT']['diag']['General_SubFunctionNotSupported_Resp']' is updated
+20240829 00:14:51.822 - INFO - The parameter 'params['global']['dSUT']['diag']['General_SubfunctionNotSupportedInActiveSession_Resp']' is updated
+20240829 00:14:51.822 - INFO - The parameter 'params['global']['dSUT']['reliability']' is updated
+20240829 00:14:51.822 - INFO - The parameter 'params['global']['dSUT']['reliability']['soc_nonbootup_count']' is updated
+20240829 00:14:51.822 - INFO - The parameter 'params['global']['dSUT']['reliability']['poweroffon']' is updated
+20240829 00:14:51.822 - INFO - The parameter 'params['global']['dSUT']['reliability']['poweroffon']['count']' is updated
+20240829 00:14:51.822 - INFO - The parameter 'params['global']['dSUT']['reliability']['poweroffon']['runtimewait']' is updated
+20240829 00:14:51.822 - INFO - The parameter 'params['global']['dSUT']['reliability']['poweroffon']['nwuwrespond']' is updated
+20240829 00:14:51.822 - INFO - The parameter 'params['global']['dSUT']['reliability']['poweroffon']['ntimerswitch']' is updated
+20240829 00:14:51.822 - INFO - The parameter 'params['global']['dSUT']['reliability']['poweroffon']['runtimecommand']' is updated
+20240829 00:14:51.822 - INFO - The parameter 'params['global']['dSUT']['reliability']['poweroffon']['runtimerespond']' is updated
+20240829 00:14:51.822 - INFO - The parameter 'params['global']['dSUT']['reliability']['simulationpath']' is updated
+20240829 00:14:51.822 - INFO - The parameter 'params['global']['dFRAMEWORK']['project']' is updated
+20240829 00:14:51.822 - INFO - The parameter 'params['global']['dFRAMEWORK']['testbench_label']' is updated
+20240829 00:14:51.822 - INFO - The parameter 'params['global']['dTESTBENCH']['relays']['channels']['Conrad_3']' is updated
+20240829 00:14:51.822 - INFO - The parameter 'params['global']['dTESTBENCH']['relays']['channels']['Conrad_3']['port']' is updated
+20240829 00:14:51.822 - INFO - The parameter 'params['global']['dTESTBENCH']['relays']['channels']['Conrad_3']['port']['sId']' is updated
+20240829 00:14:51.822 - INFO - The parameter 'params['global']['dSUT']['system']['variant']' is updated
+20240829 00:14:51.822 - INFO - The parameter 'params['global']['dSUT']['system']['sw_version']' is updated
+20240829 00:14:51.822 - INFO - Running with configuration level 2
+20240829 00:14:51.822 - INFO - Parameters loaded from 'C:/Users/anp1pg1/Documents/BITSRF/projects/IDBuzz/Maas/development/annette/sys_test/project/config/example/example.jsonp'
+20240829 00:14:51.823 - INFO - RobotFramework AIO version check passed!
+20240829 00:14:51.823 - INFO - Suite Path: 'C:\Users\anp1pg1\Documents\BITSRF\projects\IDBuzz\Maas\development\annette\sys_test'
+20240829 00:14:51.823 - INFO - CfgFile Path: 'C:/Users/anp1pg1/Documents/BITSRF/projects/IDBuzz/Maas/development/annette/sys_test/project/config/example/example.jsonp'
+20240829 00:14:51.823 - INFO - Number of test suites: 1
+20240829 00:14:51.823 - INFO - Total number of testcases: 1
+20240829 00:14:51.823 - INFO - +-- END KEYWORD: testsuites.Testsuite Setup (1430)
+20240829 00:14:51.823 - INFO - +- END SETUP: Initialize The Test Run (1431)
+==============================================================================
+20240829 00:14:53.180 - INFO - +- START SUITE: Sys Test.Project [ ]
+==============================================================================
+20240829 00:14:53.181 - INFO - +-- START SETUP: Initialize The Test Suite [ ]
+20240829 00:14:53.182 - INFO - +--- START KEYWORD: BuiltIn.Log [ __init__.robot file from project level is executed. ]
+20240829 00:14:53.182 - INFO - __init__.robot file from project level is executed.
+20240829 00:14:53.182 - INFO - +--- END KEYWORD: BuiltIn.Log (0)
+20240829 00:14:53.182 - INFO - +--- START KEYWORD: setups.Set Up Initial Test Suite [ ]
+20240829 00:14:53.182 - INFO - ****** [Sys Test.Project] :: (Initial) :: (Suite Setup) :G: Enter ******
+20240829 00:14:53.183 - INFO - +---- START KEYWORD: setups.prj.test.setups.set up initial test suite [ ]
+20240829 00:14:53.183 - INFO - +----- START KEYWORD: BuiltIn.Log [ ====== [${SUITE NAME}] :: (Initial) :: (Suite Setup) :S: Enter ====== | console=yes ]
+20240829 00:14:53.183 - INFO - ====== [Sys Test.Project] :: (Initial) :: (Suite Setup) :S: Enter ======
+20240829 00:14:53.183 - INFO - +----- END KEYWORD: BuiltIn.Log (0)
+20240829 00:14:53.184 - INFO - +----- START KEYWORD: BuiltIn.Log [ ====== [${SUITE NAME}] :: (Initial) :: (Suite Setup) :S: Exit ====== | console=yes ]
+20240829 00:14:53.184 - INFO - ====== [Sys Test.Project] :: (Initial) :: (Suite Setup) :S: Exit ======
+20240829 00:14:53.184 - INFO - +----- END KEYWORD: BuiltIn.Log (0)
+20240829 00:14:53.184 - INFO - +---- END KEYWORD: setups.prj.test.setups.set up initial test suite (1)
+20240829 00:14:53.184 - INFO - ****** [Sys Test.Project] :: (Initial) :: (Suite Setup) :G: Exit ******
+20240829 00:14:53.184 - INFO - +--- END KEYWORD: setups.Set Up Initial Test Suite (2)
+20240829 00:14:53.184 - INFO - +-- END SETUP: Initialize The Test Suite (3)
+==============================================================================
+20240829 00:14:53.190 - INFO - +-- START SUITE: Sys Test.Project.Test [ ]
+==============================================================================
+20240829 00:14:53.193 - INFO - +--- START SUITE: Sys Test.Project.Test.Suites [ ]
+==============================================================================
+20240829 00:14:53.197 - INFO - +---- START SUITE: Sys Test.Project.Test.Suites.Sw Download [ ]
+==============================================================================
+20240829 00:14:54.183 - INFO - +----- START SUITE: Sys Test.Project.Test.Suites.Sw Download.TestJenkins [ ]
+==============================================================================
+20240829 00:14:54.184 - INFO - +------ START SETUP: setups.Set Up Test Suite [ ]
+20240829 00:14:54.184 - INFO - ****** [TestJenkins] :: (Suite Setup) :G: Enter ******
+20240829 00:14:54.184 - INFO - Length is 6
+20240829 00:14:54.184 - INFO - ==== Test suite metadata:
+20240829 00:14:54.185 - INFO - actions: no actions
+20240829 00:14:54.186 - INFO - expectedresults: no expectedresults
+20240829 00:14:54.186 - INFO - preconditions: no preconditions
+20240829 00:14:54.187 - INFO - requirements: no requirements
+20240829 00:14:54.187 - INFO - testarea: power
+20240829 00:14:54.189 - INFO - testtype: example
+20240829 00:14:54.190 - INFO - Test suite start time: 2024-08-29 00:14:54
+20240829 00:14:54.190 - INFO - +------- START KEYWORD: setups.prj.test.setups.set up test suite [ ]
+20240829 00:14:54.191 - INFO - +-------- START KEYWORD: BuiltIn.Log [ ====== [${SUITE NAME}] :: (Suite Setup) :S: Enter ====== | console=yes ]
+20240829 00:14:54.191 - INFO - ====== [Sys Test.Project.Test.Suites.Sw Download.TestJenkins] :: (Suite Setup) :S: Enter ======
+20240829 00:14:54.191 - INFO - +-------- END KEYWORD: BuiltIn.Log (0)
+20240829 00:14:54.191 - INFO - +-------- START KEYWORD: BuiltIn.Log [ ====== [${SUITE NAME}] :: (Suite Setup) :S: Exit ====== | console=yes ]
+20240829 00:14:54.192 - INFO - ====== [Sys Test.Project.Test.Suites.Sw Download.TestJenkins] :: (Suite Setup) :S: Exit ======
+20240829 00:14:54.192 - INFO - +-------- END KEYWORD: BuiltIn.Log (1)
+20240829 00:14:54.192 - INFO - +------- END KEYWORD: setups.prj.test.setups.set up test suite (2)
+20240829 00:14:54.192 - INFO - ****** [TestJenkins] :: (Suite Setup) :G: Exit ******
+20240829 00:14:54.192 - INFO - +------ END SETUP: setups.Set Up Test Suite (8)
+------------------------------------------------------------------------------
+20240829 00:14:54.192 - INFO - +------ START TEST: Auto Flashing [ ]
+------------------------------------------------------------------------------
+20240829 00:14:54.194 - INFO - +------- START SETUP: setups.Set Up Test Case [ ]
+20240829 00:14:54.194 - INFO - ****** [Auto Flashing] :: (Test Setup) :G: Enter *******
+20240829 00:14:54.195 - INFO - Test case start time: 2024-08-29 00:14:54
+20240829 00:14:54.196 - INFO - +-------- START KEYWORD: setups.prj.test.setups.set up test case [ ]
+20240829 00:14:54.197 - INFO - +--------- START KEYWORD: BuiltIn.Log [ ====== [${TEST NAME}] :: (Test Setup) :S: Enter ====== ]
+20240829 00:14:54.197 - INFO - ====== [Auto Flashing] :: (Test Setup) :S: Enter ======
+20240829 00:14:54.197 - INFO - +--------- END KEYWORD: BuiltIn.Log (0)
+20240829 00:14:54.197 - INFO - +--------- START KEYWORD: BuiltIn.Log [ ====== [${TEST NAME}] :: (Test Setup) :S: Exit ====== ]
+20240829 00:14:54.198 - INFO - ====== [Auto Flashing] :: (Test Setup) :S: Exit ======
+20240829 00:14:54.198 - INFO - +--------- END KEYWORD: BuiltIn.Log (1)
+20240829 00:14:54.198 - INFO - +-------- END KEYWORD: setups.prj.test.setups.set up test case (2)
+20240829 00:14:54.198 - INFO - ****** [Auto Flashing] :: (Test Setup) :G: Exit ******
+20240829 00:14:54.198 - INFO - +------- END SETUP: setups.Set Up Test Case (4)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240829 00:14:54.198 - INFO - +------- START KEYWORD: BuiltIn.Set Log Level [ DEBUG ]
+20240829 00:14:54.198 - INFO - Log level changed from INFO to DEBUG.
+20240829 00:14:54.198 - INFO - +------- END KEYWORD: BuiltIn.Set Log Level (0)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240829 00:14:54.199 - INFO - +------- START KEYWORD: BuiltIn.Set Global Variable [ ${cacert} | ${dSUT.auto_flash_artifactory.bosch_pem1}:${dSUT.auto_flash_artifactory.bosch_pem3} ]
+20240829 00:14:54.200 - INFO - ${cacert} = C://Users//anp1pg1//Documents//BITSRF//projects//IDBuzz//Maas//development//annette//sys_test//project//test//suites//sw_download//bosch.pem
+20240829 00:14:54.200 - INFO - +------- END KEYWORD: BuiltIn.Set Global Variable (1)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240829 00:14:54.200 - INFO - +------- START KEYWORD: BuiltIn.Log To Console [ ${cacert} ]
+20240829 00:14:54.201 - INFO - +------- END KEYWORD: BuiltIn.Log To Console (0)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240829 00:14:54.201 - INFO - +------- START KEYWORD: BuiltIn.Set Global Variable [ ${save_as_filename_aurix} | ${dSUT.auto_flash.drive}:${dSUT.auto_flash_artifactory.aurix_saveasfile} ]
+20240829 00:14:54.202 - INFO - ${save_as_filename_aurix} = D://tmp//SWdownload//aurix//aurix.zip
+20240829 00:14:54.202 - INFO - +------- END KEYWORD: BuiltIn.Set Global Variable (1)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240829 00:14:54.202 - INFO - +------- START KEYWORD: BuiltIn.Log To Console [ ${save_as_filename_aurix} ]
+20240829 00:14:54.203 - INFO - +------- END KEYWORD: BuiltIn.Log To Console (1)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240829 00:14:54.203 - INFO - +------- START KEYWORD: BuiltIn.Set Global Variable [ ${save_as_filename_soc} | ${dSUT.auto_flash.drive}:${dSUT.auto_flash_artifactory.soc_saveasfile} ]
+20240829 00:14:54.204 - INFO - ${save_as_filename_soc} = D://tmp//SWdownload//soc//soc.zip
+20240829 00:14:54.205 - INFO - +------- END KEYWORD: BuiltIn.Set Global Variable (1)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240829 00:14:54.205 - INFO - +------- START KEYWORD: BuiltIn.Log To Console [ ${save_as_filename_soc} ]
+20240829 00:14:54.205 - INFO - +------- END KEYWORD: BuiltIn.Log To Console (0)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240829 00:14:54.205 - INFO - +------- START KEYWORD: BuiltIn.Set Global Variable [ ${save_as_filename_cdt} | ${dSUT.auto_flash.drive}:${dSUT.auto_flash_artifactory.cdt_saveasfile} ]
+20240829 00:14:54.207 - INFO - ${save_as_filename_cdt} = D://tmp//SWdownload//cdt//cdt.zip
+20240829 00:14:54.207 - INFO - +------- END KEYWORD: BuiltIn.Set Global Variable (2)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240829 00:14:54.207 - INFO - +------- START KEYWORD: BuiltIn.Log To Console [ ${save_as_filename_cdt} ]
+20240829 00:14:54.207 - INFO - +------- END KEYWORD: BuiltIn.Log To Console (0)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240829 00:14:54.207 - INFO - +------- START KEYWORD: sw_flashing.prj.sut.load.pcandsutserial [ ]
+20240829 00:14:54.208 - INFO - +-------- START IF/ELSE ROOT:  [ ]
+20240829 00:14:54.208 - INFO - +--------- START IF: ${PCSUTSERIALNUMBERJENKINS} == ${dSUT.auto_flash.hardware_info.pg9c0012p.SUT1.pcat_serialnumber} [ ]
+20240829 00:14:54.209 - INFO - +---------- START KEYWORD: BuiltIn.Set Global Variable [ ${SUTSERIALNUMBER} | ${dSUT.auto_flash.hardware_info.pg9c0012p.SUT1.pcat_serialnumber} ]
+20240829 00:14:54.209 - INFO - +---------- END KEYWORD: BuiltIn.Set Global Variable (0)
+20240829 00:14:54.209 - UNKNOWN - Evaluating IF condition failed: Variable '${PCSUTSERIALNUMBERJENKINS}' not found.
+20240829 00:14:54.209 - INFO - +--------- END IF: ${PCSUTSERIALNUMBERJENKINS} == ${dSUT.auto_flash.hardware_info.pg9c0012p.SUT1.pcat_serialnumber} (1)
+20240829 00:14:54.209 - INFO - +--------- START ELSE IF: ${PCSUTSERIALNUMBERJENKINS} == ${dSUT.auto_flash.hardware_info.pg1ut078c.SUT1.pcat_serialnumber} [ ]
+20240829 00:14:54.209 - INFO - +---------- START KEYWORD: BuiltIn.Set Global Variable [ ${SUTSERIALNUMBER} | ${dSUT.auto_flash.hardware_info.pg1ut078c.SUT1.pcat_serialnumber} ]
+20240829 00:14:54.209 - INFO - +---------- END KEYWORD: BuiltIn.Set Global Variable (0)
+20240829 00:14:54.209 - INFO - +--------- END ELSE IF: ${PCSUTSERIALNUMBERJENKINS} == ${dSUT.auto_flash.hardware_info.pg1ut078c.SUT1.pcat_serialnumber} (0)
+20240829 00:14:54.209 - INFO - +--------- START ELSE IF: ${PCSUTSERIALNUMBERJENKINS} == ${dSUT.auto_flash.hardware_info.pg9c001xa.SUT1.pcat_serialnumber} [ ]
+20240829 00:14:54.209 - INFO - +---------- START KEYWORD: BuiltIn.Set Global Variable [ ${SUTSERIALNUMBER} | ${dSUT.auto_flash.hardware_info.pg9c001xa.SUT1.pcat_serialnumber} ]
+20240829 00:14:54.209 - INFO - +---------- END KEYWORD: BuiltIn.Set Global Variable (0)
+20240829 00:14:54.210 - INFO - +--------- END ELSE IF: ${PCSUTSERIALNUMBERJENKINS} == ${dSUT.auto_flash.hardware_info.pg9c001xa.SUT1.pcat_serialnumber} (0)
+20240829 00:14:54.210 - INFO - +-------- END IF/ELSE ROOT:  (2)
+20240829 00:14:54.210 - INFO - +-------- START RETURN:  [ ${PCSUTSERIALNUMBER} ]
+20240829 00:14:54.210 - INFO - +-------- END RETURN:  (0)
+20240829 00:14:54.210 - INFO - +------- END KEYWORD: sw_flashing.prj.sut.load.pcandsutserial (3)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240829 00:14:54.210 - INFO - +------- START KEYWORD: OperatingSystem.Empty Directory [ ${dSUT.auto_flash.drive}:${dSUT.auto_flash_artifactory.saveasfile}//soc// ]
+20240829 00:14:54.210 - INFO - +------- END KEYWORD: OperatingSystem.Empty Directory (0)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240829 00:14:54.210 - INFO - +------- START KEYWORD: OperatingSystem.Empty Directory [ ${dSUT.auto_flash.drive}:${dSUT.auto_flash_artifactory.saveasfile}//aurix// ]
+20240829 00:14:54.210 - INFO - +------- END KEYWORD: OperatingSystem.Empty Directory (0)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240829 00:14:54.211 - INFO - +------- START KEYWORD: OperatingSystem.Empty Directory [ ${dSUT.auto_flash.drive}:${dSUT.auto_flash_artifactory.saveasfile}//cdt// ]
+20240829 00:14:54.211 - INFO - +------- END KEYWORD: OperatingSystem.Empty Directory (0)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240829 00:14:54.211 - INFO - +------- START KEYWORD: artifactory.Set Credentials [ ${dSUT.auto_flash_artifactory.host1},${dSUT.auto_flash_artifactory.host2},${dSUT.auto_flash_artifactory.host3} | ${dSUT.auto_flash_artifactory.username},${dSUT.auto_flash_artifactory.username},${dSUT.auto_flash_artifactory.username} | ${dSUT.auto_flash_artifactory.password1},${dSUT.auto_flash_artifactory.password2},${dSUT.auto_flash_artifactory.password3} | ${cacert},${cacert},${cacert} ]
+20240829 00:14:54.211 - INFO - +------- END KEYWORD: artifactory.Set Credentials (0)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240829 00:14:54.211 - INFO - +------- START KEYWORD: artifactory.Download File [ ${AURIX_URL} | ${save_as_filename_aurix} ]
+20240829 00:14:54.211 - INFO - +------- END KEYWORD: artifactory.Download File (0)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240829 00:14:54.211 - INFO - +------- START KEYWORD: artifactory.Download File [ ${SOC_URL} | ${save_as_filename_soc} ]
+20240829 00:14:54.211 - INFO - +------- END KEYWORD: artifactory.Download File (0)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240829 00:14:54.212 - INFO - +------- START KEYWORD: Process.Run Process [ 7z | x | -y | -oD:${dSUT.auto_flash_artifactory.saveasfile}aurix | ${save_as_filename_aurix} ]
+20240829 00:14:54.212 - INFO - +------- END KEYWORD: Process.Run Process (0)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240829 00:14:54.212 - INFO - +------- START KEYWORD: Process.Run Process [ 7z | x | -y | -oD:${dSUT.auto_flash_artifactory.saveasfile}soc | ${save_as_filename_soc} ]
+20240829 00:14:54.212 - INFO - +------- END KEYWORD: Process.Run Process (0)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240829 00:14:54.212 - INFO - +------- START KEYWORD: Get Binary Path [ D:${dSUT.auto_flash_artifactory.saveasfile}soc ]
+20240829 00:14:54.212 - INFO - +------- END KEYWORD: Get Binary Path (0)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240829 00:14:54.212 - INFO - +------- START KEYWORD: Process.Run Process [ 7z | x | -y | -o${path} | ${path}${dSUT.auto_flash_artifactory.LIBMaas_saveasfile} ]
+20240829 00:14:54.212 - INFO - +------- END KEYWORD: Process.Run Process (0)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240829 00:14:54.213 - INFO - +------- START KEYWORD: BuiltIn.Log To Console [ Auric version :${AURIX_VERSION} and SOC version: ${SOC_VERSION} ]
+20240829 00:14:54.213 - INFO - +------- END KEYWORD: BuiltIn.Log To Console (0)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240829 00:14:54.213 - INFO - +------- START KEYWORD: BuiltIn.Sleep [ 5s ]
+20240829 00:14:54.213 - INFO - +------- END KEYWORD: BuiltIn.Sleep (0)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240829 00:14:54.213 - INFO - +------- START KEYWORD: BuiltIn.Log To Console [ HI! Flashing is Starting. Going to boot mode ]
+20240829 00:14:54.213 - INFO - +------- END KEYWORD: BuiltIn.Log To Console (0)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240829 00:14:54.213 - INFO - +------- START IF/ELSE ROOT:  [ ]
+20240829 00:14:54.213 - INFO - +-------- START IF: ${dSUT.auto_flash.hardware_info.pg9c0012p.SUT2.CDT} == ${True} [ ]
+20240829 00:14:54.213 - INFO - +--------- START KEYWORD: sw_flashing.prj.sut.power cycle [ ]
+20240829 00:14:54.214 - INFO - +--------- END KEYWORD: sw_flashing.prj.sut.power cycle (1)
+20240829 00:14:54.214 - INFO - +--------- START KEYWORD: sw_flashing.prj.sut.boot mode on [ ]
+20240829 00:14:54.214 - INFO - +--------- END KEYWORD: sw_flashing.prj.sut.boot mode on (0)
+20240829 00:14:54.214 - INFO - +--------- START KEYWORD: BuiltIn.Log To Console [ *****Start CDT flashing****** ]
+20240829 00:14:54.214 - INFO - +--------- END KEYWORD: BuiltIn.Log To Console (0)
+20240829 00:14:54.214 - INFO - +--------- START KEYWORD: auto_flash.Pcat Flash CDT [ ${PCSUTSERIALNUMBER} | ${dSUT.auto_flash.hardware_info.pg9c0012p.SUT2.memory_type_ufs} | ${dSUT.auto_flash.hardware_info.pg9c0012p.SUT2.memory_flavorCDT} ]
+20240829 00:14:54.214 - INFO - +--------- END KEYWORD: auto_flash.Pcat Flash CDT (0)
+20240829 00:14:54.214 - INFO - +-------- END IF: ${dSUT.auto_flash.hardware_info.pg9c0012p.SUT2.CDT} == ${True} (1)
+20240829 00:14:54.214 - INFO - +-------- START ELSE: None [ ]
+20240829 00:14:54.215 - INFO - +--------- START KEYWORD: BuiltIn.Log To Console [ CDT flashing is not needed. Skipping it!. ]
+20240829 00:14:54.215 - INFO - +--------- END KEYWORD: BuiltIn.Log To Console (0)
+20240829 00:14:54.215 - INFO - +-------- END ELSE: None (1)
+20240829 00:14:54.215 - INFO - +------- END IF/ELSE ROOT:  (2)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240829 00:14:54.215 - INFO - +------- START IF/ELSE ROOT:  [ ]
+20240829 00:14:54.215 - INFO - +-------- START IF: ${dSUT.auto_flash.hardware_info.pg9c0012p.SUT2.Provisioning} == ${True} [ ]
+20240829 00:14:54.215 - INFO - +--------- START KEYWORD: sw_flashing.prj.sut.power cycle [ ]
+20240829 00:14:54.215 - INFO - +--------- END KEYWORD: sw_flashing.prj.sut.power cycle (0)
+20240829 00:14:54.215 - INFO - +--------- START KEYWORD: sw_flashing.prj.sut.boot mode on [ ]
+20240829 00:14:54.216 - INFO - +--------- END KEYWORD: sw_flashing.prj.sut.boot mode on (1)
+20240829 00:14:54.216 - INFO - +--------- START KEYWORD: BuiltIn.Log To Console [ ******Start UFS Provinsioning flashing.******** ]
+20240829 00:14:54.216 - INFO - +--------- END KEYWORD: BuiltIn.Log To Console (0)
+20240829 00:14:54.216 - INFO - +--------- START KEYWORD: auto_flash.Pcat Flash UFS Provinsioning [ ${PCSUTSERIALNUMBER} | ${dSUT.auto_flash.hardware_info.pg9c0012p.SUT2.memory_type_ufs} ]
+20240829 00:14:54.216 - INFO - +--------- END KEYWORD: auto_flash.Pcat Flash UFS Provinsioning (0)
+20240829 00:14:54.216 - INFO - +-------- END IF: ${dSUT.auto_flash.hardware_info.pg9c0012p.SUT2.Provisioning} == ${True} (1)
+20240829 00:14:54.216 - INFO - +-------- START ELSE: None [ ]
+20240829 00:14:54.216 - INFO - +--------- START KEYWORD: BuiltIn.Log To Console [ UFS Provinsioning flashing is not needed. Skipping it!. ]
+20240829 00:14:54.216 - INFO - +--------- END KEYWORD: BuiltIn.Log To Console (0)
+20240829 00:14:54.216 - INFO - +-------- END ELSE: None (0)
+20240829 00:14:54.216 - INFO - +------- END IF/ELSE ROOT:  (1)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240829 00:14:54.217 - INFO - +------- START KEYWORD: sw_flashing.prj.sut.power cycle [ ]
+20240829 00:14:54.217 - INFO - +------- END KEYWORD: sw_flashing.prj.sut.power cycle (0)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240829 00:14:54.217 - INFO - +------- START KEYWORD: sw_flashing.prj.sut.boot mode on [ ]
+20240829 00:14:54.217 - INFO - +------- END KEYWORD: sw_flashing.prj.sut.boot mode on (0)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240829 00:14:54.217 - INFO - +------- START KEYWORD: BuiltIn.Log To Console [ ******Start flashing SOC SAIL****** ]
+20240829 00:14:54.217 - INFO - +------- END KEYWORD: BuiltIn.Log To Console (0)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240829 00:14:54.218 - INFO - +------- START KEYWORD: auto_flash.Pcat Flash SOC Sail [ ]
+20240829 00:14:54.218 - INFO - +------- END KEYWORD: auto_flash.Pcat Flash SOC Sail (0)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240829 00:14:54.218 - INFO - +------- START KEYWORD: BuiltIn.Log To Console [ ${status} and ${str} ]
+20240829 00:14:54.218 - INFO - +------- END KEYWORD: BuiltIn.Log To Console (0)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240829 00:14:54.218 - INFO - +------- START IF/ELSE ROOT:  [ ]
+20240829 00:14:54.218 - INFO - +-------- START IF: ${status} == ${True} [ ]
+20240829 00:14:54.219 - INFO - +--------- START KEYWORD: BuiltIn.Log To Console [ SOC SAIL flashing was susccesfull . start to flash SOC MAIN ]
+20240829 00:14:54.219 - INFO - +--------- END KEYWORD: BuiltIn.Log To Console (0)
+20240829 00:14:54.219 - INFO - +-------- END IF: ${status} == ${True} (1)
+20240829 00:14:54.219 - INFO - +-------- START ELSE: None [ ]
+20240829 00:14:54.219 - INFO - +--------- START KEYWORD: framework.Set Test Status To Fail [ Failure in soc sail software flash ]
+20240829 00:14:54.219 - INFO - +--------- END KEYWORD: framework.Set Test Status To Fail (0)
+20240829 00:14:54.219 - INFO - +-------- END ELSE: None (0)
+20240829 00:14:54.219 - INFO - +------- END IF/ELSE ROOT:  (1)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240829 00:14:54.220 - INFO - +------- START KEYWORD: sw_flashing.prj.sut.power cycle [ ]
+20240829 00:14:54.220 - INFO - +------- END KEYWORD: sw_flashing.prj.sut.power cycle (1)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240829 00:14:54.220 - INFO - +------- START KEYWORD: sw_flashing.prj.sut.boot mode on [ ]
+20240829 00:14:54.220 - INFO - +------- END KEYWORD: sw_flashing.prj.sut.boot mode on (0)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240829 00:14:54.220 - INFO - +------- START KEYWORD: BuiltIn.Log To Console [ *******Start flashing SOC MAIN******* ]
+20240829 00:14:54.220 - INFO - +------- END KEYWORD: BuiltIn.Log To Console (0)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240829 00:14:54.221 - INFO - +------- START KEYWORD: auto_flash.Pcat Flash SOC Main [ ]
+20240829 00:14:54.221 - INFO - +------- END KEYWORD: auto_flash.Pcat Flash SOC Main (1)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240829 00:14:54.221 - INFO - +------- START IF/ELSE ROOT:  [ ]
+20240829 00:14:54.221 - INFO - +-------- START IF: ${status} == ${True} [ ]
+20240829 00:14:54.221 - INFO - +--------- START KEYWORD: BuiltIn.Log To Console [ SOC Main flashing was susccesfull . Flashing completed ]
+20240829 00:14:54.221 - INFO - +--------- END KEYWORD: BuiltIn.Log To Console (0)
+20240829 00:14:54.221 - INFO - +-------- END IF: ${status} == ${True} (0)
+20240829 00:14:54.221 - INFO - +-------- START ELSE: None [ ]
+20240829 00:14:54.221 - INFO - +--------- START KEYWORD: framework.Set Test Status To Fail [ Failure in soc Main software flash ]
+20240829 00:14:54.221 - INFO - +--------- END KEYWORD: framework.Set Test Status To Fail (0)
+20240829 00:14:54.221 - INFO - +-------- END ELSE: None (0)
+20240829 00:14:54.221 - INFO - +------- END IF/ELSE ROOT:  (0)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240829 00:14:54.222 - INFO - +------- START KEYWORD: sw_flashing.prj.sut.usb toggle debug board switch Off [ ]
+20240829 00:14:54.222 - INFO - +------- END KEYWORD: sw_flashing.prj.sut.usb toggle debug board switch Off (0)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240829 00:14:54.222 - INFO - +------- START KEYWORD: BuiltIn.Sleep [ 10s ]
+20240829 00:14:54.223 - INFO - +------- END KEYWORD: BuiltIn.Sleep (0)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240829 00:14:54.224 - INFO - +------- START KEYWORD: sw_flashing.prj.sut.power cycle [ ]
+20240829 00:14:54.224 - INFO - +------- END KEYWORD: sw_flashing.prj.sut.power cycle (1)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240829 00:14:54.224 - INFO - +------- START KEYWORD: BuiltIn.Sleep [ 10s ]
+20240829 00:14:54.224 - INFO - +------- END KEYWORD: BuiltIn.Sleep (0)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240829 00:14:54.225 - INFO - +------- START KEYWORD: bits_platform.System Send Command [ Gen5_DebugBoard_1 | SET PROGRAM_EXIT ]
+20240829 00:14:54.225 - INFO - +------- END KEYWORD: bits_platform.System Send Command (0)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240829 00:14:54.226 - INFO - +------- START KEYWORD: BuiltIn.Log To Console [ *******Start AURIX Flashing******* ]
+20240829 00:14:54.226 - INFO - +------- END KEYWORD: BuiltIn.Log To Console (0)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240829 00:14:54.226 - INFO - +------- START KEYWORD: auto_flash_flashgui.Flash Gui Flash [ update | ${dSUT.auto_flash_flashgui.flashgui_COMport} | ${dSUT.auto_flash_flashgui.flashgui_baudrate} | ${dSUT.auto_flash_flashgui.flashgui_DataBits} | ${dSUT.auto_flash_flashgui.flashgui_StopBits} | ${dSUT.auto_flash_flashgui.flashgui_Parity} ]
+20240829 00:14:54.227 - INFO - +------- END KEYWORD: auto_flash_flashgui.Flash Gui Flash (0)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240829 00:14:54.227 - INFO - +------- START IF/ELSE ROOT:  [ ]
+20240829 00:14:54.227 - INFO - +-------- START IF: ${status} == ${True} [ ]
+20240829 00:14:54.227 - INFO - +--------- START KEYWORD: BuiltIn.Log To Console [ MCU flashing was susccesfull . Flashing completed ]
+20240829 00:14:54.227 - INFO - +--------- END KEYWORD: BuiltIn.Log To Console (0)
+20240829 00:14:54.227 - INFO - +-------- END IF: ${status} == ${True} (0)
+20240829 00:14:54.227 - INFO - +-------- START ELSE: None [ ]
+20240829 00:14:54.228 - INFO - +--------- START KEYWORD: framework.Set Test Status To Fail [ Failure in MCU flash ]
+20240829 00:14:54.228 - INFO - +--------- END KEYWORD: framework.Set Test Status To Fail (0)
+20240829 00:14:54.228 - INFO - +-------- END ELSE: None (1)
+20240829 00:14:54.228 - INFO - +------- END IF/ELSE ROOT:  (1)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20240829 00:14:54.228 - INFO - +------- START TEARDOWN: teardowns.Tear Down Test Case [ ]
+20240829 00:14:54.229 - INFO - +-------- START KEYWORD: Collections.Set To Dictionary [ ${dREPORTING} | TestName | Auto Flashing ]
+20240829 00:14:54.229 - INFO - +-------- END KEYWORD: Collections.Set To Dictionary (0)
+20240829 00:14:54.229 - INFO - +-------- START KEYWORD: Collections.Set To Dictionary [ ${dREPORTING} | Iteration |  ]
+20240829 00:14:54.229 - INFO - +-------- END KEYWORD: Collections.Set To Dictionary (0)
+20240829 00:14:54.229 - INFO - ****** [Auto Flashing] :: (Test Teardown) :G: Enter *******
+20240829 00:14:54.230 - INFO - ****** (Framework) :G: Update Results :: Enter ******
+20240829 00:14:54.230 - INFO - Test case result is: 'Pass'
+20240829 00:14:54.230 - INFO - Passed test cases: 1; Failed test cases: 0; Unknown test cases: 0
+20240829 00:14:54.230 - INFO - +-------- START KEYWORD: Collections.Set To Dictionary [ ${dREPORTING} | StartTime | 2024-08-29 00:14:54 | TestResult | Pass | ErrorInfo |  ]
+20240829 00:14:54.230 - INFO - +-------- END KEYWORD: Collections.Set To Dictionary (0)
+20240829 00:14:54.230 - INFO - ****** (Framework) :G: Update Results :: Exit ******
+20240829 00:14:54.231 - INFO - Test case end time: 2024-08-29 00:14:54
+20240829 00:14:54.231 - INFO - +-------- START KEYWORD: teardowns.prj.test.teardowns.tear down test case [ ]
+20240829 00:14:54.232 - INFO - +--------- START KEYWORD: BuiltIn.Log [ ====== [${TEST NAME}] :: (Test Teardown) :S: Enter ====== | console=yes ]
+20240829 00:14:54.232 - INFO - ====== [Auto Flashing] :: (Test Teardown) :S: Enter ======
+20240829 00:14:54.232 - INFO - +--------- END KEYWORD: BuiltIn.Log (0)
+20240829 00:14:54.233 - INFO - +--------- START KEYWORD: dlt.prj.sut.disconnect.dlt [ ]
+20240829 00:14:54.233 - INFO - +---------- START KEYWORD: QConnectBase.ConnectionManager.Disconnect [ ${CONNECTION_NAME} ]
+20240829 00:14:54.234 - INFO - +---------- END KEYWORD: QConnectBase.ConnectionManager.Disconnect (1)
+20240829 00:14:54.234 - INFO - +--------- END KEYWORD: dlt.prj.sut.disconnect.dlt (1)
+20240829 00:14:54.234 - INFO - +--------- START KEYWORD: BuiltIn.Set Variable [ ${TEST_NAME} ]
+20240829 00:14:54.234 - INFO - ${test_name_log} = Auto Flashing
+20240829 00:14:54.234 - INFO - +--------- END KEYWORD: BuiltIn.Set Variable (0)
+20240829 00:14:54.234 - INFO - +--------- START KEYWORD: BuiltIn.Log To Console [ ${test_name_log} ]
+20240829 00:14:54.235 - INFO - +--------- END KEYWORD: BuiltIn.Log To Console (1)
+20240829 00:14:54.235 - INFO - +--------- START KEYWORD: OperatingSystem.Create Directory [ D:\\Desktop\\MaaS_SW\\LogFile\\Test_logs\\${test_name_log} ]
+20240829 00:14:54.237 - INFO - Directory '<a href="file://D:\Desktop\MaaS_SW\LogFile\Test_logs\Auto Flashing">D:\Desktop\MaaS_SW\LogFile\Test_logs\Auto Flashing</a>' already exists.
+20240829 00:14:54.237 - INFO - +--------- END KEYWORD: OperatingSystem.Create Directory (2)
+20240829 00:14:54.237 - INFO - +--------- START KEYWORD: OperatingSystem.Copy File [ D:\\Desktop\\MaaS_SW\\LogFile\\log.txt | D:\\Desktop\\MaaS_SW\\LogFile\\Test_logs\\${test_name_log}\\log.txt ]
+20240829 00:14:54.282 - INFO - Copied file from '<a href="file://D:\Desktop\MaaS_SW\LogFile\log.txt">D:\Desktop\MaaS_SW\LogFile\log.txt</a>' to '<a href="file://D:\Desktop\MaaS_SW\LogFile\Test_logs\Auto Flashing\log.txt">D:\Desktop\MaaS_SW\LogFile\Test_logs\Auto Flashing\log.txt</a>'.
+20240829 00:14:54.283 - INFO - +--------- END KEYWORD: OperatingSystem.Copy File (46)
+20240829 00:14:54.283 - INFO - +--------- START KEYWORD: OperatingSystem.Copy File [ D:\\Desktop\\MaaS_SW\\LogFile\\log_QNX.txt | D:\\Desktop\\MaaS_SW\\LogFile\\Test_logs\\${test_name_log}\\log_QNX.txt ]
+20240829 00:14:54.299 - INFO - Copied file from '<a href="file://D:\Desktop\MaaS_SW\LogFile\log_QNX.txt">D:\Desktop\MaaS_SW\LogFile\log_QNX.txt</a>' to '<a href="file://D:\Desktop\MaaS_SW\LogFile\Test_logs\Auto Flashing\log_QNX.txt">D:\Desktop\MaaS_SW\LogFile\Test_logs\Auto Flashing\log_QNX.txt</a>'.
+20240829 00:14:54.299 - INFO - +--------- END KEYWORD: OperatingSystem.Copy File (16)
+20240829 00:14:54.299 - INFO - +-------- END KEYWORD: teardowns.prj.test.teardowns.tear down test case (68)
+20240829 00:14:54.299 - INFO - ****** [Auto Flashing] :: (Test Teardown) :G: Exit ******
+20240829 00:14:54.300 - INFO - +------- END TEARDOWN: teardowns.Tear Down Test Case (71)
+------------------------------------------------------------------------------
+20240829 00:14:54.300 - INFO - +------ END TEST: Auto Flashing (108)
+------------------------------------------------------------------------------
+20240829 00:14:54.300 - INFO - +------ START TEARDOWN: teardowns.Tear Down Test Suite [ ]
+20240829 00:14:54.301 - INFO - ****** TestJenkins] :: (Suite Teardown) :G: Enter *******
+20240829 00:14:54.301 - INFO - Test suite end time: 2024-08-29 00:14:54
+20240829 00:14:54.302 - INFO - +------- START KEYWORD: teardowns.prj.test.teardowns.tear down test suite [ ]
+20240829 00:14:54.302 - INFO - +-------- START KEYWORD: BuiltIn.Log [ ****** [${SUITE NAME}] :: (Suite Teardown) :S: Enter ******* ]
+20240829 00:14:54.303 - INFO - ****** [Sys Test.Project.Test.Suites.Sw Download.TestJenkins] :: (Suite Teardown) :S: Enter *******
+20240829 00:14:54.303 - INFO - +-------- END KEYWORD: BuiltIn.Log (1)
+20240829 00:14:54.303 - INFO - +-------- START KEYWORD: BuiltIn.Log [ ****** [${SUITE NAME}] :: (Suite Teardown) :S: Exit ******* ]
+20240829 00:14:54.303 - INFO - ****** [Sys Test.Project.Test.Suites.Sw Download.TestJenkins] :: (Suite Teardown) :S: Exit *******
+20240829 00:14:54.303 - INFO - +-------- END KEYWORD: BuiltIn.Log (0)
+20240829 00:14:54.303 - INFO - +------- END KEYWORD: teardowns.prj.test.teardowns.tear down test suite (1)
+20240829 00:14:54.303 - INFO - ****** [TestJenkins] :: (Suite Teardown) :G: Exit *******
+20240829 00:14:54.303 - INFO - +------ END TEARDOWN: teardowns.Tear Down Test Suite (3)
+==============================================================================
+20240829 00:14:54.304 - INFO - +----- END SUITE: Sys Test.Project.Test.Suites.Sw Download.TestJenkins (1105)
+==============================================================================
+20240829 00:14:54.305 - INFO - +---- END SUITE: Sys Test.Project.Test.Suites.Sw Download (1110)
+==============================================================================
+20240829 00:14:54.306 - INFO - +--- END SUITE: Sys Test.Project.Test.Suites (1114)
+==============================================================================
+20240829 00:14:54.306 - INFO - +-- END SUITE: Sys Test.Project.Test (1121)
+==============================================================================
+20240829 00:14:54.306 - INFO - +-- START TEARDOWN: Finalize The Test Suite [ ]
+20240829 00:14:54.307 - INFO - +--- START KEYWORD: BuiltIn.Log [ __init__.robot file from project level is executed. ]
+20240829 00:14:54.307 - INFO - __init__.robot file from project level is executed.
+20240829 00:14:54.307 - INFO - +--- END KEYWORD: BuiltIn.Log (0)
+20240829 00:14:54.307 - INFO - +--- START KEYWORD: teardowns.Tear Down Final Test Suite [ ]
+20240829 00:14:54.307 - INFO - ****** [Sys Test.Project] :: (Final) :: (Suite Teardown) :G: Enter ******
+20240829 00:14:54.308 - INFO - +---- START KEYWORD: teardowns.prj.test.teardowns.tear down final test suite [ ]
+20240829 00:14:54.309 - INFO - +----- START KEYWORD: BuiltIn.Log [ ====== [${SUITE NAME}] :: (Final) :: (Suite Teardown) :S: Enter ====== ]
+20240829 00:14:54.309 - INFO - ====== [Sys Test.Project] :: (Final) :: (Suite Teardown) :S: Enter ======
+20240829 00:14:54.309 - INFO - +----- END KEYWORD: BuiltIn.Log (0)
+20240829 00:14:54.309 - INFO - +----- START KEYWORD: BuiltIn.Log [ ====== [${SUITE NAME}] :: (Final) :: (Suite Teardown) :S: Exit ====== ]
+20240829 00:14:54.309 - INFO - ====== [Sys Test.Project] :: (Final) :: (Suite Teardown) :S: Exit ======
+20240829 00:14:54.309 - INFO - +----- END KEYWORD: BuiltIn.Log (0)
+20240829 00:14:54.309 - INFO - +---- END KEYWORD: teardowns.prj.test.teardowns.tear down final test suite (1)
+20240829 00:14:54.309 - INFO - ****** [Sys Test.Project] :: (Final) :: (Suite Teardown) :G: Exit ******
+20240829 00:14:54.310 - INFO - +--- END KEYWORD: teardowns.Tear Down Final Test Suite (3)
+20240829 00:14:54.310 - INFO - +-- END TEARDOWN: Finalize The Test Suite (4)
+==============================================================================
+20240829 00:14:54.310 - INFO - +- END SUITE: Sys Test.Project (2487)
+==============================================================================
+20240829 00:14:54.311 - INFO - +- START TEARDOWN: Finalize The Test Run [ ]
+20240829 00:14:54.311 - INFO - +-- START KEYWORD: testsuites.Testsuite Teardown [ ]
+20240829 00:14:54.311 - INFO - testsuite_teardown: Will be implemented later
+20240829 00:14:54.311 - INFO - +-- END KEYWORD: testsuites.Testsuite Teardown (0)
+20240829 00:14:54.311 - INFO - +- END TEARDOWN: Finalize The Test Run (0)
+==============================================================================
+20240829 00:14:54.312 - INFO - + END SUITE: Sys Test (4356)
+==============================================================================

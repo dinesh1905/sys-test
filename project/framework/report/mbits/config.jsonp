@@ -1,0 +1,4 @@
+// Enable mBITS support for this project
+{
+   "supported" : true
+}

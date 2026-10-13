@@ -1,0 +1,14 @@
+   // Generic testbench tuner fm configuration
+{
+   "channels" : {
+      "NDR2" : {
+         "device" : {
+            "id" : 1
+         },
+         "frequency" : 89.2,
+         "level" : 70.2,
+         "tone" : 700,
+         "deviation" : 22
+      }
+   }
+}

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<testmodule title="SM05_CAN Fault Injection Tests" version="1.0" xmlns="http://www.vector-informatik.de/CANoe/TestModule/1.25">
+	<description>
+		System Test Specification
+	</description>
+        <testgroup title="Fault Injection Tests">
+	    <testcase title="EnvD_SysQual_Diagnostic_CommunicationProtection_OPMMPowerCRCFreezeFaultInjection" ident="">
+            <capltestfunction title="EnvD_SysQual_Diagnostic_CommunicationProtection_OPMMPowerCRCFreezeFaultInjection" name="EnvD_SysQual_Diagnostic_CommunicationProtection_OPMMPowerCRCFreezeFaultInjection" />
+        </testcase>
+	    <testcase title="EnvD_SysQual_Diagnostic_CommunicationProtection_OPMMPowerCRCRandomFaultInjection" ident="">
+            <capltestfunction title="EnvD_SysQual_Diagnostic_CommunicationProtection_OPMMPowerCRCRandomFaultInjection" name="EnvD_SysQual_Diagnostic_CommunicationProtection_OPMMPowerCRCRandomFaultInjection" />
+        </testcase>
+	    <testcase title="EnvD_SysQual_Diagnostic_CommunicationProtection_OPMMPowerCNTRFreezeFaultInjection" ident="">
+            <capltestfunction title="EnvD_SysQual_Diagnostic_CommunicationProtection_OPMMPowerCNTRFreezeFaultInjection" name="EnvD_SysQual_Diagnostic_CommunicationProtection_OPMMPowerCNTRFreezeFaultInjection" />
+        </testcase>
+	    <testcase title="EnvD_SysQual_Diagnostic_CommunicationProtection_OPMMPowerCNTRRandomFaultInjection" ident="">
+            <capltestfunction title="EnvD_SysQual_Diagnostic_CommunicationProtection_OPMMPowerCNTRRandomFaultInjection" name="EnvD_SysQual_Diagnostic_CommunicationProtection_OPMMPowerCNTRRandomFaultInjection" />
+        </testcase>
+	    <testcase title="EnvD_SysQual_Diagnostic_CommunicationProtection_NonOPMMGlobalAlivenessDBPCRCFreezeFaultInjection" ident="">
+            <capltestfunction title="EnvD_SysQual_Diagnostic_CommunicationProtection_NonOPMMGlobalAlivenessDBPCRCFreezeFaultInjection" name="EnvD_SysQual_Diagnostic_CommunicationProtection_NonOPMMGlobalAlivenessDBPCRCFreezeFaultInjection" />
+        </testcase>
+	    <testcase title="EnvD_SysQual_Diagnostic_CommunicationProtection_NonOPMMGlobalAlivenessDBPCRCRandomFaultInjection" ident="">
+            <capltestfunction title="EnvD_SysQual_Diagnostic_CommunicationProtection_NonOPMMGlobalAlivenessDBPCRCRandomFaultInjection" name="EnvD_SysQual_Diagnostic_CommunicationProtection_NonOPMMGlobalAlivenessDBPCRCRandomFaultInjection" />
+        </testcase>
+	    <testcase title="EnvD_SysQual_Diagnostic_CommunicationProtection_NonOPMMGlobalAlivenessDBPCNTRFreezeFaultInjection" ident="">
+            <capltestfunction title="EnvD_SysQual_Diagnostic_CommunicationProtection_NonOPMMGlobalAlivenessDBPCNTRFreezeFaultInjection" name="EnvD_SysQual_Diagnostic_CommunicationProtection_NonOPMMGlobalAlivenessDBPCNTRFreezeFaultInjection" />
+        </testcase>
+	    <testcase title="EnvD_SysQual_Diagnostic_CommunicationProtection_NonOPMMGlobalAlivenessDBPCNTRRandomFaultInjection" ident="">
+            <capltestfunction title="EnvD_SysQual_Diagnostic_CommunicationProtection_NonOPMMGlobalAlivenessDBPCNTRRandomFaultInjection" name="EnvD_SysQual_Diagnostic_CommunicationProtection_NonOPMMGlobalAlivenessDBPCNTRRandomFaultInjection" />
+        </testcase>
+	    <testcase title="EnvD_SysQual_Diagnostic_CommunicationProtection_CANGL1OPMMNetworkDBSCRCFreezeFaultInjection" ident="">
+            <capltestfunction title="EnvD_SysQual_Diagnostic_CommunicationProtection_CANGL1OPMMNetworkDBSCRCFreezeFaultInjection" name="EnvD_SysQual_Diagnostic_CommunicationProtection_CANGL1OPMMNetworkDBSCRCFreezeFaultInjection" />
+        </testcase>
+	    <testcase title="EnvD_SysQual_Diagnostic_CommunicationProtection_CANGL1OPMMNetworkDBSCRCRandomFaultInjection" ident="">
+            <capltestfunction title="EnvD_SysQual_Diagnostic_CommunicationProtection_CANGL1OPMMNetworkDBSCRCRandomFaultInjection" name="EnvD_SysQual_Diagnostic_CommunicationProtection_CANGL1OPMMNetworkDBSCRCRandomFaultInjection" />
+       </testcase>
+	    <testcase title="EnvD_SysQual_Diagnostic_CommunicationProtection_CANGL1OPMMNetworkDBSCNTRFreezeFaultInjection" ident="">
+            <capltestfunction title="EnvD_SysQual_Diagnostic_CommunicationProtection_CANGL1OPMMNetworkDBSCNTRFreezeFaultInjection" name="EnvD_SysQual_Diagnostic_CommunicationProtection_CANGL1OPMMNetworkDBSCNTRFreezeFaultInjection" />
+        </testcase>
+	    <testcase title="EnvD_SysQual_Diagnostic_CommunicationProtection_CANGL1OPMMNetworkDBSCNTRRandomFaultInjection" ident="">
+            <capltestfunction title="EnvD_SysQual_Diagnostic_CommunicationProtection_CANGL1OPMMNetworkDBSCNTRRandomFaultInjection" name="EnvD_SysQual_Diagnostic_CommunicationProtection_CANGL1OPMMNetworkDBSCNTRRandomFaultInjection" />
+        </testcase>
+	    <testcase title="EnvD_SysQual_Diagnostic_CommunicationProtection_CANGL1NonOPMMASWKeepAwakeReqMainCRCFreezeFaultInjection" ident="">
+            <capltestfunction title="EnvD_SysQual_Diagnostic_CommunicationProtection_CANGL1NonOPMMASWKeepAwakeReqMainCRCFreezeFaultInjection" name="EnvD_SysQual_Diagnostic_CommunicationProtection_CANGL1NonOPMMASWKeepAwakeReqMainCRCRandomFaultInjection" />
+        </testcase>
+	    <testcase title="EnvD_SysQual_Diagnostic_CommunicationProtection_CANGL1NonOPMMASWKeepAwakeReqMainCRCRandomFaultInjection" ident="">
+            <capltestfunction title="EnvD_SysQual_Diagnostic_CommunicationProtection_CANGL1NonOPMMASWKeepAwakeReqMainCRCRandomFaultInjection" name="EnvD_SysQual_Diagnostic_CommunicationProtection_CANGL1NonOPMMASWKeepAwakeReqMainCRCRandomFaultInjection" />
+       </testcase>
+	    <testcase title="EnvD_SysQual_Diagnostic_CommunicationProtection_CANGL1NonOPMMASWKeepAwakeReqMainCNTRFreezeFaultInjection" ident="">
+            <capltestfunction title="EnvD_SysQual_Diagnostic_CommunicationProtection_CANGL1NonOPMMASWKeepAwakeReqMainCNTRFreezeFaultInjection" name="EnvD_SysQual_Diagnostic_CommunicationProtection_CANGL1NonOPMMASWKeepAwakeReqMainCNTRFreezeFaultInjection" />
+        </testcase>
+	    <testcase title="EnvD_SysQual_Diagnostic_CommunicationProtection_CANGL1NonOPMMASWKeepAwakeReqMainCNTRRandomFaultInjection" ident="">
+            <capltestfunction title="EnvD_SysQual_Diagnostic_CommunicationProtection_CANGL1NonOPMMASWKeepAwakeReqMainCNTRRandomFaultInjection" name="EnvD_SysQual_Diagnostic_CommunicationProtection_CANGL1NonOPMMASWKeepAwakeReqMainCNTRRandomFaultInjection" />
+
+        </testcase>
+	</testgroup>
+</testmodule>

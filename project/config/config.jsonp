@@ -1,0 +1,6 @@
+{
+   "default": {
+      "name": "thread.jsonp",
+      "path": "./thread/"
+   }
+}

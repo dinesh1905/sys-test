@@ -1,0 +1,9 @@
+{
+   // Import generic framework parameters
+   "csv" : {
+      "[import]": "./csv/config.jsonp"
+   },
+   "mbits" : {
+      "[import]": "./mbits/config.jsonp"
+   }
+}

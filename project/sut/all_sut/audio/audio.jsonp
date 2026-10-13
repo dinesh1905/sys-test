@@ -1,0 +1,23 @@
+{
+
+      ${params.global.sut.audio.unit1} : 1,
+      ${params.global.sut.audio.unit2} : 2,
+      ${params.global.sut.audio.unit3} : 3,
+      ${params.global.sut.audio.unit4} : 4,
+
+      ${params.global.sut.audio.Channel_1} :1,
+      ${params.global.sut.audio.Channel_2} :2,
+      ${params.global.sut.audio.Channel_3} :3,
+      ${params.global.sut.audio.Channel_4} :4,
+      
+      ${params.global.sut.audio.Play} :"Play",
+      ${params.global.sut.audio.Pause} :"Pause",
+      ${params.global.sut.audio.initial_level} :10,
+      ${params.global.sut.audio.final_level} :50,
+      ${params.global.sut.audio.initial_freq} :2100,
+      ${params.global.sut.audio.final_freq} :15000,
+      ${params.global.sut.audio.invalid_initial_level}:4,
+      ${params.global.sut.audio.invalid_final_level}:7,
+      ${params.global.sut.audio.invalid_initial_freq}:100,
+      ${params.global.sut.audio.invalid_final_freq}:800
+}

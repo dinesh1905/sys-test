@@ -1,0 +1,28 @@
+//*****************************************************************************
+// The file configures the access to all variant dependent robot_config*.jsonp
+// files.
+//
+// The path to the robot_config*.jsonp files depends on the test file location. A 
+// different number of ../ is required dependend on the directory depth of the test 
+// case location.
+// Therefore we use here three ... to tell the ROBFW to search from the test 
+// file location up till the robot_config*.jsonp files are found:
+// ./config/robot_config.jsonp
+// ../config/robot_config.jsonp
+// ../../config/robot_config.jsonp
+// ../../../config/robot_config.jsonp
+// and so on.
+//*****************************************************************************
+{
+   "default": {
+      "name": "config.jsonp",
+      //"path": ".../project/sut/default/"
+      "path" : "./all_sut/"
+   },
+
+   "all_sut": {
+      "name": "config.jsonp",
+      //"path": ".../project/sut/all_sut/"
+      "path" : "./all_sut/"
+   }
+}

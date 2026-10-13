@@ -1,0 +1,10 @@
+{
+   // Here the project specific columns for the 'output.csv' file are defined.
+   // The initial values must be positive integers. The columns will be ordered
+   // based on the values. The smallest value for the first column and so on.
+   // - Missing values will be ignored.
+   // - Duplicate values mean that the column order cannot be ensured.
+
+   "Duration_ms" : 1,
+   "prj1" : 2
+}

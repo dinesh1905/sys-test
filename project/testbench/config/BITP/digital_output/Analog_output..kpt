@@ -1,0 +1,11 @@
+BITS-Platform Setupfile 24.15.6
+
+
+Analog_Out_Key_Clear_List
+Analog_Out_Key_Add_List Battery 600
+Analog_Out_Key_Add_List Ignition 601
+Analog_Out_Key_Add_List Q5050 601
+Analog_Out_Key_Add_List KL15 0
+Analog_Out_Key_Add_List KALL 0
+
+End_Setup_File

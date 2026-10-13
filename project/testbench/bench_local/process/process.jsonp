@@ -1,0 +1,25 @@
+{
+
+   // Project testbench process parameter
+
+   ${params.global.testbench.process.simulationpath} : "/tmp/CanSim/MaaS_CanInterbladeCommunication_v16.cfg",
+   ${params.global.testbench.process.CAN_Tracepath} : "/tmp/CAN_Trace/Trace.txt",
+   ${params.global.testbench.process.driveD} : "D",
+   ${params.global.testbench.process.driveC} : "C",
+   ${params.global.testbench.process.iteration} : "10",
+   ${params.global.testbench.process.JenkinsEnable} : True,
+
+    // Project testbench process parameter
+   ${params.global.testbench.process.DLT_IM}: "dlt_viewer.exe",
+   ${params.global.testbench.process.Putty_IM}: "putty.exe",
+   ${params.global.testbench.process.FlashGUI_IM}: "FlashGUI.exe",
+   ${params.global.testbench.process.DebugRemote_IM}: "Gen5DBG_RemoteCtrl.exe",
+   
+   ${params.global.testbench.process.Emptyreportfolder}: "//report",
+   ${params.global.testbench.process.driveC}: "C",
+   ${params.global.testbench.process.TApath}: "C",
+   ${params.global.testbench.process.TestPlanID}: "1990"
+
+
+
+   }

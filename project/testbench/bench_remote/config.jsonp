@@ -1,0 +1,28 @@
+// Testbench configuration 'bench_remote'
+{
+   "[import]" : "../../rf.jsonp",
+
+   "params" : {
+      "global" : {
+         "testbench" : {
+            "power" : {
+              "[import]" : "./power/config.jsonp"
+            },
+            "relays" : {
+              "[import]" : "./relays/config.jsonp"
+            },
+            "audio" : {
+              "[import]" : "./audio/config.jsonp"
+            },
+            "tuner" : {
+              "[import]" : "./tuner/config.jsonp"
+            },
+            "robotarm" : {
+              "[import]" : "./robotarm/config.jsonp"
+            }
+         },
+
+         "label" : None
+      }
+   }
+}

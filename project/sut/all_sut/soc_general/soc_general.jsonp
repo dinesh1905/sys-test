@@ -1,0 +1,15 @@
+{
+   //soc_general configuration
+// "params": {
+//       "global": {
+//           "soc_general": {},
+          ${params.global.sut.soc_general.PORT}:          "22",
+          ${params.global.sut.soc_general.USERNAME}:      "root",
+          ${params.global.sut.soc_general.TARGET_IP}:      "172.21.0.40",
+          ${params.global.sut.soc_general.TARGET_IP1}:      "172.21.0.10",
+          ${params.global.sut.soc_general.WAIT_REBOOT}:    "4 min"
+
+
+   //     }
+   // }
+}

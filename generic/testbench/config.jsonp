@@ -1,0 +1,28 @@
+// Generic testbench configuration
+{
+   "testbench" : {
+      "audio" : {
+         "[import]": "./audio/config.jsonp"
+      },
+      "power" : {
+         "[import]": "./power/config.jsonp"
+      },
+      "relays": {
+         "[import]": "./relays/config.jsonp"
+      },
+      "tuner": {
+         "[import]": "./tuner/config.jsonp"
+      },
+      "video": {
+         "[import]": "./video/config.jsonp"
+      },
+      "robotarmvideo": {
+         "[import]": "./robotarm/config.jsonp"
+      },
+      
+      // BITS-Platform is disabled (default), if needed enable it in project testbench configuration
+      "bitsplatform" : {
+         "supported" : false
+      }
+   }
+}

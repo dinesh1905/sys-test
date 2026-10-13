@@ -1,0 +1,9 @@
+BITS-Platform Setupfile 23.9.0
+
+
+Analog_Out_Key_Clear_List
+Analog_Out_Key_Add_List KL30 9000
+Analog_Out_Key_Add_List KL15 9001
+Analog_Out_Key_Add_List Maas_Battery 600
+
+End_Setup_File

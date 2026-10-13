@@ -1,0 +1,6 @@
+// Generic testbench audio configuration
+{
+   "input" : {
+      "[import]": "./input/config.jsonp"
+   }
+}

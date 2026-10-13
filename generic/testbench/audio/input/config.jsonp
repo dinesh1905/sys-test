@@ -1,0 +1,366 @@
+// Generic testbench audio input parameter
+{
+    "channels" : {
+        "Front_Left" : {
+            "source" : {
+                "id" : "LF_Source"
+            },
+            "volume" :{
+                "id" : "LF_Volume"
+            },
+            "track" : {
+                "id" : "LF_TrackID",
+                "position" : {
+                    "id" : "LF_TimePos"
+                }
+            }
+        },
+
+        "Front_Right" : {
+            "source" : {
+                "id" : "RF_Source"
+            },
+            "volume" :{
+                "id" : "RF_Volume"
+            },
+            "track" : {
+                "id" : "RF_TrackID",
+                "position" : {
+                    "id" : "RF_TimePos"
+                }
+            }
+        },
+
+        "Rear_Left" : {
+            "source" : {
+                "id" : "LR_Source"
+            },
+            "volume" :{
+                "id" : "LR_Volume"
+            },
+            "track" : {
+                "id" : "LR_TrackID",
+                "position" : {
+                    "id" : "LR_TimePos"
+                }
+            }
+        },
+
+        "Rear_Right" : {
+            "source" : {
+                "id" : "RR_Source"
+            },
+            "volume" :{
+                "id" : "RR_Volume"
+            },
+            "track" : {
+                "id" : "RR_TrackID",
+                "position" : {
+                    "id" : "RR_TimePos"
+                }
+            }
+        },
+
+        "Side_Left" : {
+            "source" : {
+                "id" : "LS_Source"
+            },
+            "volume" :{
+                "id" : "LS_Volume"
+            },
+            "track" : {
+                "id" : "LS_TrackID",
+                "position" : {
+                    "id" : "LS_TimePos"
+                }
+            }
+        },
+
+        "Side_Right" : {
+            "source" : {
+                "id" : "RS_Source"
+            },
+            "volume" :{
+                "id" : "RS_Volume"
+            },
+            "track" : {
+                "id" : "RS_TrackID",
+                "position" : {
+                    "id" : "RS_TimePos"
+                }
+            }
+        },
+
+        "Center" : {
+            "source" : {
+                "id" : "C_Source"
+            },
+            "volume" :{
+                "id" : "C_Volume"
+            },
+            "track" : {
+                "id" : "C_TrackID",
+                "position" : {
+                    "id" : "C_TimePos"
+                }
+            }
+        },
+
+        "Subwoofer" : {
+            "source" : {
+                "id" : "SW_Source"
+            },
+            "volume" :{
+                "id" : "SW_Volume"
+            },
+            "track" : {
+                "id" : "SW_TrackID",
+                "position" : {
+                    "id" : "SW_TimePos"
+                }
+            }
+        }
+    },
+
+    "sources" : {
+
+        "FM_1" : {
+            "type" : "Tuner",
+            "id" : 1
+        },
+        "FM_2" : {
+            "type" : "Tuner",
+            "id" : 2
+        },
+        "FM_3" : {
+            "type" : "Tuner",
+            "id" : 4
+        },
+
+        "FM_RDS1" : {
+            "type" : "Tuner",
+            "id" : 131328
+        },
+        "FM_RDS2" : {
+            "type" : "Tuner",
+            "id" : 8
+        },
+        "FM_RDS3" : {
+            "type" : "Tuner",
+            "id" : 16
+        },
+
+        "AM_1" : {
+            "type" : "Tuner",
+            "id" : 32
+        },
+        "AM_2" : {
+            "type" : "Tuner",
+            "id" : 64
+        },
+        "AM_3" : {
+            "type" : "Tuner",
+            "id" : 128
+        },
+
+        "DAB_1" : {
+            "type" : "Tuner",
+            "id" : 512
+        },
+        "DAB_2" : {
+            "type" : "Tuner",
+            "id" : 1024
+        },
+        "DAB_3" : {
+            "type" : "Tuner",
+            "id" : 2048
+        },
+
+        "XM_1" : {
+            "type" : "Tuner",
+            "id" : 4096
+        },
+        "XM_2" : {
+            "type" : "Tuner",
+            "id" : 8192
+        },
+        "XM_3" : {
+            "type" : "Tuner",
+            "id" : 16384
+        },
+
+        "USB_1" : {
+            "type" : "Media",
+            "id" : 1536
+        },
+        "USB_2" : {
+            "type" : "Media",
+            "id" : 2560
+        },
+        "USB_3" : {
+            "type" : "Media",
+            "id" : 3072
+        },
+        "USB_4" : {
+            "type" : "Media",
+            "id" : 3584
+        },
+        "USB_5" : {
+            "type" : "Media",
+            "id" : 4608
+        },
+        "USB_6" : {
+            "type" : "Media",
+            "id" : 5120
+        },
+        "USB_7" : {
+            "type" : "Media",
+            "id" : 5632
+        },
+        "USB_8" : {
+            "type" : "Media",
+            "id" : 6144
+        },
+        "USB_9" : {
+            "type" : "Media",
+            "id" : 6656
+        },
+        "USB_10" : {
+            "type" : "Media",
+            "id" : 7168
+        },
+
+        "USB_10" : {
+            "type" : "Media",
+            "id" : 7168
+        },
+
+        "Disc_1" : {
+            "type" : "Media",
+            "id" : 7680
+        },
+        "Disc_2" : {
+            "type" : "Media",
+            "id" : 8704
+        },
+        "Disc_3" : {
+            "type" : "Media",
+            "id" : 9216
+        },
+        "Disc_4" : {
+            "type" : "Media",
+            "id" : 9728
+        },
+        "Disc_5" : {
+            "type" : "Media",
+            "id" : 10240
+        },
+
+        "BT_Audio_1" : {
+            "type" : "Media",
+            "id" : 10752
+        },
+        "BT_Audio_2" : {
+            "type" : "Media",
+            "id" : 11264
+        },
+        "BT_Audio_3" : {
+            "type" : "Media",
+            "id" : 11776
+        },
+
+        "SD_1" : {
+            "type" : "Media",
+            "id" : 12288
+        },
+        "SD_2" : {
+            "type" : "Media",
+            "id" : 12800
+        },
+
+        "iPod_1" : {
+            "type" : "Media",
+            "id" : 13312
+        },
+        "iPod_2" : {
+            "type" : "Media",
+            "id" : 13824
+        },
+        "iPod_3" : {
+            "type" : "Media",
+            "id" : 14336
+        },
+        "iPod_4" : {
+            "type" : "Media",
+            "id" : 14848
+        },
+        "iPod_5" : {
+            "type" : "Media",
+            "id" : 15360
+        },
+        "iPod_6" : {
+            "type" : "Media",
+            "id" : 15872
+        },
+        "iPod_7" : {
+            "type" : "Media",
+            "id" : 17408
+        },
+        "iPod_8" : {
+            "type" : "Media",
+            "id" : 17408
+        },
+        "iPod_9" : {
+            "type" : "Media",
+            "id" : 17920
+        },
+        "iPod_10" : {
+            "type" : "Media",
+            "id" : 18432
+        },
+
+        "AUX_1" : {
+            "type" : "Media",
+            "id" : 18944
+        },
+        "AUX_2" : {
+            "type" : "Media",
+            "id" : 19456
+        },
+
+        "Phone_1" : {
+            "type" : "Phone",
+            "id" : 19968
+        },
+        "Phone_2" : {
+            "type" : "Phone",
+            "id" : 20480
+        },
+        "Phone_3" : {
+            "type" : "Phone",
+            "id" : 20992
+        },
+        "Phone_4" : {
+            "type" : "Phone",
+            "id" : 21504
+        },
+        "Phone_5" : {
+            "type" : "Phone",
+            "id" : 22016
+        },
+        "Phone_6" : {
+            "type" : "Phone",
+            "id" : 22528
+        },
+
+        "CarPlay" : {
+            "type" : "SPI",
+            "id" : 23040
+        },
+
+        "AndroidAuto" : {
+            "type" : "SPI",
+            "id" : 23552
+        }
+    }
+}

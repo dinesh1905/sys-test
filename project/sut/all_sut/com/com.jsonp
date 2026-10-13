@@ -1,0 +1,31 @@
+{
+   //comman configuration
+// "params": {
+//       "global": {
+//           "com": {},
+          ${params.global.sut.com.expected_linux_ports}:["22/tcp open ssh", "3490/tcp open colubris", "5355/tcp open llmnr", "5556/tcp open freeciv"],
+          ${params.global.sut.com.expected_qnx_ports}:["22/tcp open ssh", "3490/tcp open colubris"],
+          ${params.global.sut.com.expected_mcu_ports}:["13400/tcp open doip-data"],
+          ${params.global.sut.com.expected_android_ports}:["3490/tcp open colubris","5555/tcp open freeciv"],
+          ${params.global.sut.com.expected_linux_ports_Xmas_scan}:["22/tcp open|filtered ssh"],
+          ${params.global.sut.com.expected_android_ports_Xmas_scan}:["5555/tcp open|filtered freeciv"],
+          ${params.global.sut.com.expected_linux_ipv6}:"FD53:7CB8:0383:0018:0000:0000:0001:0269",
+          ${params.global.sut.com.expected_qnx_ipv6}:"FD53:7CB8:0383:0018:0000:0000:0001:0268",
+          ${params.global.sut.com.expected_mcu_ipv6}:"FD53:7CB8:0383:0016:0000:0000:0000:0166",
+          ${params.global.sut.com.expected_android_ipv6}:"FD53:7CB8:0383:0018:0000:0000:0005:0269",
+          ${params.global.sut.com.expected_linux_mac}:"02:7D:FA:02:69:40",
+          ${params.global.sut.com.expected_qnx_mac}:"02:7D:FA:02:68:40",
+          ${params.global.sut.com.expected_mcu_mac}:"02:7D:FA:01:66:00",
+          ${params.global.sut.com.expected_android_mac}:"02:7D:FA:02:69:41",
+          ${params.global.sut.com.QNX_HOST}:      "FD53:7CB8:0383:0018:0000:0000:0001:0268",
+          ${params.global.sut.com.LINUX_HOST}:     "FD53:7CB8:0383:0018:0000:0000:0001:0269",
+          ${params.global.sut.com.PORT}:          "22",
+          ${params.global.sut.com.USERNAME}:      "root",
+          ${params.global.sut.com.ETH_Path}:    "D://tmp//SWdownload//ETHSwitch//MAAS_ETHSWT_25.04.00_SEC_PRJ",
+          ${params.global.sut.com.ETH_Switch_Version}:    "EthSwtFwversion: 25.04.00"
+
+
+   //     }
+   // }
+
+}

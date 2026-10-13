@@ -1,0 +1,670 @@
+/*@!Encoding:1252*/
+includes{
+#include "D:\SW\VAG_SM05\Scripts\SM05_E2E.cin"
+#include "D:\SW\VAG_SM05\Scripts\SM05_DTC.cin"
+}
+
+variables
+{
+
+}
+
+
+testfunction FaultInjectionTemplate()
+{
+  //TestValidateSystemCallWithExitCode("", "D:\\SW\\Relay\\USBRelayExtLib\\USBRelayExtLib\\TestAppCode\\GuiApp_English\\Power_OnOff.bat", 18000,0);  
+  //testWaitForTimeout(60000);
+  @sysvar::IL::Klemme15 = 0;
+  @sysvar::IL::StartWithoutSending = 0;
+  testWaitForTimeout(3000);
+  @sysvar::IL::Klemme15 = 1;
+  @sysvar::IL::StartWithoutSending = 1;
+  
+  Check_DTC_Logged(255, "d2031c", 0, 00);
+  testWaitForTimeout(2000);
+  Check_DTC_Logged(255, "d2031d", 0, 00);
+  testWaitForTimeout(2000);
+  Check_DTC_Logged(255, "d2031e", 0, 00);
+  testWaitForTimeout(2000);
+}
+
+testfunction EnvD_SysQual_Diagnostic_CommunicationProtection_OPMMPowerCRCFreezeFaultInjection()
+{
+  long result;
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Setting Attribute - CRC Freeze");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  Set_Attribute(DisturbChecksum_Type, Freeze, -1, 500); 
+  testWaitForTimeout(2000);
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Injecting CRC Freeze Failure for OPMM_Power");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  result = CRC_Crpt_enable(Crc_CrptFIT_DataSet, "MaaS_CAN_Interblade_1::VectorSimulationNode::OPMM_Power", "ISG_OPMM_Power");
+  testWaitForTimeout(2000);
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Checking DTC Status is Active");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  Check_DTC_Logged(255, "d2031d", 1, 00);
+  testWaitForTimeout(2000);
+  
+  Check_DTC_Logged(255, "d2031e", 1, 00);
+  testWaitForTimeout(2000);
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Disabling CRC Freeze Failure for OPMM_Power");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  CRC_Crpt_disable(Crc_CrptFIT_DataSet, "MaaS_CAN_Interblade_1::VectorSimulationNode::OPMM_Power", "ISG_OPMM_Power");
+  testWaitForTimeout(2000);
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Checking DTC Status is InActive");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  Check_DTC_Logged(255, "d2031d", 0, 00);
+  testWaitForTimeout(2000);
+  
+  Check_DTC_Logged(255, "d2031e", 0, 00);
+  testWaitForTimeout(2000);
+  
+  
+}
+
+testfunction EnvD_SysQual_Diagnostic_CommunicationProtection_OPMMPowerCRCRandomFaultInjection()
+{
+  long result;
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Setting Attribute - CRC Random");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  Set_Attribute(DisturbChecksum_Type, Random, -1, 500); 
+  testWaitForTimeout(2000);
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Injecting CRC Random Failure for OPMM_Power");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  result = CRC_Crpt_enable(Crc_CrptFIT_DataSet, "MaaS_CAN_Interblade_1::VectorSimulationNode::OPMM_Power", "ISG_OPMM_Power");
+  testWaitForTimeout(2000);
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Checking DTC Status is Active");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  Check_DTC_Logged(255, "d2031d", 1, 00);
+  testWaitForTimeout(2000);
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Disabling CRC Random Failure for OPMM_Power");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  CRC_Crpt_disable(Crc_CrptFIT_DataSet, "MaaS_CAN_Interblade_1::VectorSimulationNode::OPMM_Power", "ISG_OPMM_Power");
+  testWaitForTimeout(2000);
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Checking DTC Status is Inactive");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  Check_DTC_Logged(255, "d2031d", 0, 00);
+  testWaitForTimeout(2000);
+
+  
+}
+
+
+testfunction EnvD_SysQual_Diagnostic_CommunicationProtection_OPMMPowerCNTRFreezeFaultInjection()
+{
+  long result;
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Setting Attribute - CNTR Freeze");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  Set_Attribute(DisturbChecksum_Type, Freeze, -1, 500); 
+  testWaitForTimeout(2000);
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Injecting CNTR Freeze Failure for OPMM_Power");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  result = SeqCoun_Crpt_enable(Crc_CrptFIT_DataSet, "MaaS_CAN_Interblade_1::VectorSimulationNode::OPMM_Power", "ISG_OPMM_Power");
+  testWaitForTimeout(2000);
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Checking DTC Status is Active");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  Check_DTC_Logged(255, "d2031e", 1, 00);
+  testWaitForTimeout(2000);
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Disabling CNTR Freeze Failure for OPMM_Power");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  SeqCoun_Crpt_disable(Crc_CrptFIT_DataSet, "MaaS_CAN_Interblade_1::VectorSimulationNode::OPMM_Power", "ISG_OPMM_Power");
+  testWaitForTimeout(2000);
+  
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Checking DTC Status is Inactive");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  Check_DTC_Logged(255, "d2031e", 0, 00);
+  testWaitForTimeout(2000);
+  
+}
+
+testfunction EnvD_SysQual_Diagnostic_CommunicationProtection_OPMMPowerCNTRRandomFaultInjection()
+{
+  long result;
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Setting Attribute - CNTR Random");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  Set_Attribute(DisturbChecksum_Type, Random, -1, 500); 
+  testWaitForTimeout(2000);
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Injecting CNTR Random Failure for OPMM_Power");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  result = SeqCoun_Crpt_enable(Crc_CrptFIT_DataSet, "MaaS_CAN_Interblade_1::VectorSimulationNode::OPMM_Power", "ISG_OPMM_Power");
+  testWaitForTimeout(2000);
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Checking DTC Status is Active");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  Check_DTC_Logged(255, "d2031e", 1, 00);
+  testWaitForTimeout(2000);
+  
+  Check_DTC_Logged(255, "d2031c", 1, 00);
+  testWaitForTimeout(2000);
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Disabling CNTR Random Failure for OPMM_Power");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  SeqCoun_Crpt_disable(Crc_CrptFIT_DataSet, "MaaS_CAN_Interblade_1::VectorSimulationNode::OPMM_Power", "ISG_OPMM_Power");
+  testWaitForTimeout(2000);
+  
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Checking DTC Status is Inactive");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  Check_DTC_Logged(255, "d2031e", 0, 00);
+  testWaitForTimeout(2000);
+  
+  Check_DTC_Logged(255, "d2031c", 0, 00);
+  testWaitForTimeout(2000);
+  
+}
+
+testfunction EnvD_SysQual_Diagnostic_CommunicationProtection_NonOPMMGlobalAlivenessDBPCRCFreezeFaultInjection()
+{
+  long result;
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Setting Attribute - CRC Freeze");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  Set_Attribute(DisturbChecksum_Type, Freeze, -1, 500); 
+  testWaitForTimeout(2000);
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Injecting CRC Freeze Failure for NonOPMMGlobalAlivenessDBP");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  result = CRC_Crpt_enable(Crc_CrptFIT_DataSet, "MaaS_CAN_Interblade_1::VectorSimulationNode::GlobalAliveness_DBP", "ISG_GlobalAliveness_DBP");
+  testWaitForTimeout(2000);
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Checking DTC Status is Active");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  Check_DTC_Logged(255, "d2031b", 1, 00);
+  testWaitForTimeout(2000);
+  
+  Check_DTC_Logged(255, "d2031a", 1, 00);
+  testWaitForTimeout(2000);
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Disabling CRC Freeze Failure for NonOPMMGlobalAlivenessDBP");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  CRC_Crpt_disable(Crc_CrptFIT_DataSet, "MaaS_CAN_Interblade_1::VectorSimulationNode::GlobalAliveness_DBP", "ISG_GlobalAliveness_DBP");
+  testWaitForTimeout(2000);
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Checking DTC Status is InActive");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  Check_DTC_Logged(255, "d2031b", 0, 00);
+  testWaitForTimeout(2000);
+  
+  Check_DTC_Logged(255, "d2031a", 0, 00);
+  testWaitForTimeout(2000);
+  
+  
+}
+
+testfunction EnvD_SysQual_Diagnostic_CommunicationProtection_NonOPMMGlobalAlivenessDBPCRCRandomFaultInjection()
+{
+  long result;
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Setting Attribute - CRC Random");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  Set_Attribute(DisturbChecksum_Type, Random, -1, 500); 
+  testWaitForTimeout(2000);
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Injecting CRC Random Failure for NonOPMMGlobalAlivenessDBP");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  result = CRC_Crpt_enable(Crc_CrptFIT_DataSet, "MaaS_CAN_Interblade_1::VectorSimulationNode::GlobalAliveness_DBP", "ISG_GlobalAliveness_DBP");
+  testWaitForTimeout(2000);
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Checking DTC Status is Active");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  Check_DTC_Logged(255, "d2031a", 1, 00);
+  testWaitForTimeout(2000);
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Disabling CRC Random Failure for NonOPMMGlobalAlivenessDBP");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  CRC_Crpt_disable(Crc_CrptFIT_DataSet, "MaaS_CAN_Interblade_1::VectorSimulationNode::GlobalAliveness_DBP", "ISG_GlobalAliveness_DBP");
+  testWaitForTimeout(2000);
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Checking DTC Status is Inactive");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  Check_DTC_Logged(255, "d2031a", 0, 00);
+  testWaitForTimeout(2000);
+
+  
+}
+
+testfunction EnvD_SysQual_Diagnostic_CommunicationProtection_NonOPMMGlobalAlivenessDBPCNTRFreezeFaultInjection()
+{
+  long result;
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Setting Attribute - CNTR Freeze");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  Set_Attribute(DisturbChecksum_Type, Freeze, -1, 500); 
+  testWaitForTimeout(2000);
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Injecting CNTR Freeze Failure for NonOPMMGlobalAlivenessDBP");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  result = SeqCoun_Crpt_enable(Crc_CrptFIT_DataSet, "MaaS_CAN_Interblade_1::VectorSimulationNode::GlobalAliveness_DBP", "ISG_GlobalAliveness_DBP");
+  testWaitForTimeout(2000);
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Checking DTC Status is Active");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  Check_DTC_Logged(255, "d2031b", 1, 00);
+  testWaitForTimeout(2000);
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Disabling CNTR Freeze Failure for NonOPMMGlobalAlivenessDBP");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  SeqCoun_Crpt_disable(Crc_CrptFIT_DataSet, "MaaS_CAN_Interblade_1::VectorSimulationNode::GlobalAliveness_DBP", "ISG_GlobalAliveness_DBP");
+  testWaitForTimeout(2000);
+  
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Checking DTC Status is Inactive");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  Check_DTC_Logged(255, "d2031b", 0, 00);
+  testWaitForTimeout(2000);
+  
+}
+
+testfunction EnvD_SysQual_Diagnostic_CommunicationProtection_NonOPMMGlobalAlivenessDBPCNTRRandomFaultInjection()
+{
+  long result;
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Setting Attribute - CNTR Random");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  Set_Attribute(DisturbChecksum_Type, Random, -1, 500); 
+  testWaitForTimeout(2000);
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Injecting CNTR Random Failure for NonOPMMGlobalAlivenessDBP");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  result = SeqCoun_Crpt_enable(Crc_CrptFIT_DataSet, "MaaS_CAN_Interblade_1::VectorSimulationNode::GlobalAliveness_DBP", "ISG_GlobalAliveness_DBP");
+  testWaitForTimeout(2000);
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Checking DTC Status is Active");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  Check_DTC_Logged(255, "d2031b", 1, 00);
+  testWaitForTimeout(2000);
+  
+  Check_DTC_Logged(255, "d20319", 1, 00);
+  testWaitForTimeout(2000);
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Disabling CNTR Random Failure for NonOPMMGlobalAlivenessDBP");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  SeqCoun_Crpt_disable(Crc_CrptFIT_DataSet, "MaaS_CAN_Interblade_1::VectorSimulationNode::GlobalAliveness_DBP", "ISG_GlobalAliveness_DBP");
+  testWaitForTimeout(2000);
+  
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Checking DTC Status is Inactive");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  Check_DTC_Logged(255, "d2031b", 0, 00);
+  testWaitForTimeout(2000);
+  
+  Check_DTC_Logged(255, "d20319", 0, 00);
+  testWaitForTimeout(2000);
+  
+}
+
+testfunction EnvD_SysQual_Diagnostic_CommunicationProtection_CANGL1OPMMNetworkDBSCRCFreezeFaultInjection()
+{
+  long result;
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Setting Attribute - CRC Freeze");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  Set_Attribute(DisturbChecksum_Type, Freeze, -1, 500); 
+  testWaitForTimeout(2000);
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Injecting CRC Freeze Failure for CANGL1OPMMNetworkDBS");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  result = CRC_Crpt_enable(Crc_CrptFIT_DataSet, "MaaS_CAN_Interblade_GL1_2::VectorSimulationNode::OPMM_Network_DBS", "ISG_OPMM_Network_DBS");
+  testWaitForTimeout(2000);
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Checking DTC Status is Active");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  Check_DTC_Logged(255, "d2036a", 1, 00);
+  testWaitForTimeout(2000);
+  
+  Check_DTC_Logged(255, "d20369", 1, 00);
+  testWaitForTimeout(2000);
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Disabling CRC Freeze Failure for CANGL1OPMMNetworkDBS");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  CRC_Crpt_disable(Crc_CrptFIT_DataSet, "MaaS_CAN_Interblade_GL1_2::VectorSimulationNode::OPMM_Network_DBS", "ISG_OPMM_Network_DBS");
+  testWaitForTimeout(2000);
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Checking DTC Status is InActive");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  Check_DTC_Logged(255, "d2036a", 0, 00);
+  testWaitForTimeout(2000);
+  
+  Check_DTC_Logged(255, "d20369", 0, 00);
+  testWaitForTimeout(2000);
+  
+  
+}
+
+testfunction EnvD_SysQual_Diagnostic_CommunicationProtection_CANGL1OPMMNetworkDBSCRCRandomFaultInjection()
+{
+  long result;
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Setting Attribute - CRC Random");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  Set_Attribute(DisturbChecksum_Type, Random, -1, 500); 
+  testWaitForTimeout(2000);
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Injecting CRC Random Failure for CANGL1OPMMNetworkDBS");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  result = CRC_Crpt_enable(Crc_CrptFIT_DataSet, "MaaS_CAN_Interblade_GL1_2::VectorSimulationNode::OPMM_Network_DBS", "ISG_OPMM_Network_DBS");
+  testWaitForTimeout(2000);
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Checking DTC Status is Active");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  Check_DTC_Logged(255, "d20369", 1, 00);
+  testWaitForTimeout(2000);
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Disabling CRC Random Failure for CANGL1OPMMNetworkDBS");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  CRC_Crpt_disable(Crc_CrptFIT_DataSet, "MaaS_CAN_Interblade_GL1_2::VectorSimulationNode::OPMM_Network_DBS", "ISG_OPMM_Network_DBS");
+  testWaitForTimeout(2000);
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Checking DTC Status is Inactive");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  Check_DTC_Logged(255, "d20369", 0, 00);
+  testWaitForTimeout(2000);
+
+  
+}
+
+testfunction EnvD_SysQual_Diagnostic_CommunicationProtection_CANGL1OPMMNetworkDBSCNTRFreezeFaultInjection()
+{
+  long result;
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Setting Attribute - CNTR Freeze");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  Set_Attribute(DisturbChecksum_Type, Freeze, -1, 500); 
+  testWaitForTimeout(2000);
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Injecting CNTR Freeze Failure for CANGL1OPMMNetworkDBS");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  result = SeqCoun_Crpt_enable(Crc_CrptFIT_DataSet, "MaaS_CAN_Interblade_GL1_2::VectorSimulationNode::OPMM_Network_DBS", "ISG_OPMM_Network_DBS");
+  testWaitForTimeout(2000);
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Checking DTC Status is Active");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  Check_DTC_Logged(255, "d2036a", 1, 00);
+  testWaitForTimeout(2000);
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Disabling CNTR Freeze Failure for CANGL1OPMMNetworkDBS");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  SeqCoun_Crpt_disable(Crc_CrptFIT_DataSet, "MaaS_CAN_Interblade_GL1_2::VectorSimulationNode::OPMM_Network_DBS", "ISG_OPMM_Network_DBS");
+  testWaitForTimeout(2000);
+  
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Checking DTC Status is Inactive");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  Check_DTC_Logged(255, "d2036a", 0, 00);
+  testWaitForTimeout(2000);
+  
+}
+
+testfunction EnvD_SysQual_Diagnostic_CommunicationProtection_CANGL1OPMMNetworkDBSCNTRRandomFaultInjection()
+{
+  long result;
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Setting Attribute - CNTR Random");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  Set_Attribute(DisturbChecksum_Type, Random, -1, 500); 
+  testWaitForTimeout(2000);
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Injecting CNTR Random Failure for CANGL1OPMMNetworkDBS");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  result = SeqCoun_Crpt_enable(Crc_CrptFIT_DataSet, "MaaS_CAN_Interblade_GL1_2::VectorSimulationNode::OPMM_Network_DBS", "ISG_OPMM_Network_DBS");
+  testWaitForTimeout(2000);
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Checking DTC Status is Active");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  Check_DTC_Logged(255, "d2036a", 1, 00);
+  testWaitForTimeout(2000);
+  
+  Check_DTC_Logged(255, "d20368", 1, 00);
+  testWaitForTimeout(2000);
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Disabling CNTR Random Failure for CANGL1OPMMNetworkDBS");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  SeqCoun_Crpt_disable(Crc_CrptFIT_DataSet, "MaaS_CAN_Interblade_GL1_2::VectorSimulationNode::OPMM_Network_BBS", "ISG_OPMM_Network_DBS");
+  testWaitForTimeout(2000);
+  
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Checking DTC Status is Inactive");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  Check_DTC_Logged(255, "d2036a", 0, 00);
+  testWaitForTimeout(2000);
+  
+  Check_DTC_Logged(255, "d20368", 0, 00);
+  testWaitForTimeout(2000);
+  
+}
+
+testfunction EnvD_SysQual_Diagnostic_CommunicationProtection_CANGL1NonOPMMASWKeepAwakeReqMainCRCFreezeFaultInjection()
+{
+  long result;
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Setting Attribute - CRC Freeze");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  Set_Attribute(DisturbChecksum_Type, Freeze, -1, 500); 
+  testWaitForTimeout(2000);
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Injecting CRC Freeze Failure for CANGL1NonOPMMASWKeepAwakeReqMain");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  result = CRC_Crpt_enable(Crc_CrptFIT_DataSet, "MaaS_CAN_Interblade_GL1_2::VectorSimulationNode::OPMM_ASW_KeepAwake_Req_Main", "ISG_ASW_KeepAwake_Req_Main");
+  testWaitForTimeout(2000);
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Checking DTC Status is Active");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  Check_DTC_Logged(255, "d20367", 1, 00);
+  testWaitForTimeout(2000);
+  
+  Check_DTC_Logged(255, "d20366", 1, 00);
+  testWaitForTimeout(2000);
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Disabling CRC Freeze Failure for CANGL1NonOPMMASWKeepAwakeReqMain");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  CRC_Crpt_disable(Crc_CrptFIT_DataSet, "MaaS_CAN_Interblade_GL1_2::VectorSimulationNode::OPMM_ASW_KeepAwake_Req_Main", "ISG_ASW_KeepAwake_Req_Main");
+  testWaitForTimeout(2000);
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Checking DTC Status is InActive");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  Check_DTC_Logged(255, "d20367", 0, 00);
+  testWaitForTimeout(2000);
+  
+  Check_DTC_Logged(255, "d20366", 0, 00);
+  testWaitForTimeout(2000);
+  
+  
+}
+
+testfunction EnvD_SysQual_Diagnostic_CommunicationProtection_CANGL1NonOPMMASWKeepAwakeReqMainCRCRandomFaultInjection()
+{
+  long result;
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Setting Attribute - CRC Random");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  Set_Attribute(DisturbChecksum_Type, Random, -1, 500); 
+  testWaitForTimeout(2000);
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Injecting CRC Random Failure for CANGL1NonOPMMASWKeepAwakeReqMain");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  result = CRC_Crpt_enable(Crc_CrptFIT_DataSet, "MaaS_CAN_Interblade_GL1_2::VectorSimulationNode::OPMM_ASW_KeepAwake_Req_Main", "ISG_ASW_KeepAwake_Req_Main");
+  testWaitForTimeout(2000);
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Checking DTC Status is Active");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  Check_DTC_Logged(255, "d20366", 1, 00);
+  testWaitForTimeout(2000);
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Disabling CRC Random Failure for CANGL1NonOPMMASWKeepAwakeReqMain");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  CRC_Crpt_disable(Crc_CrptFIT_DataSet, "MaaS_CAN_Interblade_GL1_2::VectorSimulationNode::OPMM_ASW_KeepAwake_Req_Main", "ISG_ASW_KeepAwake_Req_Main");
+  testWaitForTimeout(2000);
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Checking DTC Status is Inactive");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  Check_DTC_Logged(255, "d20366", 0, 00);
+  testWaitForTimeout(2000);
+
+  
+}
+
+testfunction EnvD_SysQual_Diagnostic_CommunicationProtection_CANGL1NonOPMMASWKeepAwakeReqMainCNTRFreezeFaultInjection()
+{
+  long result;
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Setting Attribute - CNTR Freeze");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  Set_Attribute(DisturbChecksum_Type, Freeze, -1, 500); 
+  testWaitForTimeout(2000);
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Injecting CNTR Freeze Failure for CANGL1NonOPMMASWKeepAwakeReqMain");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  result = SeqCoun_Crpt_enable(Crc_CrptFIT_DataSet, "MaaS_CAN_Interblade_GL1_2::VectorSimulationNode::OPMM_ASW_KeepAwake_Req_Main", "ISG_ASW_KeepAwake_Req_Main");
+  testWaitForTimeout(2000);
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Checking DTC Status is Active");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  Check_DTC_Logged(255, "d20367", 1, 00);
+  testWaitForTimeout(2000);
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Disabling CNTR Freeze Failure for CANGL1NonOPMMASWKeepAwakeReqMain");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  SeqCoun_Crpt_disable(Crc_CrptFIT_DataSet, "MaaS_CAN_Interblade_GL1_2::VectorSimulationNode::OPMM_ASW_KeepAwake_Req_Main", "ISG_ASW_KeepAwake_Req_Main");
+  testWaitForTimeout(2000);
+  
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Checking DTC Status is Inactive");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  Check_DTC_Logged(255, "d20367", 0, 00);
+  testWaitForTimeout(2000);
+  
+}
+
+testfunction EnvD_SysQual_Diagnostic_CommunicationProtection_CANGL1NonOPMMASWKeepAwakeReqMainCNTRRandomFaultInjection()
+{
+  long result;
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Setting Attribute - CNTR Random");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  Set_Attribute(DisturbChecksum_Type, Random, -1, 500); 
+  testWaitForTimeout(2000);
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Injecting CNTR Random Failure for CANGL1NonOPMMASWKeepAwakeReqMain");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  result = SeqCoun_Crpt_enable(Crc_CrptFIT_DataSet, "MaaS_CAN_Interblade_GL1_2::VectorSimulationNode::OPMM_ASW_KeepAwake_Req_Main", "ISG_ASW_KeepAwake_Req_Main");
+  testWaitForTimeout(2000);
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Checking DTC Status is Active");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  Check_DTC_Logged(255, "d20367", 1, 00);
+  testWaitForTimeout(2000);
+  
+  Check_DTC_Logged(255, "d20365", 1, 00);
+  testWaitForTimeout(2000);
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Disabling CNTR Random Failure for CANGL1NonOPMMASWKeepAwakeReqMain");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  SeqCoun_Crpt_disable(Crc_CrptFIT_DataSet, "MaaS_CAN_Interblade_GL1_2::VectorSimulationNode::OPMM_ASW_KeepAwake_Req_Main", "ISG_ASW_KeepAwake_Req_Main");
+  testWaitForTimeout(2000);
+  
+  
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  TestStep("", "Checking DTC Status is Inactive");
+  TestStep("", "----------------------------------------------------------------------------------------------------");
+  Check_DTC_Logged(255, "d20367", 0, 00);
+  testWaitForTimeout(2000);
+  
+  Check_DTC_Logged(255, "d20365", 0, 00);
+  testWaitForTimeout(2000);
+  
+}

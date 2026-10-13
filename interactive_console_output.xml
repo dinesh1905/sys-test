@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.9.16 on win32)" generated="20240909 13:56:53.102" rpa="false" schemaversion="3">
+<suite id="s1" name="Robot Interactive Console" source="c:\BITS\RobotFramework\robotvscode\data\extensions\robocorp.robotframework-lsp-1.7.3\src\robotframework_ls\vendored\robotframework_interactive\robot_interactive_console.robot">
+<test id="s1-t1" name="Default Task/Test" line="5">
+<kw name="Interpreter Main Loop" library="MainLoop">
+<kw name="prj.sut.can.diag.send">
+<arg>${dSUT.diag.Default_Session_Req}</arg>
+<msg timestamp="20240909 13:56:54.721" level="UNKNOWN">No keyword with name 'prj.sut.can.diag.send' found.</msg>
+<status status="UNKNOWN" starttime="20240909 13:56:54.721" endtime="20240909 13:56:54.721"/>
+</kw>
+<kw name="prj.sut.diag.compare">
+<arg>${dSUT.diag.Default_Session_Resp}</arg>
+<status status="NOT RUN" starttime="20240909 13:56:54.725" endtime="20240909 13:56:54.725"/>
+</kw>
+<kw name="prj.sut.can.diag.send">
+<arg>${dSUT.diag.ProgrammingPreconditions_Req}</arg>
+<status status="NOT RUN" starttime="20240909 13:56:54.728" endtime="20240909 13:56:54.728"/>
+</kw>
+<kw name="prj.sut.diag.compare">
+<arg>${dSUT.diag.ProgrammingPreconditions_Resp}</arg>
+<status status="NOT RUN" starttime="20240909 13:56:54.731" endtime="20240909 13:56:54.731"/>
+</kw>
+<status status="PASS" starttime="20240909 13:56:53.142" endtime="20240909 13:56:57.958"/>
+</kw>
+<status status="PASS" starttime="20240909 13:56:53.142" endtime="20240909 13:56:57.959"/>
+</test>
+<status status="PASS" starttime="20240909 13:56:53.112" endtime="20240909 13:56:57.960"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0" unknown="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" unknown="0" id="s1" name="Robot Interactive Console">Robot Interactive Console</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

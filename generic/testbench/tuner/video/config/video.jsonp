@@ -1,0 +1,27 @@
+{
+
+    // Generic testbench video parameter
+   "${params}['global']['dTESTBENCH']['video']" : {},
+   "${params}['global']['dTESTBENCH']['video']['channels']" : {},
+
+   // Generic testbench video channels parameter
+   "${params}['global']['dTESTBENCH']['video']['channels']['TV_Info']" : {},
+   "${params}['global']['dTESTBENCH']['video']['channels']['TV_Info']['source']" : {},
+   "${params}['global']['dTESTBENCH']['video']['channels']['TV_Info']['source']['sId']" : "TV_Source",
+   "${params}['global']['dTESTBENCH']['video']['channels']['TV_Info']['volume']" : {},
+   "${params}['global']['dTESTBENCH']['video']['channels']['TV_Info']['volume']['sId']" : "TV_Volume",
+   "${params}['global']['dTESTBENCH']['video']['channels']['TV_Info']['track']" : {},
+   "${params}['global']['dTESTBENCH']['video']['channels']['TV_Info']['track']['sId']" : "TV_TrackID",
+   "${params}['global']['dTESTBENCH']['video']['channels']['TV_Info']['track']['position']" : {},
+   "${params}['global']['dTESTBENCH']['video']['channels']['TV_Info']['track']['position']['sId']" : "TV_TimePos",
+   "${params}['global']['dTESTBENCH']['video']['channels']['USB_MP4']" : {},
+   "${params}['global']['dTESTBENCH']['video']['channels']['USB_MP4']['source']" : {},
+   "${params}['global']['dTESTBENCH']['video']['channels']['USB_MP4']['source']['sId']" : "MP4_Source",
+   "${params}['global']['dTESTBENCH']['video']['channels']['USB_MP4']['volume']" : {},
+   "${params}['global']['dTESTBENCH']['video']['channels']['USB_MP4']['volume']['sId']" : "MP4_Volume",
+   "${params}['global']['dTESTBENCH']['video']['channels']['USB_MP4']['track']" : {},
+   "${params}['global']['dTESTBENCH']['video']['channels']['USB_MP4']['track']['sId']" : "MP4_TrackID",
+   "${params}['global']['dTESTBENCH']['video']['channels']['USB_MP4']['track']['position']" : {},
+   "${params}['global']['dTESTBENCH']['video']['channels']['USB_MP4']['track']['position']['sId']" : "MP4_TimePos"
+
+}

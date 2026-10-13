@@ -1,0 +1,129 @@
+{
+   //comman configuration
+// "params": {
+//       "global": {
+//            "auto_flash": {},
+   ${params.global.sut.auto_flash.drive}: "D",
+   ${params.global.sut.auto_flash.driveC}: "C",
+   ${params.global.sut.auto_flash.iteration}: "10",
+   ${params.global.sut.auto_flash.JenkinsEnable}: True,
+   ${params.global.sut.auto_flash.flashgui.HSM_Status}: True,
+
+   //PCAT configuration
+   ${params.global.sut.auto_flash.pcat_path}: "//Desktop//MAAS_PROD_PI24.2.0_001_(PI24.2.0_ReleaseCandidate1)",
+
+
+   ${params.global.sut.auto_flash.hardware_info.dltportnumber} : "COM14",
+   ${params.global.sut.auto_flash.hardware_info.dltportnumber_QNX} : "COM15",
+   ${params.global.sut.auto_flash.hardware_info.dltportnumber_SAIL} : "COM17",
+
+   ${params.global.sut.auto_flash.hardware_info.pg9c0012p.sut1} : [{"serial_number":"abcd123","pattern.xml":"content.xml","pcat_serialnumber":"7994319B"}],
+
+   ${params.global.sut.auto_flash.hardware_info.pg9c0012p.sut2.pcat_serialnumber} : "29745C39",
+   ${params.global.sut.auto_flash.hardware_info.pg9c0012p.sut2.memory_typeSail} : "SPINOR",
+   ${params.global.sut.auto_flash.hardware_info.pg9c0012p.sut2.memory_flavor} : "sail_nor_lemans",
+   ${params.global.sut.auto_flash.hardware_info.pg9c0012p.sut2.contents_xml} : "contents.xml",
+   ${params.global.sut.auto_flash.hardware_info.pg9c0012p.sut2.memory_typeMainSW} : "UFS",
+   ${params.global.sut.auto_flash.hardware_info.pg9c0012p.sut2.memory_flavorMainSW} : "8255_mgvm",
+   ${params.global.sut.auto_flash.hardware_info.pg9c0012p.sut2.Provisioning} : True,
+   ${params.global.sut.auto_flash.hardware_info.pg9c0012p.sut2.CDT} : False,
+
+   ${params.global.sut.auto_flash.hardware_info.pg9c0012p.sut2.Provisioning_xmlpath} : "//Desktop//MAAS_PROD_PI24.2.0_001_(PI24.2.0_ReleaseCandidate1)//MAAS_SOC_hqx_4.5.5.0_r00004.1b_PI24.2.0_001//LIB_MPCI_MAAS_SoC//out-collectout-collect//common//config//ufs//provision//provision_default.xml",
+   ${params.global.sut.auto_flash.hardware_info.pg9c0012p.sut2.Provisioning_elfpath} : "//Desktop//MAAS_PROD_PI24.2.0_001_(PI24.2.0_ReleaseCandidate1)//MAAS_SOC_hqx_4.5.5.0_r00004.1b_PI24.2.0_001//LIB_MPCI_MAAS_SoC//out-collect//boot//boot_images//boot//QcomPkg//SocPkg//LeMans//Bin//AU//RELEASE//prog_firehose_ddr.elf",
+   ${params.global.sut.auto_flash.hardware_info.pg9c0012p.sut2.memory_type_ufs} : "UFS",
+   ${params.global.sut.auto_flash.hardware_info.pg9c0012p.sut2.cdt_path} : "//tmp//SWdownload//cdt//CDT_B1_oemcfg_1",
+   ${params.global.sut.auto_flash.hardware_info.pg9c0012p.sut2.memory_flavorCDT} : "maas_b1",
+
+   //pg1ut078c sut1 configuration
+   ${params.global.sut.auto_flash.hardware_info.pg1ut078c.sut1.pcat_serialnumber} : "2B400E2E",
+   ${params.global.sut.auto_flash.hardware_info.pg1ut078c.sut1.memory_typeSail} : "SPINOR",
+   ${params.global.sut.auto_flash.hardware_info.pg1ut078c.sut1.memory_flavor} : "sail_nor_lemans",
+   ${params.global.sut.auto_flash.hardware_info.pg1ut078c.sut1.contents_xml} : "contents.xml",
+   ${params.global.sut.auto_flash.hardware_info.pg1ut078c.sut1.memory_typeMainSW} : "UFS",
+   ${params.global.sut.auto_flash.hardware_info.pg1ut078c.sut1.memory_flavorMainSW} : "8255_mgvm",
+   ${params.global.sut.auto_flash.hardware_info.pg1ut078c.sut1.Provisioning} : True,
+   ${params.global.sut.auto_flash.hardware_info.pg1ut078c.sut1.CDT} : True,
+
+   ${params.global.sut.auto_flash.hardware_info.pg1ut078c.sut1.Provisioning_xmlpath} : "//Desktop//MAAS_PROD_PI24.2.0_001_(PI24.2.0_ReleaseCandidate1)//MAAS_SOC_hqx_4.5.5.0_r00004.1b_PI24.2.0_001//LIB_MPCI_MAAS_SoC//out-collectout-collect//common//config//ufs//provision//provision_default.xml",
+   ${params.global.sut.auto_flash.hardware_info.pg1ut078c.sut1.Provisioning_elfpath} : "//Desktop//MAAS_PROD_PI24.2.0_001_(PI24.2.0_ReleaseCandidate1)//MAAS_SOC_hqx_4.5.5.0_r00004.1b_PI24.2.0_001//LIB_MPCI_MAAS_SoC//out-collect//boot//boot_images//boot//QcomPkg//SocPkg//LeMans//Bin//AU//RELEASE//prog_firehose_ddr.elf",
+   ${params.global.sut.auto_flash.hardware_info.pg1ut078c.sut1.memory_type_ufs} : "UFS",
+   ${params.global.sut.auto_flash.hardware_info.pg1ut078c.sut1.cdt_path} : "//tmp//SWdownload//cdt//CDT_B1_oemcfg_1",
+   ${params.global.sut.auto_flash.hardware_info.pg1ut078c.sut1.memory_flavorCDT} : "maas_b1",
+
+   //pg9-c-001xa sut1 configuration
+   ${params.global.sut.auto_flash.hardware_info.pg9c001xa.sut1.pcat_serialnumber} : "6254CC9C",
+   ${params.global.sut.auto_flash.hardware_info.pg9c001xa.sut1.memory_typeSail} : "SPINOR",
+   ${params.global.sut.auto_flash.hardware_info.pg9c001xa.sut1.memory_flavor} : "sail_nor_lemans",
+   ${params.global.sut.auto_flash.hardware_info.pg9c001xa.sut1.contents_xml} : "contents.xml",
+   ${params.global.sut.auto_flash.hardware_info.pg9c001xa.sut1.memory_typeMainSW} : "UFS",
+   ${params.global.sut.auto_flash.hardware_info.pg9c001xa.sut1.memory_flavorMainSW} : "8255_mgvm",
+   ${params.global.sut.auto_flash.hardware_info.pg9c001xa.sut1.Provisioning} : True,
+   ${params.global.sut.auto_flash.hardware_info.pg9c001xa.sut1.CDT} : True,
+
+   ${params.global.sut.auto_flash.hardware_info.pg9c001xa.sut1.Provisioning_xmlpath} : "//Desktop//MAAS_PROD_PI24.2.0_001_(PI24.2.0_ReleaseCandidate1)//MAAS_SOC_hqx_4.5.5.0_r00004.1b_PI24.2.0_001//LIB_MPCI_MAAS_SoC//out-collectout-collect//common//config//ufs//provision//provision_default.xml",
+   ${params.global.sut.auto_flash.hardware_info.pg9c001xa.sut1.Provisioning_elfpath} : "//Desktop//MAAS_PROD_PI24.2.0_001_(PI24.2.0_ReleaseCandidate1)//MAAS_SOC_hqx_4.5.5.0_r00004.1b_PI24.2.0_001//LIB_MPCI_MAAS_SoC//out-collect//boot//boot_images//boot//QcomPkg//SocPkg//LeMans//Bin//AU//RELEASE//prog_firehose_ddr.elf",
+   ${params.global.sut.auto_flash.hardware_info.pg9c001xa.sut1.memory_type_ufs} : "UFS",
+   ${params.global.sut.auto_flash.hardware_info.pg9c001xa.sut1.cdt_path} : "//tmp//SWdownload//cdt//CDT_B1_oemcfg_1",
+   ${params.global.sut.auto_flash.hardware_info.pg9c001xa.sut1.memory_flavorCDT} : "maas_b1",
+
+   ${params.global.sut.auto_flash.hardware_info.pg9c001xa.sut2.memory_typeMainSW_flatbuild} : "UFS",
+
+   //Flash Gui configuration
+   ${params.global.sut.auto_flash.flashgui.flashgui_path}: "//Desktop//MaaS_SW//FlashGui_V8.2//",
+   ${params.global.sut.auto_flash.flashgui.flashgui_dnlpath}: "//tmp//SWdownload//aurix//MAAS_AURIX_PI24.2.0_004_b1_debug//HEX_FILES//",
+   ${params.global.sut.auto_flash.flashgui.flashgui_dnlpatharchive}: "//tmp//SWdownload//aurix_archive//MAAS_AURIX_PI25.3.0_RC3_B1//HEX_FILES//",
+   ${params.global.sut.auto_flash.flashgui.flashgui_dnlpathdebug}: "//tmp//SWdownload//aurixdebug//MAAS_AURIX_PI24.2.0_004_b1_debug//UTFInjection//",
+   ${params.global.sut.auto_flash.flashgui.flashgui_COMport}: "Quad-Gen5-6Dbg C -XCHVZPOK",
+   ${params.global.sut.auto_flash.flashgui.flashgui_baudrate}: "3000000",
+   ${params.global.sut.auto_flash.flashgui.flashgui_DataBits}: "8",
+   ${params.global.sut.auto_flash.flashgui.flashgui_StopBits}: "1",
+   ${params.global.sut.auto_flash.flashgui.flashgui_Parity}: "E",
+   ${params.global.sut.auto_flash.flashgui.flashgui_dnlfile}: "LIB_MPCI_MAAS_AURIX.dnl",
+   ${params.global.sut.auto_flash.flashgui.flashgui_program_ucb}: True,
+
+   //artifactory configuration
+   ${params.global.sut.auto_flash.artifactory.bosch_pem1}: "C",
+   ${params.global.sut.auto_flash.artifactory.bosch_pem2}: ":",
+   //${params.global.sut.auto_flash.artifactory.bosch_pem3}: "//Users//anp1pg1//Documents//BITSRF//projects//IDBuzz//Maas//development//annette//sys_test//project//test//suites//sw_download//bosch.pem",
+   ${params.global.sut.auto_flash.artifactory.bosch_pem3}: "//BITSRF//projects//IDBuzzMaasBlade//CT_Execution//sys_test//project//test//suites//sw_download//bosch.pem",
+   //${params.global.sut.auto_flash.artifactory.bosch_pem3}: "//BITSRF//projects//IDBuzzMaasBlade//temp_develop//annette//sys_test//project//test//suites//sw_download//bosch.pem",
+   ${params.global.sut.auto_flash.artifactory.host1}: "rb-cmbinex-pg-p1.apac.bosch.com",
+   ${params.global.sut.auto_flash.artifactory.host2}: "rb-cmbinex-fe-p1.de.bosch.com",
+   ${params.global.sut.auto_flash.artifactory.host3} : "rb-cmbinex-hi-p1.de.bosch.com",
+   ${params.global.sut.auto_flash.artifactory.username} : "toa8pg1",
+   ${params.global.sut.auto_flash.artifactory.password1} : "AP7qPN44cedYibp5AZpqHktun1X",
+   ${params.global.sut.auto_flash.artifactory.password2} : "APgV3k8cECY3BhSaXrJaiyjgrD",
+   ${params.global.sut.auto_flash.artifactory.password3} : "AP5A42Vi3kX5WXfPq8bpm3KBSjj",
+   ${params.global.sut.auto_flash.artifactory.url1} : "https",
+   ${params.global.sut.auto_flash.artifactory.url_aurix} : "//rb-cmbinex-pg-p1.apac.bosch.com:443/artifactory/maas-aurix-images/MAAS_AURIX_PI24.4.0_RC3.2_TEST/MAAS_AURIX_PI24.4.0_RC3.2_B1.zip",
+  // ${params.global.sut.auto_flash.artifactory.url_soc} : "//rb-cmbinex-pg-p1.apac.bosch.com/artifactory/maas-soc-images/MAAS_SOC_hqx_4.5.6.0_r00006.3_PI24.4.0_RC3/MAAS_SOC_hqx_4.5.6.0_r00006.3_PI24.4.0_RC3.zip",
+   ${params.global.sut.auto_flash.artifactory.url_hypervisorsoc} : "//rb-cmbinex-pg-p1.apac.bosch.com/artifactory/maas-soc-images/MAAS_SOC_hqx_4.5.6.0_r00006.3_PI24.4.0_RC3/MAAS_SOC_hqx_4.5.6.0_r00006.3_PI24.4.0_RC3.zip",
+   ${params.global.sut.auto_flash.artifactory.url_sandboxsoc} : "//rb-cmbinex-pg-p1.apac.bosch.com/artifactory/maas-soc-images/MAAS_SOC_hqx_4.5.6.0_r00006.3_PI24.4.0_RC3/MAAS_SOC_hqx_4.5.6.0_r00006.3_PI24.4.0_RC3.zip",
+   ${params.global.sut.auto_flash.artifactory.url_cdt} : "//rb-cmbinex-pg-p1.apac.bosch.com/artifactory/maas-generic/CDT/CDT_B1_oemcfg_1.zip",
+   ${params.global.sut.auto_flash.artifactory.cdt_saveasfile} : "//tmp//SWdownload//cdt//cdt.zip",
+   ${params.global.sut.auto_flash.artifactory.soc_saveasfile} : "//tmp//SWdownload//soc//soc.zip",
+   ${params.global.sut.auto_flash.artifactory.hypervisorsoc_saveasfile} : "//tmp//SWdownload//soc//soc_hypervisor.zip",
+   ${params.global.sut.auto_flash.artifactory.sandboxsoc_saveasfile} : "//tmp//SWdownload//soc//soc_sandbox.zip",
+   ${params.global.sut.auto_flash.artifactory.cdt_saveasfile} : "//tmp//SWdownload//cdt//cdt.zip",
+   ${params.global.sut.auto_flash.artifactory.FLAT_soc_saveasfile} : "//tmp//SWdownload//soc//soc.zip",
+   ${params.global.sut.auto_flash.artifactory.FLAT_hypervisorsoc_saveasfile} : "//tmp//SWdownload//soc//soc_hypervisor.zip",
+   ${params.global.sut.auto_flash.artifactory.FLAT_sandboxsoc_saveasfile} : "//tmp//SWdownload//soc//soc_sandbox.zip",
+   ${params.global.sut.auto_flash.artifactory.hypervisor_soc_outcollect} : "//tmp//SWdownload//soc//HYPERVISOR//out-collect-hypervisor_CSW.zip",
+   ${params.global.sut.auto_flash.artifactory.sandbox_soc_outcollect} : "//tmp//SWdownload//soc//SANDBOX//out-collect-sandbox_CSW.zip",
+   ${params.global.sut.auto_flash.artifactory.aurix_saveasfile} : "//tmp//SWdownload//aurix//aurix.zip",
+   ${params.global.sut.auto_flash.artifactory.aurixdebug_saveasfile} : "//tmp//SWdownload//aurixdebug//aurix.zip",
+   ${params.global.sut.auto_flash.artifactory.eth_saveasfile} : "//tmp//SWdownload//EthSwitch//binary//eth.zip",
+    ${params.global.sut.auto_flash.artifactory.LIBMaas_saveasfile} : "//LIB_MPCI_MAAS_SoC.zip",
+   ${params.global.sut.auto_flash.artifactory.saveasfile} : "/tmp/SWdownload/",
+   ${params.global.sut.auto_flash.artifactory.pcat_cachefilepath_1} : "//Temp//PCAT",
+   ${params.global.sut.auto_flash.artifactory.pcat_cachefilepath_2} : "//ProgramData//Qualcomm//PCAT//Temp",
+   ${params.global.sut.auto_flash.KDS_PI_RELEASE_PATH} :"//tmp//SWdownload//aurix//HEX_FILES//KDS_C2.kds",
+   ${params.global.sut.auto_flash.KDS_NIGHTLY_PATH} : "//tmp//SWdownload//aurix//MaaS_Aurix_C2//HEX_FILES//KDS_C2.kds",
+   ${params.global.sut.auto_flash.AurixDebug_PI_Nightly_PATH} :"UTF",
+   ${params.global.sut.auto_flash.AurixDebug_PI_RELEASE_PATH} :"DEBUG_UTF"
+   //     }
+   // }
+
+
+
+}

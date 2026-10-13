@@ -1,0 +1,5 @@
+// project testbench tuner am configuration
+{
+   // derive from common configuration
+   "[import]" : "../../../../../generic/testbench/tuner/am/config.jsonp"
+}

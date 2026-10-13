@@ -1,0 +1,25 @@
+{
+   //comman configuration
+// "params": {
+//       "global": {
+//           "reliability": {},
+            ${params.global.sut.reliability.soc_nonbootup_count}: "0",
+
+               //Parameters for iteration test
+            ${params.global.sut.reliability.poweroffon} : {},
+            ${params.global.sut.reliability.poweroffon.count} : "6",
+            ${params.global.sut.reliability.poweroffon.runtimewait} : "20,2,10",
+            ${params.global.sut.reliability.poweroffon.nwuwrespond} : "2031,2032,2034",
+            ${params.global.sut.reliability.poweroffon.ntimerswitch} : 1,
+            ${params.global.sut.reliability.poweroffon.runtimecommand}               : "NA",
+            ${params.global.sut.reliability.poweroffon.runtimerespond}               : "NA",
+
+            //PCAT configuration
+            ${params.global.sut.reliability.simulationpath}: "/Desktop/MaaS_SW/MAAS_CI_24.0V17.01/CanSim/MaaS_CanInterbladeCommunication_v11_withdiagPanel.cfg"
+
+   //     }
+   // }
+
+
+
+}

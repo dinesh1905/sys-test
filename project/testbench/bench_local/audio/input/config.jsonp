@@ -1,0 +1,5 @@
+// project testbench audio input configuration
+{
+   // derive from common configuration
+   "[import]" : "../../../../../generic/testbench/audio/input/config.jsonp"
+}

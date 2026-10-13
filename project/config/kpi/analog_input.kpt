@@ -1,0 +1,42 @@
+BITS-Platform Setupfile 25.8.1
+
+
+Analog_In_Key_Clear_List
+Analog_In_Key_Add_List CHANNEL_KL30_CURRENT 1 1.00 0.0 
+Analog_In_Key_Add_List BigToelner_Current 10400 1.00 0.0 
+Analog_In_Key_Add_List BigToellner 600 1.00 0.0 
+Analog_In_Key_Add_List Battery_Current 603 1.00 0.0 
+Analog_In_Key_Add_List Battery_Voltage 602 1.00 0.0 
+Analog_In_Key_Add_List Battery 602 1.00 0.0 
+Analog_In_Key_Add_List A2B_Volatge 602 1.00 0.0 
+Analog_In_Key_Add_List CHANNEL_KL15_CURRENT 1 1.00 0.0 
+Analog_In_Key_Add_List CHANNEL_KL15_VOLTAGE 1 1.00 0.0 
+Analog_In_Key_Add_List CHANNEL_USER_CURRENT 1 1.00 0.0 
+Analog_In_Key_Add_List CHANNEL_USER_VOLTAGE 1 1.00 0.0 
+Analog_In_Key_Add_List SPEAKER_R_SOURCE_CHANGE 1 1.00 0.0 
+Analog_In_Key_Add_List SPEAKER_R_VOLUME_CHANGE 1 1.00 0.0 
+Analog_In_Key_Add_List SPEAKER_R_MIN_MAX 1 1.00 0.0 
+Analog_In_Key_Add_List SPEAKER_R_MIN_MAX_CHANGE 1 1.00 0.0 
+Analog_In_Key_Add_List SPEAKER_R_VOLUME 1 1.00 0.0 
+Analog_In_Key_Add_List SPEAKER_R_SOURCE 1 1.00 0.0 
+Analog_In_Key_Add_List SPEAKER_L_SOURCE_CHANGE 1 1.00 0.0 
+Analog_In_Key_Add_List SPEAKER_L_VOLUME_CHANGE 1 1.00 0.0 
+Analog_In_Key_Add_List SPEAKER_L_MIN_MAX 1 1.00 0.0 
+Analog_In_Key_Add_List SPEAKER_L_MIN_MAX_CHANGE 1 1.00 0.0 
+Analog_In_Key_Add_List SPEAKER_L_VOLUME 1 1.00 0.0 
+Analog_In_Key_Add_List SPEAKER_L_SOURCE 1 1.00 0.0 
+Analog_In_Key_Add_List SPEAKER_RR_SOURCE_CHANGE 1 1.00 0.0 
+Analog_In_Key_Add_List SPEAKER_RR_VOLUME_CHANGE 1 1.00 0.0 
+Analog_In_Key_Add_List SPEAKER_RR_MIN_MAX 1 1.00 0.0 
+Analog_In_Key_Add_List SPEAKER_RR_MIN_MAX_CHANGE 1 1.00 0.0 
+Analog_In_Key_Add_List SPEAKER_RR_VOLUME 1 1.00 0.0 
+Analog_In_Key_Add_List SPEAKER_RR_SOURCE 1 1.00 0.0 
+Analog_In_Key_Add_List SPEAKER_RL_SOURCE_CHANGE 1 1.00 0.0 
+Analog_In_Key_Add_List SPEAKER_RL_VOLUME_CHANGE 1 1.00 0.0 
+Analog_In_Key_Add_List SPEAKER_RL_MIN_MAX 1 1.00 0.0 
+Analog_In_Key_Add_List SPEAKER_RL_MIN_MAX_CHANGE 1 1.00 0.0 
+Analog_In_Key_Add_List SPEAKER_RL_VOLUME 1 1.00 0.0 
+Analog_In_Key_Add_List SPEAKER_RL_SOURCE 1 1.00 0.0 
+Analog_In_Key_Add_List CHECK_CD_SCAN 1 1.00 0.0 
+
+End_Setup_File

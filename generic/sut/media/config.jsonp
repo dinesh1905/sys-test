@@ -1,0 +1,12 @@
+// Generic sut media configuration
+{
+   "audio" : {
+      "[import]": "./audio/config.jsonp"
+   },
+   "image" : {
+      "[import]": "./image/config.jsonp"
+   },
+   "video" : {
+      "[import]": "./video/config.jsonp"
+   }
+}

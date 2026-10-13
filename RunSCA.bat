@@ -1,0 +1,1 @@
+"%RobotPythonPath%\python.exe" -m robocop  --report all --configure return_status:quality_gates:E=2:W=30:I=-1 "D:\Aizat\IDBuzz\sys_test\Custom_Rules\SCA.robot"  --output robocop_sca.log

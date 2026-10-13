@@ -1,0 +1,36 @@
+BITS-Platform Setupfile 24.15.6
+
+
+Analog_In_Key_Clear_List
+Analog_In_Key_Add_List Analog_Port_Input_1 9001 1.0 0.0 
+Analog_In_Key_Add_List TV_TrackID 9001 1.0 0.0 
+Analog_In_Key_Add_List TV_Volume 9001 1.0 0.0 
+Analog_In_Key_Add_List TV_Source 9001 1.0 0.0 
+Analog_In_Key_Add_List JOE 9000 1.0 0.0 
+Analog_In_Key_Add_List NDR2 9000 1.0 0.0 
+Analog_In_Key_Add_List LF_TimePos 9000 1 0.0 
+Analog_In_Key_Add_List RS_TrackID 9000 1 0.0 
+Analog_In_Key_Add_List RF_Source 9001 1.0 0.0 
+Analog_In_Key_Add_List Antenna_1_Level 603 1 0.0 
+Analog_In_Key_Add_List Antenna_2_Level 9000 1 0.0 
+Analog_In_Key_Add_List Antenna_Switch_Level 9000 1 0.0 
+Analog_In_Key_Add_List Battery_Current 603 1 0.0 
+Analog_In_Key_Add_List Battery_Voltage 602 1 0.0 
+Analog_In_Key_Add_List Battery 602 1 0.0 
+Analog_In_Key_Add_List U0meas 602 1 0.0 
+Analog_In_Key_Add_List Boster_Switch_Level 9000 1 0.0 
+Analog_In_Key_Add_List Break_Level 9000 1 0.0 
+Analog_In_Key_Add_List IGN_Current 9000 1 0.0 
+Analog_In_Key_Add_List IGN_Level 9000 1 0.0 
+Analog_In_Key_Add_List LF_Freq 9000 1 0.0 
+Analog_In_Key_Add_List LF_Level 9000 1 0.0 
+Analog_In_Key_Add_List LR_Freq 9000 1 0.0 
+Analog_In_Key_Add_List LR_Level 9000 1 0.0 
+Analog_In_Key_Add_List Light_Level 9000 1 0.0 
+Analog_In_Key_Add_List RF_Freq 9000 1 0.0 
+Analog_In_Key_Add_List RF_Level 9000 1 0.0 
+Analog_In_Key_Add_List RR_Freq 9000 1 0.0 
+Analog_In_Key_Add_List RR_Level 9000 1 0.0 
+Analog_In_Key_Add_List Revers_Level 9000 1 0.0 
+
+End_Setup_File

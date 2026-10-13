@@ -1,0 +1,19 @@
+{
+
+   "WelcomeString": "Hello... TA-Framework is running now!!",
+
+   // Version control information.
+   "version": {
+           "majorversion": "1",
+           "minorversion": "0",
+           "patchversion": "0"
+   },
+
+   // Version check
+   "Maximum_version": "1.0.0",
+   "Minimum_version" : "0.9.2",
+
+   "Project": "MPCI_MaaS_Blade",
+   "TargetName" : "gen3flex@dlt"
+
+}

@@ -1,0 +1,14 @@
+// Generic testbench tuner am configuration
+{
+   "channels" : {
+      "JOE" : {
+         "device" : {
+            "id" : 1
+         },
+         "frequency" : 850,
+         "level" : 60.0,
+         "tone" : 1500,
+         "depth" : 30
+      }
+   }
+}

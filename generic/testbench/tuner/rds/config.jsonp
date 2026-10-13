@@ -1,0 +1,14 @@
+// Generic testbench tuner rds (fm) configuration
+{
+   "channels" : {
+      "NDR1" : {
+         "device" : {
+            "id" : 1
+         },
+         "frequency" : 90.9,
+         "level" : 70.0,
+         "tone" : 1300,
+         "slot" : 10
+      }
+   }
+}

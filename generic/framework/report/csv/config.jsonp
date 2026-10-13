@@ -1,0 +1,14 @@
+{
+   // Data dictionary 'dREPORTING' is used for the 'output.csv' file.
+   // Here the generic columns for the 'output.csv' file are defined.
+   // The initial values must be negative integers. The columns will be ordered
+   // based on the values. The smallest value for the first column and so on.
+   // - Missing values will be ignored.
+   // - Duplicate values mean that the column order cannot be ensured.
+
+   "StartTime" : -5,
+   "TestName" : -4,
+   "Iteration" : -3,
+   "TestResult" : -2,
+   "ErrorInfo" : -1
+}

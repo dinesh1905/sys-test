@@ -1,0 +1,17 @@
+{
+   "[import]" : "../../rf.jsonp",
+
+   "params" : {
+      "global" : {
+         "framework" : {
+            "[import]" : "../../../generic/framework/config.jsonp",
+
+            // Import csv report parameter
+            "[import]": "../report/csv/config.jsonp",
+
+            // Project framework parameter
+            "project" : "BITS"
+         }
+      }
+   }
+}

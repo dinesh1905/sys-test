@@ -1,0 +1,34 @@
+// Generic testbench video configuration
+{
+    "channels" : {
+        "TV_Info" : {
+            "source" : {
+                "id" : "TV_Source"
+            },
+            "volume" : {
+                "id" : "TV_Volume"
+            },
+            "track" : {
+                "id" : "TV_TrackID",
+                "position" : {
+                    "id" : "TV_TimePos"
+                }
+            }
+        },
+
+        "USB_MP4" : {
+            "source" : {
+                "id" : "MP4_Source"
+            },
+            "volume" : {
+                "id" : "MP4_Volume"
+            },
+            "track" : {
+                "id" : "MP4_TrackID",
+                "position" : {
+                    "id" : "MP4_TimePos"
+                }
+            }
+        }
+    }
+}

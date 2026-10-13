@@ -1,0 +1,12 @@
+// Generic framework configuration
+{
+   "media" : {
+      "[import]": "./media/config.jsonp"
+   },
+   "system" : {
+      "[import]": "./system/config.jsonp"
+   },
+   "tuner" : {
+      "[import]": "./tuner/config.jsonp"
+   }
+}

@@ -1,0 +1,5 @@
+// project testbench tuner dab configuration
+{
+   // derive from common configuration
+   "[import]" : "../../../../../generic/testbench/tuner/dab/config.jsonp"
+}

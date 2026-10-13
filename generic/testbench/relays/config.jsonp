@@ -1,0 +1,10 @@
+// Generic testbench relays configurationparameter
+{
+    "channels" : {
+        "Conrad_1" : {
+            "port" : {
+                "id" : "GPIB_PORT_1"
+            }
+        }
+    }
+}

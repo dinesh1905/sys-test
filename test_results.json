@@ -1,0 +1,161 @@
+{
+    "total_auto_flashing": 0,
+    "total_entry": 0,
+    "total_fulltest": 3,
+    "auto_flashing_passed": 0,
+    "entry_passed": 0,
+    "fulltest_passed": 2,
+    "auto_flashing_failed": 0,
+    "entry_failed": 0,
+    "fulltest_failed": 1,
+    "milli_sec_autoflashing_execution_time": "00:00",
+    "milli_sec_entry_execution_time": "00:00",
+    "milli_sec_fulltest_execution_time": "00:02",
+    "total_time": "00:02",
+    "autoflashing_execution_time": "00:00",
+    "entry_execution_time": "00:00",
+    "fulltest_execution_time": "00:02",
+    "autoflashing_pass_percent": "0.00",
+    "entry_pass_percent": "0.00",
+    "fulltest_pass_percent": "66.67",
+    "total_pass_per": "66.67",
+    "testcase_summary": [
+        {
+            "component_name": "SWDOWNLOAD",
+            "total_tests": 0,
+            "pass_tests": 0,
+            "fail_tests": 0,
+            "execution_time": "00:00",
+            "pass_percentage": 0.0
+        },
+        {
+            "component_name": "POWER",
+            "total_tests": 3,
+            "pass_tests": 2,
+            "fail_tests": 1,
+            "execution_time": "00:02",
+            "pass_percentage": 66.66666666666666
+        },
+        {
+            "component_name": "CustomerDiagnostic",
+            "total_tests": 0,
+            "pass_tests": 0,
+            "fail_tests": 0,
+            "execution_time": "00:00",
+            "pass_percentage": 0.0
+        },
+        {
+            "component_name": "SAFETY",
+            "total_tests": 0,
+            "pass_tests": 0,
+            "fail_tests": 0,
+            "execution_time": "00:00",
+            "pass_percentage": 0.0
+        },
+        {
+            "component_name": "COMMUNICATION",
+            "total_tests": 0,
+            "pass_tests": 0,
+            "fail_tests": 0,
+            "execution_time": "00:00",
+            "pass_percentage": 0.0
+        },
+        {
+            "component_name": "SOC",
+            "total_tests": 0,
+            "pass_tests": 0,
+            "fail_tests": 0,
+            "execution_time": "00:00",
+            "pass_percentage": 0.0
+        },
+        {
+            "component_name": "Memory",
+            "total_tests": 0,
+            "pass_tests": 0,
+            "fail_tests": 0,
+            "execution_time": "00:00",
+            "pass_percentage": 0.0
+        },
+        {
+            "component_name": "Mcu",
+            "total_tests": 0,
+            "pass_tests": 0,
+            "fail_tests": 0,
+            "execution_time": "00:00",
+            "pass_percentage": 0.0
+        },
+        {
+            "component_name": "Total",
+            "total_tests": 3,
+            "pass_tests": 2,
+            "fail_tests": 1,
+            "pass_percentage": 66.66666666666666,
+            "execution_time": "00:02"
+        }
+    ],
+    "testcase_info": [
+        {
+            "TESTCASE_ID": "195844",
+            "REQUIREMENTS": [
+                "1275382",
+                "1275380",
+                "1275400",
+                "1275417"
+            ],
+            "TESTCASE": "EnvD_SysQual_PowerManagementSubsystem_PowerHandling_VoltageRangeMonitoring_0value",
+            "STATUS": "PASS",
+            "REASON": ""
+        },
+        {
+            "TESTCASE_ID": "5345421",
+            "REQUIREMENTS": [
+                "1275382",
+                "1275380",
+                "1275417",
+                "1275401"
+            ],
+            "TESTCASE": "EnvD_SysQual_PowerManagementSubsystem_PowerHandling_VoltageRangeMonitoring_0value_2",
+            "STATUS": "PASS",
+            "REASON": ""
+        },
+        {
+            "TESTCASE_ID": "195",
+            "REQUIREMENTS": [
+                "1275382",
+                "1275380",
+                "1275400",
+                "1275417"
+            ],
+            "TESTCASE": "EnvD_SysQual_PowerManagementSubsystem_PowerHandling_VoltageRangeMonitoring_0value_8",
+            "STATUS": "FAIL",
+            "REASON": "The precondition is not correct. Counter is not ZERO.Unable to verify the Reset command.\n\nAlso teardown failed:\nInvalid IF condition: Evaluating expression 'Exception: '[WinError 10061] No connection could be made because the target machine actively refused it' == 12' failed: SyntaxError: invalid syntax (<string>, line 1)\n\nVariables in the original expression '${s_result} == 12' were resolved before the expression was evaluated. Try using '$s_result == 12' syntax to avoid that. See Evaluating Expressions appendix in Robot Framework User Guide for more details."
+        }
+    ],
+    "total_requirements": 5,
+    "passed_requirements": 1,
+    "failed_requirements": 4,
+    "requirements_pass_percent": "20.00",
+    "requirements_fail_percent": "80.00",
+    "requirements_status": [
+        {
+            "Requirement": "1275380",
+            "Status": "FAILED"
+        },
+        {
+            "Requirement": "1275382",
+            "Status": "FAILED"
+        },
+        {
+            "Requirement": "1275400",
+            "Status": "FAILED"
+        },
+        {
+            "Requirement": "1275401",
+            "Status": "PASSED"
+        },
+        {
+            "Requirement": "1275417",
+            "Status": "FAILED"
+        }
+    ]
+}

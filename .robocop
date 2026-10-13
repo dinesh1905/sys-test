@@ -1,0 +1,13 @@
+--configure return_status:quality_gate:E=0:W=0:I=25
+--exclude wrong-case-in-keyword-name
+--exclude non-local-variables-should-be-uppercase
+--ext-rules C:/BITSRF/projects/IDBuzzMaasBlade/CT_Execution/sys_test/Custom_Rules/custom_rules.py
+--configure too-many-test-cases:max_testcases:300
+--configure file-too-long:max_lines:5000
+--configure too-long-test-case:max_len:300
+--configure line-too-long:line_length:180
+--configure not-allowed-char-in-name:pattern:"[\?]"
+--configure too-many-calls-in-keyword:max_calls:100
+--configure too-many-calls-in-test-case:max_calls:100
+--configure too-long-keyword:max_len:300
+--reports all

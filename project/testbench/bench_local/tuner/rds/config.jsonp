@@ -1,0 +1,5 @@
+// project testbench tuner rds configuration
+{
+   // derive from common configuration
+   "[import]" : "../../../../../generic/testbench/tuner/rds/config.jsonp"
+}

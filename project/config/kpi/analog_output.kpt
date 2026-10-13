@@ -1,0 +1,14 @@
+BITS-Platform Setupfile 25.8.1
+
+
+Analog_Out_Key_Clear_List
+Analog_Out_Key_Add_List Battery 602
+Analog_Out_Key_Add_List powercurve_battery 9000
+Analog_Out_Key_Add_List Ignition 601
+Analog_Out_Key_Add_List Q5050 601
+Analog_Out_Key_Add_List KL15 0
+Analog_Out_Key_Add_List KALL 0
+Analog_Out_Key_Add_List Power_1 9000
+Analog_Out_Key_Add_List Power_2 600
+
+End_Setup_File

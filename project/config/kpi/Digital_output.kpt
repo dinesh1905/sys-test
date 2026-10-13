@@ -1,0 +1,24 @@
+BITS-Platform Setupfile 25.8.1
+
+
+Virtual_Key_Clear_List
+Virtual_Key_Add H1000 0 0 7011   
+Virtual_Key_Add A2B_OpenCircuit 0 0 6210   
+Virtual_Key_Add A2B_Short_Battery 0 0 6211   
+Virtual_Key_Add Camera_Short_Battery 0 0 6213   
+Virtual_Key_Add Camera_OpenCircuit 0 0 6212 
+Virtual_Key_Add Big_toelner_6 0 0 6006   
+Virtual_Key_Add Big_toelner_8 0 0 6008   
+Virtual_Key_Add Digital_Out_3 0 0 201   
+Virtual_Key_Add H1007 0 0 7003   
+Virtual_Key_Add H1008 0 0 7004   
+Virtual_Key_Add H1005 0 0 7006   
+Virtual_Key_Add CPU_PWR 0 0 7010   
+Virtual_Key_Add USB_Qualcomm 0 0 601   
+Virtual_Key_Add Camera_Short_Ground 0 0 6208   
+Virtual_Key_Add A2B_Short_Ground 0 0 6209   
+Virtual_Key_Setup 304 305 217 8.00 0.00 8.00 0.00 300.00 0.00 120.00 0.00
+Virtual_Key_TTFis_Pressed VDKBD_KeySimulateVWTouchKey TOUCH_PRESSED
+Virtual_Key_TTFis_Released VDKBD_KeySimulateVWTouchKey TOUCH_RELEASED
+
+End_Setup_File

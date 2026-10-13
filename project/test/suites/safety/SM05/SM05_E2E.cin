@@ -1,0 +1,163 @@
+/*@!Encoding:1252*/
+includes
+{
+}
+
+variables
+{
+  struct crc_Seq_Crpt_Atrbs
+  {
+    long disturbChecksum_type;
+    long disturbanceMode;
+    long disturbanceCount;
+    long disturbanceValue;
+    long disturbanceOffset;
+  };
+  long Value = 0;
+  long Freeze = 1;
+  long Random = 2;
+  long Offset = 3;
+  long E_OK = 0;
+  long DisturbanceCount_NormalOperation = 0;
+  long DisturbChecksum_Type = 0;
+  long Continue_Mode = 0;
+  struct crc_Seq_Crpt_Atrbs Crc_CrptFIT_DataSet;
+
+}
+
+
+void Set_Attribute(long checksumtype, long disturbmode, long disturbCount, long disturbValue)
+{
+  Crc_CrptFIT_DataSet.disturbChecksum_type = checksumtype;
+  Crc_CrptFIT_DataSet.disturbanceMode = disturbmode;
+  Crc_CrptFIT_DataSet.disturbanceCount = disturbCount;
+  Crc_CrptFIT_DataSet.disturbanceValue = disturbValue;
+}
+
+long CRC_Crpt_enable(struct crc_Seq_Crpt_Atrbs Crc_DataSet, char msg[], char signals[])
+{
+  long result;
+
+  result = ILNodeDisturbChecksum(msg, signals, Crc_DataSet.disturbChecksum_type, Crc_DataSet.disturbanceMode, Crc_DataSet.disturbanceCount, Crc_DataSet.disturbanceValue);
+
+  if (E_OK == result)
+  {
+    teststeppass("", "Fault Injected Successfully in CRC");
+  }
+  else
+  {
+    teststepfail("", "Fault Injection is not Success in CRC");
+  }
+  return (result);
+}
+
+void CRC_Crpt_disable(struct crc_Seq_Crpt_Atrbs Crc_DataSet, char msg[], char signals[])
+{
+  long result;
+
+  result = ILNodeDisturbChecksum(msg, signals, Crc_DataSet.disturbChecksum_type, Crc_DataSet.disturbanceMode, DisturbanceCount_NormalOperation, Crc_DataSet.disturbanceValue);
+
+  if (E_OK == result)
+  {
+    teststeppass("", "Fault Injection Successfully removed in CRC");
+  }
+  else
+  {
+    teststepfail("", "Fault Injection not removed in CRC");
+  }
+}
+
+long SeqCoun_Crpt_enable(struct crc_Seq_Crpt_Atrbs Crc_DataSet, char messages[], char signals[])
+{
+  long result;
+
+  result = ILNodeDisturbCounter(signals, Crc_DataSet.disturbChecksum_type, Crc_DataSet.disturbanceMode, Crc_DataSet.disturbanceCount, Crc_DataSet.disturbanceValue, Continue_Mode);
+  if (E_OK == result)
+  {
+    teststeppass("", "Fault Injected Successfully in SeqCounter");
+  }
+  else
+  {
+    teststepfail("", "Fault Not Injected Successfully in SeqCounter");
+  }
+  return (result);
+}
+
+Void SeqCoun_Crpt_disable(struct crc_Seq_Crpt_Atrbs Crc_DataSet, char messages[], char signals[])
+{
+  long result;
+
+  result = ILNodeDisturbCounter(signals, Crc_DataSet.disturbChecksum_type, Crc_DataSet.disturbanceMode, DisturbanceCount_NormalOperation, Crc_DataSet.disturbanceValue, Continue_Mode);
+  if (E_OK == result)
+  {
+    teststeppass("", "Fault Injection Successfully removed in CRC");
+  }
+  else
+  {
+    teststepfail("", "Fault Injection not removed in CRC");
+  }
+}
+
+
+void Loss_of_Inforamtion_enable(char msg[])
+{
+  long result;
+  result = ILNodeControlMsg(msg, 2, 0, 0, 0);
+  testWaitForTimeout(100);
+
+  if (E_OK == result)
+  {
+    teststeppass("", "Loss of Information fault is  injected");
+  }
+  else
+  {
+    teststepfail("", "Loss of Information fault is not injected");
+  }
+}
+
+void Loss_of_Inforamtion_disable(char msg[]) // Delay of Information
+{
+  long result;
+  result = ILNodeControlMsg(msg, 1, 0, 0, 0);
+  testWaitForTimeout(100);
+  if (E_OK == result)
+  {
+    teststeppass("", "Loss of Information fault Successfully removed in CRC, System moved to Normal Operation");
+  }
+  else
+  {
+    teststepfail("", "Loss of Information fault not removed in CRC, System not moved to Normal Operation");
+  }
+}
+
+
+long Delay_of_Info_enable(char msg[], long ms) // Delay of Information
+{
+  long result;
+  result = ILNodeSetPDUTimingCyclic(msg, 1, 0, (ms * 5), -1, 0); // TestSetMsgCycleTime
+  if (E_OK == result)
+  {
+    teststeppass("", "Delay of Information fault is  injected");
+  }
+  else
+  {
+    teststepfail("", "Delay of Information fault is not injected");
+  }
+  return (result);
+}
+
+Void Delay_of_Info_disable(char messages[], long time) // Delay of Information
+{
+  long result;
+  result = ILNodeSetPDUTimingCyclic(messages, 3, 0, time, 0, 0);
+  testWaitForTimeout(100);
+  if (E_OK == result)
+  {
+    teststeppass("", "Delay of Information fault Successfully removed in CRC, System moved to Normal Operation");
+  }
+  else
+  {
+    teststepfail("", "Delay of Information fault not removed in CRC, System not moved to Normal Operation");
+  }
+}
+

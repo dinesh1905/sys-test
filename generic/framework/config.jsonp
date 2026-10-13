@@ -1,0 +1,9 @@
+{
+   "report" : {
+      "[import]": "./report/config.jsonp"
+   },
+   "version" : {
+      "number" : "2.0.0",
+      "date" : "10.05.2024"
+   }
+}

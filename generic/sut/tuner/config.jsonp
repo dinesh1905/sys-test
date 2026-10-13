@@ -1,0 +1,12 @@
+   // Generic sut tuner configuration
+{
+   "am" : {
+      "[import]": "./am/config.jsonp"
+   },
+   "fm" : {
+      "[import]": "./fm/config.jsonp"
+   },
+   "dab" : {
+      "[import]": "./dab/config.jsonp"
+   }
+}

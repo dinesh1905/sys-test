@@ -1,0 +1,6 @@
+// project testbench relays configuration
+{
+   // derive from common configuration
+   "[import]" : "../../../../generic/testbench/relays/config.jsonp"
+
+}

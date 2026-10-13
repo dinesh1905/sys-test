@@ -1,0 +1,86 @@
+BITS-Platform Setupfile 23.16.5
+
+
+Variable_Title Variable_0001.wav
+Variable_Waverate 1000
+Variable_Wavelength 2102
+Variable_Max_Index 1
+Variable_Channel_Index 0
+Variable_On_Off On
+Variable_Point 5
+Variable_Point_Index 1
+Variable_Point_Time 1.0000
+Variable_Point_V_Start 9.800
+Variable_Point_V_Stop 9.800
+Variable_Point_Index 2
+Variable_Point_Time 1.0010
+Variable_Point_V_Start 9.800
+Variable_Point_V_Stop 8.800
+Variable_Point_Index 3
+Variable_Point_Time 1.1010
+Variable_Point_V_Start 8.800
+Variable_Point_V_Stop 8.800
+Variable_Point_Index 4
+Variable_Point_Time 1.1020
+Variable_Point_V_Start 8.800
+Variable_Point_V_Stop 9.800
+Variable_Point_Index 5
+Variable_Point_Time 2.1020
+Variable_Point_V_Start 9.800
+Variable_Point_V_Stop 9.800
+Variable_Delta_Point 1
+Variable_Delta_V_Start 0.000
+Variable_Delta_V_Stop 0.000
+Variable_Delta_V_Max 18.000
+Variable_Delta_V_Min 0.000
+Variable_Delta_T_Left 0.0000
+Variable_Delta_T_Right 0.0000
+Variable_Wavefile 
+Variable_Channel_Index 1
+Variable_On_Off Off
+Variable_Point 1
+Variable_Point_Index 1
+Variable_Point_Time 15.0000
+Variable_Point_V_Start 13.500
+Variable_Point_V_Stop 13.500
+Variable_Delta_Point 1
+Variable_Delta_V_Start 0.000
+Variable_Delta_V_Stop 0.000
+Variable_Delta_V_Max 18.000
+Variable_Delta_V_Min 0.000
+Variable_Delta_T_Left 0.0000
+Variable_Delta_T_Right 0.0000
+Variable_Wavefile C:\Users\paa1pg1\Desktop\test.wav
+Variable_Channel_Index 2
+Variable_On_Off Off
+Variable_Point 1
+Variable_Point_Index 1
+Variable_Point_Time 15.0000
+Variable_Point_V_Start 13.500
+Variable_Point_V_Stop 13.500
+Variable_Delta_Point 1
+Variable_Delta_V_Start 0.000
+Variable_Delta_V_Stop 0.000
+Variable_Delta_V_Max 18.000
+Variable_Delta_V_Min 0.000
+Variable_Delta_T_Left 0.0000
+Variable_Delta_T_Right 0.0000
+Variable_Wavefile 
+Variable_Channel_Index 3
+Variable_On_Off Off
+Variable_Point 1
+Variable_Point_Index 1
+Variable_Point_Time 15.0000
+Variable_Point_V_Start 13.500
+Variable_Point_V_Stop 13.500
+Variable_Delta_Point 1
+Variable_Delta_V_Start 0.000
+Variable_Delta_V_Stop 0.000
+Variable_Delta_V_Max 18.000
+Variable_Delta_V_Min 0.000
+Variable_Delta_T_Left 0.0000
+Variable_Delta_T_Right 0.0000
+Variable_Wavefile 
+
+End_Setup_File
+

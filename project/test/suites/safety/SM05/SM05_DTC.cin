@@ -1,0 +1,498 @@
+/*@!Encoding:1252*/
+includes
+{
+}
+
+variables
+{
+  byte Diag_Req[4095];
+  byte Diag_Resp[4095];
+  byte Actual_response[4095];
+  int Diag_Req_len = 0;
+  dword AddtoReportCount = 0;
+  char AddtoReport_Count[10];
+  int DTCCheck = 0;
+  int dtcflg = 0;
+  
+  dword RequestTimestamp;
+  dword ResponseTimestamp;
+
+  int DTCRetry = 0;
+  int DTCRetryCount = 50;
+  int DTCClearCount = 200;
+  int DTCRetryFlag = 0;
+  int WaitTime_80ms = 80;
+  int WaitTime_1000ms = 1000;
+  int WaitTime_10000ms = 10000;
+  int WaitTime_20000ms = 20000;
+  //******************** DTC related ******************************
+  byte RespReceived = 0;
+  char Description[1000];
+  byte O_Resp[2000];
+  byte DTC_Status;
+  int i = 0, len, loop = 0;
+  char TL_Text[256];
+  byte Expected_Response[21] = {
+  0x62, 0x2C, 0x55, 0x00, 0x57, 0x56, 0x57, 0x41, 0x42, 0x43,
+  0x44, 0x45, 0x46, 0x47, 0x48, 0x31, 0x32, 0x33, 0x34, 0x38,
+  0x38
+};
+  byte ExpectedVIN_Response[21] = {
+  0x62, 0x2C, 0x55, 0x00, 0x57, 0x56, 0x57, 0x41, 0x42, 0x43,
+  0x44, 0x45, 0x46, 0x47, 0x48, 0x31, 0x32, 0x33, 0x34, 0x52,
+  0x52
+};
+  byte ResetVIN_Response[21] = {
+  0x62, 0x2C, 0x55, 0x00, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D,
+  0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D,
+  0x2D
+};
+  byte DLCVIN_Response[21] = {
+  0x62, 0x2C, 0x55, 0x00, 0x57, 0x56, 0x57, 0x41, 0x42, 0x43,
+  0x44, 0x45, 0x46, 0x47, 0x48, 0x31, 0x32, 0x33, 0x34, 0x35,
+  0x36
+};
+  dword StartReqTimestamp;
+  dword ResultReqTimestamp;
+  dword StartRespTimestamp;
+  dword ReqTimestamp;
+  dword RespTimestamp;
+  dword ResultRespTimestamp;
+  dword TimeCheck;
+  float ActualTime;
+  long Convertor_ms = 100;
+  float ExpResultTime1 = 6000.00;
+  float ExpResultTime2 = 500.00;
+  float ExpResultTime3 = 100.00;
+  int isEqual = 1;
+  int isEqual1 = 1;
+  int isEqual2 = 1;
+  int skip = 0;
+
+}
+
+// to print the report :
+void AddtoReport(char stepinfo[])
+{
+  Teststep(AddtoReport_Count, stepinfo);
+}
+
+void Bytes_to_String(byte Resp_buffer[], int Resp_Len, char Byte_string_output1[], byte ErrorCode)
+{
+  char temp[10];
+  char temp1[2] = "0";
+  byte buff[100];
+  char space[2] = " ";
+  int i = 0;
+ 
+  strncpy(Byte_string_output1, "", strlen(Byte_string_output1));
+  for (i = 0; i < Resp_Len; i++)
+  {
+    ltoa(Resp_buffer[i], temp, 16);
+    strncat(Byte_string_output1, space, 300);
+    strncat(Byte_string_output1, temp, 300);
+  }
+  strncpy(temp, "", strlen(temp));
+  if(Resp_buffer[0] == 0x59 && Resp_buffer[1] == 0x06 && DTCCheck == 1)
+  {
+    dtcflg = Byte_to_Bit(Resp_buffer[5],0,1);
+    if (dtcflg ==0)
+    {
+      TestStep("", "---------------------------------------------------------------------------------------------------");
+      TeststepPass("", "DTC Passive");
+      TestStep("", "----------------------------------------------------------------------------------------------------");
+    }
+    else
+    {
+      TestStep("", "---------------------------------------------------------------------------------------------------");
+      testStepFail("", "DTC Active");
+      TestStep("", "----------------------------------------------------------------------------------------------------");
+    }
+    write("Done");
+  }
+  }
+
+
+dword string_To_Bytes(char buff_in[], byte buff_out[])
+{
+  dword counter, i;
+  byte temp_byte;
+  byte second_nibble;
+
+  counter = 0;
+  second_nibble = 0;
+  i = 0;
+
+  if (elcount(buff_out) < strlen(buff_in) / 3)
+  {
+    write("Function string_To_Bytes received wrong parameter! buff_out array size to small ");
+    return 0;
+  }
+
+  while (buff_in[counter])
+  {
+    if (buff_in[counter] == 0x20)
+    {
+      counter++;
+      continue;
+    }
+    if (!second_nibble)
+    {
+      temp_byte = char_To_Byte(buff_in[counter]);
+      second_nibble = 1;
+    }
+    else
+    {
+      buff_out[i++] = (temp_byte << 4) + char_To_Byte(buff_in[counter]);
+      second_nibble = 0;
+    }
+    counter++;
+  }
+  return i;
+}
+
+byte char_To_Byte(char character)
+{
+  if (character >= 0x41 && character <= 0x46)
+    return (byte)character - 0x37;
+
+  else if (character >= 0x61 && character <= 0x66)
+    return (byte)character - 0x57;
+
+  else if (character >= 0x30 && character <= 0x39)
+    return (byte)character - 0x30;
+
+  return 0;
+}
+
+int Byte_to_Bit(byte data, byte bitpos, byte length)
+{
+  // Bitpos 0-7
+  byte mask;
+  byte i;
+  byte temp;
+  int value;
+  mask = 0x00;
+  if ((bitpos > 7 || length > 8 || (bitpos + length) > 8))
+  {
+    teststepfail("Invalid Parameter input for getting bit value from byte.");
+    value = 0;
+  }
+  else
+  {
+    for (i = 0; i < length; i++)
+    {
+      temp = _pow(2, bitpos + i);
+      mask = mask | temp;
+    }
+
+    value = (data & mask) >> bitpos;
+  }
+  return value;
+}
+
+// send Diagrequest to diagnostic   
+export SendDiag_Request(char Qualifier[], char Diag_Request[], char ExpectedResp[], byte ErrorCode)
+{
+    DiagRequest ReadDataByIdentifier Phy_ReadDataByIdentifier_Req;
+    DiagResponse ReadDataByIdentifier Phy_ReadDataByIdentifier_Res;
+    byte Valid_Response_Flag = 0, i = 0;
+    char buffer[100];
+    long ret, ret2, ret3, ret4;
+    int ExpectedResp_len = 0;
+    byte ExpectedResp_Buffer[4095];
+    char Received_Response[4095];
+    int Response_size = 0;
+
+    Diag_Req_len = string_To_Bytes(Diag_Request, Diag_Req);
+    ExpectedResp_len = string_To_Bytes(ExpectedResp, ExpectedResp_Buffer);
+
+    diagSetTarget(Qualifier);
+    DiagResize(Phy_ReadDataByIdentifier_Req, Diag_Req_len);
+    Phy_ReadDataByIdentifier_Req.SetPrimitiveData(Diag_Req, Diag_Req_len);
+
+    DiagSendRequest(Phy_ReadDataByIdentifier_Req);
+    ret = testWaitForDiagRequestSent(Phy_ReadDataByIdentifier_Req, 2000);
+
+    if (ret == 1) // Request sent
+    {
+        TestReportWriteDiagObject(Phy_ReadDataByIdentifier_Req);
+        ret2 = TestWaitForDiagResponse(Phy_ReadDataByIdentifier_Req, 5010);
+
+        if (ret2 == 1) // Response received
+        {
+            ret3 = DiagGetLastResponse(Phy_ReadDataByIdentifier_Req, Phy_ReadDataByIdentifier_Res);
+
+            if (ret3 == 0)
+            {
+                if (diagIsPositiveResponse(Phy_ReadDataByIdentifier_Res))
+                {
+                    Response_size = diagGetPrimitiveData(Phy_ReadDataByIdentifier_Res, Actual_response, elcount(Actual_response));
+                    diagGetPrimitiveData(Phy_ReadDataByIdentifier_Res, Diag_Resp, ExpectedResp_len);
+                    TestReportWriteDiagObject(Phy_ReadDataByIdentifier_Res);
+
+                    if (Valid_Response_Flag)
+                    {
+                        Valid_Response_Flag = 0;
+                        Teststepfail("", "Response received is not valid");
+                        Bytes_to_string(Actual_response, Response_size, Received_Response, ErrorCode);
+                        Teststep("", "Actual response=%s", Received_Response);
+                    }
+                    else
+                    {
+                        TeststepPass("", "Response received is valid and DTC cleared successfully");
+                        Bytes_to_string(Actual_response, Response_size, Received_Response, ErrorCode);
+                        Teststep("", "Actual response=%s", Received_Response);
+                    }
+
+                }
+                else
+                {
+                    ret4 = diagGetResponseCode(Phy_ReadDataByIdentifier_Res);
+                    TestReportWriteDiagObject(Phy_ReadDataByIdentifier_Res);
+                    Teststepfail("", "Negative Response Received");
+                }
+            }
+            else
+            {
+                Teststepfail("", "Response not received");
+            }
+        }
+        else
+        {
+            Teststepfail("", "Response not received");
+        }
+    }
+    else if (ret == 0)
+    {
+        TeststepFail("", "Timeout expired while trying to send request");
+    }
+}
+
+export Read_19_06_particular_DTC_Status(int Ext_Record_Num, char EXP_DTC[], int Exp_DTC_Status, byte ErrorCode)
+{
+  diagRequest BV_BladeMobilAsAServiUDS.*req;
+  diagResponse BV_BladeMobilAsAServiUDS.*_resp;
+  char DTC_EXP_S[100], DTC_temp[100];
+  long DTC_EXP, DTC_tempo;
+  byte Req_frame[6];
+  dword timestamp = 0;
+  int ExpectedResp_len = 0;
+  byte ExpectedResp_Buffer[4095];
+  char Received_Response[4095];
+  int mask;
+  int bits[8] = 0;
+  byte position = 7;
+  byte status = 0;
+  int d = 0;
+
+  testStep("", " Read DTC by 19 06 **service ");
+  snprintf(TL_Text, elcount(TL_Text), "Expected DTC status =%d", d);
+  snprintf(DTC_EXP_S, 3, "0x");    // includes terminating "\0" 0x\0 - 3 characters
+  strncat(DTC_EXP_S, EXP_DTC, 10); // includes terminating "\0" - XXXXXX\0 - 7 characters
+  DTC_EXP = atol(DTC_EXP_S);       // atol :: converts string to long
+  // duplicating DTC and copying to another buffer
+  snprintf(DTC_temp, 3, "0x");    // includes terminating "\0" 0x\0 - 3 characters
+  strncat(DTC_temp, EXP_DTC, 10); // includes terminating "\0" - XXXXXX\0 - 7 characters
+  DTC_tempo = atol(DTC_temp);
+  // Frame Request
+  Req_frame[0] = 0x19;
+  Req_frame[1] = 0x06;
+  Req_frame[2] = DTC_EXP >> 16;
+  Req_frame[3] = DTC_EXP >> 8;
+  Req_frame[4] = DTC_EXP;
+  Req_frame[5] = Ext_Record_Num;
+  diagResize(req, 6);
+  diagSetPrimitiveData(req, Req_frame, elCount(Req_frame)); // coping framed request to raw data object
+  // output Request
+  diagSendRequest(req);
+  RespReceived = testWaitForDiagRequestSent(req, 2000);
+  RespReceived = testWaitForDiagResponse(req, 2000); // waiting for Response
+  if (RespReceived == 1)                             // response received
+  {
+    diagGetLastResponse(req, _resp);
+    ExpectedResp_len = diagGetPrimitiveData(_resp, ExpectedResp_Buffer, elCount(ExpectedResp_Buffer)); // reading the entire Response and copying into O_Resp[]
+    diagGetPrimitiveData(_resp, O_Resp, 1000);
+    len = _resp.GetPrimitiveSize(); // taking the output response total length
+    // Coverting output Response to String
+    Bytes_to_string(ExpectedResp_Buffer, ExpectedResp_len, Received_Response,ErrorCode);
+    write("Output Actual_response = %s", Received_Response);
+    if (O_Resp[0] != 0x7F) // positive Response only
+    {
+      write("entering positive response %x", O_Resp[5]);
+      DTC_Status = O_Resp[5];
+      bits[7] = Byte_to_Bit(O_Resp[5], 0, 1);
+      if (((Ext_Record_Num == 0xFF)) && (O_Resp[5] == 0x00))
+      {
+        if ((DTC_Status == 0x00) && (Exp_DTC_Status == 1))
+        {
+          snprintf(Description, 1999, "1 DTC %X is not Active \n Expected DTC is Matched with 19 06 %X %X Response\n Below is the overall Response from 1906 service : %s ", DTC_tempo, DTC_tempo, Ext_Record_Num, Received_Response);
+          DTCRetryFlag = 0;
+        }
+        else if ((DTC_Status == 0x00) && (Exp_DTC_Status == 0))
+        {
+          snprintf(Description, 1999, "1.1 DTC %X is not Active \n Expected DTC is Matched with 19 06 %X %X Response\n Below is the overall Response from 1906 service : %s ", DTC_tempo, DTC_tempo, Ext_Record_Num, Received_Response);
+          DTCRetryFlag = 1;
+        }
+        else
+        {
+          snprintf(Description, 1999, " DTC %X is Active \n DTC Status Mask is not Expected with 19 06 %X %02X Response\n Below is the overall Response from 1906 service : %s ", DTC_tempo, DTC_tempo, Ext_Record_Num, Received_Response);
+          DTCRetryFlag = 1;
+        }
+      }
+      else if ((Ext_Record_Num == 0xFF) && (O_Resp[5] != 0x00))
+      {
+
+        if ((bits[7] == 1) && (Exp_DTC_Status == 1))
+        {
+          snprintf(Description, 19999, "2 DTC %X is Active with DTC Status Mask %02X ", DTC_tempo, O_Resp[5]);
+          DTCRetryFlag = 1;
+        }
+        else if ((bits[7] == 0) && (Exp_DTC_Status == 0))
+        {
+          write("entering in 3");
+          snprintf(Description, 19999, "3 DTC %X is not Active with DTC Status Mask %02X ", DTC_tempo, O_Resp[5]);
+          DTCRetryFlag = 1;
+        }
+
+        else if ((bits[7] == 0) && (Exp_DTC_Status == 1))
+        {
+          snprintf(Description, 19999, "4 DTC %X is not Active with DTC Status Mask %02X ", DTC_tempo, O_Resp[5]);
+          DTCRetryFlag = 0;
+        }
+
+        else if ((bits[7] == 1) && (Exp_DTC_Status == 0))
+
+        {
+          snprintf(Description, 19999, "5 DTC %X is Active with DTC Status Mask %02X ", DTC_tempo, O_Resp[5]);
+          DTCRetryFlag = 0;
+        }
+      }
+      else
+      {
+        snprintf(Description, 199999, "6 ERROR :: DTC %X is present with DTC Status Mask in 19 06 %X %02X Response\n Below is the overall Response from 1906 service : %s ", DTC_tempo, DTC_tempo, DTC_Status, Ext_Record_Num, Received_Response);
+        DTCRetryFlag = 0;
+      }
+    }
+
+    else
+    {
+      snprintf(Description, 199999, "NRC Received : %X", O_Resp[2]);
+      DTCRetryFlag = 0;
+    }
+  }
+  else
+  {
+    snprintf(Description, 199999, "Error :: Internal Error occured, Response not received");
+    DTCRetryFlag = 0;
+  }
+}
+
+void Check_DTC_Logged(int Ext_Record_Num, char EXP_DTC[], int Exp_DTC_Status, byte ErrorCode)
+{
+  for (DTCRetry = 0; DTCRetry <= DTCRetryCount; DTCRetry++)
+  {
+    Read_19_06_particular_DTC_Status(Ext_Record_Num, EXP_DTC, Exp_DTC_Status,ErrorCode);
+    testWaitForTimeout(WaitTime_80ms);
+    if (DTCRetryFlag == 1)
+    {
+      TestStep("", "---------------------------------------------------------------------------------------------------");
+      TeststepPass("", Description);
+      TestStep("", "----------------------------------------------------------------------------------------------------");
+      break;
+    }
+    else if (DTCRetryFlag == 0 && DTCRetry == DTCRetryCount)
+    {
+      teststepFail("", Description);
+    }
+  }
+}
+
+export TimeoutRequest(char Qualifier[], char Diag_Request[], char ExpectedResp[], byte ErrorCode)
+{
+  DiagRequest ReadDataByIdentifier Phy_ReadDataByIdentifier_Req;
+  DiagResponse ReadDataByIdentifier Phy_ReadDataByIdentifier_Res;
+  byte Valid_Response_Flag = 0, i = 0;
+  char buffer[100];
+  long ret, ret2, ret3, ret4;
+  int ExpectedResp_len = 0;
+  byte ExpectedResp_Buffer[4095];
+  char Received_Response[4095];
+
+  int Response_size = 0;
+  Diag_Req_len = string_To_Bytes(Diag_Request, Diag_Req); //_Str_To_Data_Bytes(Diag_Request, MAX_STR_REQ, tx_buffer, MAX_DATA);
+
+  ExpectedResp_len = string_To_Bytes(ExpectedResp, ExpectedResp_Buffer); //_Str_To_Data_Bytes(ExpectedResp, MAX_STR_REQ, ExpectedResp_Buffer, MAX_DATA);
+  // Qualifier is target
+  diagSetTarget(Qualifier);
+
+  DiagResize(Phy_ReadDataByIdentifier_Req, Diag_Req_len);
+  Phy_ReadDataByIdentifier_Req.SetPrimitiveData(Diag_Req, Diag_Req_len);
+
+  DiagSendRequest(Phy_ReadDataByIdentifier_Req);
+
+  ret = testWaitForDiagRequestSent(Phy_ReadDataByIdentifier_Req, 2000); // Wait until the request has been completely sent
+  if (ret == 1)                                                         // Request sent
+  {
+    TestReportWriteDiagObject(Phy_ReadDataByIdentifier_Req); // Write the request-Object to the testreport
+
+    ret2 = TestWaitForDiagResponse(Phy_ReadDataByIdentifier_Req, 5010); // Wait for a response, here for 5000ms.
+
+    if (ret2 == 1) // Response received
+    {
+      ret3 = DiagGetLastResponse(Phy_ReadDataByIdentifier_Req, Phy_ReadDataByIdentifier_Res); // Get the receveived response
+      if (ret3 == 0)
+      {
+        if (diagIsPositiveResponse(Phy_ReadDataByIdentifier_Res)) // Is it a positive response?
+        {
+          Response_size = diagGetPrimitiveData(Phy_ReadDataByIdentifier_Res, Actual_response, elcount(Actual_response));
+          diagGetPrimitiveData(Phy_ReadDataByIdentifier_Res, Diag_Resp, ExpectedResp_len); // Retrieve the response in raw format
+
+          TestReportWriteDiagObject(Phy_ReadDataByIdentifier_Res); // Write the response-Object to the testreport
+          if (Valid_Response_Flag)
+          {
+            Valid_Response_Flag = 0;
+            Teststepfail("", "response Received is not valid");
+            Bytes_to_string(Actual_response, Response_size, Received_Response, ErrorCode);
+            Teststep("", "Actual response=%s", Received_Response);
+          }
+          else
+          {
+            testStepPass("", "Response Received is valid");
+            Bytes_to_string(Actual_response, Response_size, Received_Response, ErrorCode);
+            Teststep("", "Actual response=%s", Received_Response);
+          }
+        }
+        else // It is a negative Response
+        {
+          ret4 = diagGetResponseCode(Phy_ReadDataByIdentifier_Res);
+          TestReportWriteDiagObject(Phy_ReadDataByIdentifier_Res); // Write the response-Object to the testreport
+          testStepPass("", "Negative Response Received");
+        }
+      }
+      else
+      {
+        Teststepfail("", "response not received");
+      }
+    }
+    else
+    {
+      Teststepfail("", "response not received");
+    }
+  }
+  else if (ret == 0)
+  {
+    TeststepPass("", "Timeout expired while trying to send request");
+  }
+}
+
+
+
+// Call function to Clear DTC
+void Clear_DTC()
+{
+  AddtoReport("Clear DTC");
+  SendDiag_Request("CIVIC174V", "14 FF FF FF", "54",0x0);
+}
+
+/*@!Encoding:65001*/

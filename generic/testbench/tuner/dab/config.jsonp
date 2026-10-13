@@ -1,0 +1,12 @@
+// Generic testbench tuner dab configuration
+{
+   "channels" : {
+      "NJOY" : {
+         "device" : {
+            "id" : 1
+         },
+         "frequency" : 188.928,
+         "level" : 70.0
+      }
+   }
+}

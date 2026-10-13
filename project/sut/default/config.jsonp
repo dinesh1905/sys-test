@@ -1,0 +1,21 @@
+// SUT CONFIGURATION
+{
+   "[import]" : "../../rf.jsonp",
+   //"[import]" : "../../sut/default/all_sut/config/sut.jsonp",
+
+   "params" : {
+      "global" : {
+         "sut" : {
+            "[import]" : "../../../generic/sut/config.jsonp",
+            //"[import]" : "../../../project/sut/all_sut/sut.jsonp",
+            // Project sut parameter
+            "system" : {
+               "variant" : "SelfTest",
+               "software" : {
+                  "version" : "1.0.0"
+               }
+            }
+         }
+      }
+   }
+}

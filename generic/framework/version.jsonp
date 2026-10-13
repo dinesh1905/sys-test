@@ -1,0 +1,9 @@
+{
+
+   "dFRAMEWORK": {},
+
+   // Generic framework parameter
+   "${params}['global']['dFRAMEWORK']['sVersion']" : "1.3.0",
+   "${params}['global']['dFRAMEWORK']['sLastUpdated']" : "15.09.2023"
+
+}

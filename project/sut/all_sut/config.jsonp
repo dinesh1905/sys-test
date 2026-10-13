@@ -1,0 +1,52 @@
+// SUT configuration for all_sut'
+{
+   "[import]" : "../../rf.jsonp",
+
+   "params" : {
+      "global" : {
+         "sut" : {
+            "power" : {
+              "[import]" : "./power/power.jsonp"
+            },
+            "auto_flash" : {
+              "[import]" : "./auto_flash/auto_flash.jsonp"
+            },
+            "audio" : {
+              "[import]" : "./audio/audio.jsonp"
+            },
+            "can" : {
+              "[import]" : "./can/can.jsonp"
+            },
+            "com" : {
+              "[import]" : "./com/com.jsonp"
+            },
+            "soc" : {
+              "[import]" : "./soc/soc.jsonp"
+            },
+            "soc_general" : {
+              "[import]" : "./soc_general/soc_general.jsonp"
+            },
+            "diag" : {
+              "[import]" : "./diagnostic/diagnostic.jsonp"
+            },
+            "hmi" : {
+              "[import]" : "./hmi/hmi.jsonp"
+            },
+            "reliability" : {
+              "[import]" : "./reliability/reliability.jsonp"
+            },
+            "safety" : {
+              "[import]" : "./safety/safety.jsonp"
+            },
+            "ssh" : {
+              "[import]" : "./ssh/ssh.jsonp"
+            },
+            "system" : {
+              "[import]" : "./system/system.jsonp"
+            }
+         },
+
+        "label" : None
+      }
+   }
+}

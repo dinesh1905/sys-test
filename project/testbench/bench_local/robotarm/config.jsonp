@@ -1,0 +1,6 @@
+// project testbench robotarm configuration
+{
+   // derive from common configuration
+   "[import]" : "../../../../generic/testbench/robotarm/config.jsonp"
+
+}

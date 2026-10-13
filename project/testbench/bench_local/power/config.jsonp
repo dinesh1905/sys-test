@@ -1,0 +1,29 @@
+// testbench power configuration 
+{
+   // derive from common configuration
+   "[import]" : "../../../../generic/testbench/power/config.jsonp",
+
+   // modifiy parameter in common parameter set for this testbench
+   ${params.global.testbench.power.channels.SUT_Power.output.voltage.limit.max} : 14.0,
+   
+   // add new power channel 'SUT_Power_new'
+   ${params.global.testbench.power.channels.SUT_Power_new} : {
+      "output" : {
+         "voltage" :{
+            "id" : "Battery_new",
+            "limit" : {
+               "min" : 0.0,
+               "max" : 13.0
+            }
+         }
+      },
+      "measurement" : {
+         "voltage" : {
+            "id" : "U0meas_new"
+         },
+         "current" : {
+            "id" : "Battery_Current_new"
+         }
+      }
+   }
+}

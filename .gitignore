@@ -1,0 +1,15 @@
+*.pyc
+*.pkl
+__pycache__
+output.xml
+log.html
+report.html
+*.log
+*.dll
+/libspecs/
+/.refactorings/
+/.settings/
+/.idea/
+/report/
+/results/
+console.txt

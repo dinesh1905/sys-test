@@ -1,0 +1,18 @@
+{
+
+   // Project sut audio media parameter
+// "params": {
+//       "global": {
+//           "ssh": {},
+            ${params.global.sut.ssh.MaaS_SWVersion}: "23.0V43.01",
+            ${params.global.sut.ssh.DeviceSwVersionPath}: "/mnt/Buildinfo.txt",
+            ${params.global.sut.ssh.LocalSwVersionPath}: "/c/BITSRF/projects/Buildinfo.txt",
+            ${params.global.sut.ssh.SSH_DeviceHost}: "172.21.0.10",
+            ${params.global.sut.ssh.SSH_Username}: "root",
+            ${params.global.sut.ssh.SSH_Password}: ""
+   //     }
+   // }
+
+
+
+}

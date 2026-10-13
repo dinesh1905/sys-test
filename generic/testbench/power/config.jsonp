@@ -1,0 +1,24 @@
+// Generic testbench power configuration
+{
+   "channels": {
+      "SUT_Power" : {
+         "output" :{
+            "voltage" :{
+               "id" : "Battery",
+               "limit" : {
+                  "min" : 0.0,
+                  "max" : 13.0
+               }
+            }
+         },
+         "measurement" : {
+            "voltage" : {
+               "id" : "U0meas"
+            },
+            "current" : {
+               "id" : "Battery_Current"
+            }
+         }
+      }
+   }
+}

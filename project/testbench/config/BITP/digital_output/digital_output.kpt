@@ -1,0 +1,20 @@
+BITS-Platform Setupfile 24.15.6
+
+
+Virtual_Key_Clear_List
+Virtual_Key_Add H1000 0 0 4111   
+Virtual_Key_Add Camera_Short_Ground 0 0 6208   
+Virtual_Key_Add Digital_Out_2 0 0 201   
+Virtual_Key_Add Cleware 0 0 601   
+Virtual_Key_Add H1007 0 0 4103   
+Virtual_Key_Add H1008 0 0 4104   
+Virtual_Key_Add H1005 0 0 4106   
+Virtual_Key_Add CPU_PWR 0 0 4110   
+Virtual_Key_Add USB_Qualcomm 0 0 601   
+Virtual_Key_Add GPIB_Port_1 0 0 9999   
+Virtual_Key_Add GPIB_Port_2 0 0 9999   
+Virtual_Key_Setup 304 305 217 8.00 0.00 8.00 0.00 300.00 0.00 120.00 0.00
+Virtual_Key_TTFis_Pressed VDKBD_KeySimulateVWTouchKey TOUCH_PRESSED
+Virtual_Key_TTFis_Released VDKBD_KeySimulateVWTouchKey TOUCH_RELEASED
+
+End_Setup_File
